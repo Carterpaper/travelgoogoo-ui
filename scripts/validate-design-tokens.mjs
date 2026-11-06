@@ -5,8 +5,8 @@ import path from 'node:path'
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const jsonPath = path.join(projectRoot, 'src/design-tokens/generated/tokens.json')
 const cssPath = path.join(projectRoot, 'src/design-tokens/generated/tokens.css')
-const expectedVariableCount = 441
-const expectedAliasReferenceCount = 356
+const expectedVariableCount = 442
+const expectedAliasReferenceCount = 358
 const expectedColorModes = ['SDS Light', 'SDS Dark']
 const expectedResponsiveModes = ['Desktop', 'Mobile', 'Tablet', 'Desktop Wide']
 const errors = []

@@ -325,6 +325,7 @@
   --tgg-color-background-warning-tertiary-hover: var(--tgg-color-primitives-yellow-200); /* VariableID:2002:7449 | Color/Background/Warning/Tertiary Hover */
   --tgg-color-background-danger-default: var(--tgg-color-primitives-red-500); /* VariableID:3919:36443 | Color/Background/Danger/Default */
   --tgg-color-background-danger-hover: var(--tgg-color-primitives-red-600); /* VariableID:3919:36446 | Color/Background/Danger/Hover */
+  --tgg-color-background-danger-pressed: var(--tgg-color-primitives-red-700); /* VariableID:4770:31072 | Color/Background/Danger/Pressed */
   --tgg-color-background-danger-secondary: var(--tgg-color-primitives-red-200); /* VariableID:3919:36445 | Color/Background/Danger/Secondary */
   --tgg-color-background-danger-secondary-hover: var(--tgg-color-primitives-red-300); /* VariableID:56:9909 | Color/Background/Danger/Secondary Hover */
   --tgg-color-background-danger-tertiary: var(--tgg-color-primitives-red-100); /* VariableID:2002:7450 | Color/Background/Danger/Tertiary */
@@ -370,7 +371,7 @@
   --tgg-color-text-warning-on-warning-tertiary: var(--tgg-color-primitives-yellow-900); /* VariableID:2002:7453 | Color/Text/Warning/On Warning Tertiary */
   --tgg-color-text-danger-default: var(--tgg-color-primitives-red-700); /* VariableID:3919:36474 | Color/Text/Danger/Default */
   --tgg-color-text-danger-secondary: var(--tgg-color-primitives-red-600); /* VariableID:3919:36475 | Color/Text/Danger/Secondary */
-  --tgg-color-text-danger-tertiari: var(--tgg-color-primitives-red-500); /* VariableID:3919:36476 | Color/Text/Danger/Tertiari */
+  --tgg-color-text-danger-tertiary: var(--tgg-color-primitives-red-500); /* VariableID:3919:36476 | Color/Text/Danger/Tertiary */
   --tgg-color-text-danger-on-danger: var(--tgg-color-primitives-red-100); /* VariableID:3919:36477 | Color/Text/Danger/On Danger */
   --tgg-color-text-danger-on-danger-secondary: var(--tgg-color-primitives-red-700); /* VariableID:3919:36479 | Color/Text/Danger/On Danger Secondary */
   --tgg-color-text-danger-on-danger-tertiary: var(--tgg-color-primitives-red-700); /* VariableID:2002:7454 | Color/Text/Danger/On Danger Tertiary */
@@ -486,6 +487,7 @@
   --tgg-color-background-warning-tertiary-hover: var(--tgg-color-primitives-yellow-200);
   --tgg-color-background-danger-default: var(--tgg-color-primitives-red-500);
   --tgg-color-background-danger-hover: var(--tgg-color-primitives-red-600);
+  --tgg-color-background-danger-pressed: var(--tgg-color-primitives-red-700);
   --tgg-color-background-danger-secondary: var(--tgg-color-primitives-red-200);
   --tgg-color-background-danger-secondary-hover: var(--tgg-color-primitives-red-300);
   --tgg-color-background-danger-tertiary: var(--tgg-color-primitives-red-100);
@@ -531,7 +533,7 @@
   --tgg-color-text-warning-on-warning-tertiary: var(--tgg-color-primitives-yellow-900);
   --tgg-color-text-danger-default: var(--tgg-color-primitives-red-700);
   --tgg-color-text-danger-secondary: var(--tgg-color-primitives-red-600);
-  --tgg-color-text-danger-tertiari: var(--tgg-color-primitives-red-500);
+  --tgg-color-text-danger-tertiary: var(--tgg-color-primitives-red-500);
   --tgg-color-text-danger-on-danger: var(--tgg-color-primitives-red-100);
   --tgg-color-text-danger-on-danger-secondary: var(--tgg-color-primitives-red-700);
   --tgg-color-text-danger-on-danger-tertiary: var(--tgg-color-primitives-red-700);
@@ -647,6 +649,7 @@
   --tgg-color-background-warning-tertiary-hover: var(--tgg-color-primitives-yellow-1000);
   --tgg-color-background-danger-default: var(--tgg-color-primitives-red-600);
   --tgg-color-background-danger-hover: var(--tgg-color-primitives-red-700);
+  --tgg-color-background-danger-pressed: var(--tgg-color-primitives-red-200);
   --tgg-color-background-danger-secondary: var(--tgg-color-primitives-red-800);
   --tgg-color-background-danger-secondary-hover: var(--tgg-color-primitives-red-900);
   --tgg-color-background-danger-tertiary: var(--tgg-color-primitives-red-900);
@@ -692,7 +695,7 @@
   --tgg-color-text-warning-on-warning-tertiary: var(--tgg-color-primitives-yellow-100);
   --tgg-color-text-danger-default: var(--tgg-color-primitives-red-200);
   --tgg-color-text-danger-secondary: var(--tgg-color-primitives-red-400);
-  --tgg-color-text-danger-tertiari: var(--tgg-color-primitives-red-500);
+  --tgg-color-text-danger-tertiary: var(--tgg-color-primitives-red-500);
   --tgg-color-text-danger-on-danger: var(--tgg-color-primitives-red-100);
   --tgg-color-text-danger-on-danger-secondary: var(--tgg-color-primitives-red-100);
   --tgg-color-text-danger-on-danger-tertiary: var(--tgg-color-primitives-red-100);

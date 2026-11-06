@@ -1,0 +1,1030 @@
+/* Generated from Figma TGG-DS. Do not edit; regenerate from Figma. */
+/* Source: https://www.figma.com/design/4bMfNqCkX6zywD94itcIgo/TGG-DS */
+
+:root {
+  --tgg-color-primitives-black-100: rgba(12, 12, 13, 0.05000000074505806); /* VariableID:9:11234 | Color Primitives/Black/100 */
+  --tgg-color-primitives-black-200: rgba(12, 12, 13, 0.10000000149011612); /* VariableID:9:11235 | Color Primitives/Black/200 */
+  --tgg-color-primitives-black-300: rgba(12, 12, 13, 0.20000000298023224); /* VariableID:9:11236 | Color Primitives/Black/300 */
+  --tgg-color-primitives-black-400: rgba(12, 12, 13, 0.40000000596046448); /* VariableID:9:11237 | Color Primitives/Black/400 */
+  --tgg-color-primitives-black-500: rgba(12, 12, 13, 0.69999998807907104); /* VariableID:9:11238 | Color Primitives/Black/500 */
+  --tgg-color-primitives-black-600: rgba(12, 12, 13, 0.80000001192092896); /* VariableID:9:11239 | Color Primitives/Black/600 */
+  --tgg-color-primitives-black-700: rgba(12, 12, 13, 0.85000002384185791); /* VariableID:9:11240 | Color Primitives/Black/700 */
+  --tgg-color-primitives-black-800: rgba(12, 12, 13, 0.89999997615814209); /* VariableID:9:11241 | Color Primitives/Black/800 */
+  --tgg-color-primitives-black-900: rgba(12, 12, 13, 0.94999998807907104); /* VariableID:9:11242 | Color Primitives/Black/900 */
+  --tgg-color-primitives-black-1000: #0c0c0d; /* VariableID:9:11243 | Color Primitives/Black/1000 */
+  --tgg-color-primitives-white-100: rgba(255, 255, 255, 0.05000000074505806); /* VariableID:3919:36544 | Color Primitives/White/100 */
+  --tgg-color-primitives-green-100: #ebffee; /* VariableID:3919:36654 | Color Primitives/Green/100 */
+  --tgg-color-primitives-green-200: #cff7d3; /* VariableID:3919:36655 | Color Primitives/Green/200 */
+  --tgg-color-primitives-green-300: #aff4c6; /* VariableID:3919:36656 | Color Primitives/Green/300 */
+  --tgg-color-primitives-green-400: #85e0a3; /* VariableID:3919:36657 | Color Primitives/Green/400 */
+  --tgg-color-primitives-green-500: #14ae5c; /* VariableID:3919:36658 | Color Primitives/Green/500 */
+  --tgg-color-primitives-green-600: #009951; /* VariableID:3919:36659 | Color Primitives/Green/600 */
+  --tgg-color-primitives-green-700: #008043; /* VariableID:3919:36660 | Color Primitives/Green/700 */
+  --tgg-color-primitives-green-800: #02542d; /* VariableID:3919:36661 | Color Primitives/Green/800 */
+  --tgg-color-primitives-green-900: #024023; /* VariableID:3919:36662 | Color Primitives/Green/900 */
+  --tgg-color-primitives-green-1000: #062d1b; /* VariableID:3919:36663 | Color Primitives/Green/1000 */
+  --tgg-color-primitives-gray-100: #f5f5f5; /* VariableID:611:26724 | Color Primitives/Gray/100 */
+  --tgg-color-primitives-gray-200: #e6e6e6; /* VariableID:611:26725 | Color Primitives/Gray/200 */
+  --tgg-color-primitives-gray-300: #d9d9d9; /* VariableID:611:26726 | Color Primitives/Gray/300 */
+  --tgg-color-primitives-gray-400: #b3b3b3; /* VariableID:611:26727 | Color Primitives/Gray/400 */
+  --tgg-color-primitives-gray-500: #757575; /* VariableID:611:26728 | Color Primitives/Gray/500 */
+  --tgg-color-primitives-gray-600: #444444; /* VariableID:611:26729 | Color Primitives/Gray/600 */
+  --tgg-color-primitives-gray-700: #383838; /* VariableID:611:26730 | Color Primitives/Gray/700 */
+  --tgg-color-primitives-gray-800: #2c2c2c; /* VariableID:611:26731 | Color Primitives/Gray/800 */
+  --tgg-color-primitives-gray-900: #1e1e1e; /* VariableID:611:26732 | Color Primitives/Gray/900 */
+  --tgg-color-primitives-gray-1000: #111111; /* VariableID:611:26733 | Color Primitives/Gray/1000 */
+  --tgg-color-primitives-white-200: rgba(255, 255, 255, 0.10000000149011612); /* VariableID:3919:36545 | Color Primitives/White/200 */
+  --tgg-color-primitives-white-300: rgba(255, 255, 255, 0.20000000298023224); /* VariableID:3919:36546 | Color Primitives/White/300 */
+  --tgg-color-primitives-white-400: rgba(255, 255, 255, 0.40000000596046448); /* VariableID:3919:36547 | Color Primitives/White/400 */
+  --tgg-color-primitives-white-500: rgba(255, 255, 255, 0.69999998807907104); /* VariableID:3919:36548 | Color Primitives/White/500 */
+  --tgg-color-primitives-white-600: rgba(255, 255, 255, 0.80000001192092896); /* VariableID:3919:36549 | Color Primitives/White/600 */
+  --tgg-color-primitives-white-700: rgba(255, 255, 255, 0.85000002384185791); /* VariableID:3919:36550 | Color Primitives/White/700 */
+  --tgg-color-primitives-white-800: rgba(255, 255, 255, 0.89999997615814209); /* VariableID:3919:36551 | Color Primitives/White/800 */
+  --tgg-color-primitives-white-900: rgba(255, 255, 255, 0.94999998807907104); /* VariableID:3919:36552 | Color Primitives/White/900 */
+  --tgg-color-primitives-white-1000: #ffffff; /* VariableID:3919:36553 | Color Primitives/White/1000 */
+  --tgg-color-primitives-pink-100: #fcf1fd; /* VariableID:280:16481 | Color Primitives/Pink/100 */
+  --tgg-color-primitives-pink-200: #fae1fa; /* VariableID:280:16482 | Color Primitives/Pink/200 */
+  --tgg-color-primitives-pink-300: #f5c0ef; /* VariableID:280:16483 | Color Primitives/Pink/300 */
+  --tgg-color-primitives-pink-400: #f19edc; /* VariableID:280:16486 | Color Primitives/Pink/400 */
+  --tgg-color-primitives-pink-500: #ea3fb8; /* VariableID:280:16490 | Color Primitives/Pink/500 */
+  --tgg-color-primitives-pink-600: #d732a8; /* VariableID:280:16491 | Color Primitives/Pink/600 */
+  --tgg-color-primitives-pink-700: #ba2a92; /* VariableID:280:16493 | Color Primitives/Pink/700 */
+  --tgg-color-primitives-pink-800: #8a226f; /* VariableID:280:16494 | Color Primitives/Pink/800 */
+  --tgg-color-primitives-pink-900: #57184a; /* VariableID:280:16497 | Color Primitives/Pink/900 */
+  --tgg-color-primitives-pink-1000: #3f1536; /* VariableID:280:16498 | Color Primitives/Pink/1000 */
+  --tgg-color-primitives-red-100: #fee9e7; /* VariableID:3919:36624 | Color Primitives/Red/100 */
+  --tgg-color-primitives-red-200: #fdd3d0; /* VariableID:3919:36625 | Color Primitives/Red/200 */
+  --tgg-color-primitives-red-300: #fcb3ad; /* VariableID:3919:36626 | Color Primitives/Red/300 */
+  --tgg-color-primitives-red-400: #f4776a; /* VariableID:3919:36627 | Color Primitives/Red/400 */
+  --tgg-color-primitives-red-500: #ec221f; /* VariableID:3919:36628 | Color Primitives/Red/500 */
+  --tgg-color-primitives-red-600: #c00f0c; /* VariableID:3919:36629 | Color Primitives/Red/600 */
+  --tgg-color-primitives-red-700: #900b09; /* VariableID:3919:36630 | Color Primitives/Red/700 */
+  --tgg-color-primitives-red-800: #690807; /* VariableID:3919:36631 | Color Primitives/Red/800 */
+  --tgg-color-primitives-red-900: #4d0b0a; /* VariableID:3919:36632 | Color Primitives/Red/900 */
+  --tgg-color-primitives-red-1000: #300603; /* VariableID:3919:36633 | Color Primitives/Red/1000 */
+  --tgg-color-primitives-slate-100: #f3f3f3; /* VariableID:3919:36534 | Color Primitives/Slate/100 */
+  --tgg-color-primitives-slate-200: #e3e3e3; /* VariableID:3919:36535 | Color Primitives/Slate/200 */
+  --tgg-color-primitives-slate-300: #cdcdcd; /* VariableID:3919:36536 | Color Primitives/Slate/300 */
+  --tgg-color-primitives-slate-400: #b2b2b2; /* VariableID:3919:36537 | Color Primitives/Slate/400 */
+  --tgg-color-primitives-slate-500: #949494; /* VariableID:3919:36538 | Color Primitives/Slate/500 */
+  --tgg-color-primitives-slate-600: #767676; /* VariableID:3919:36539 | Color Primitives/Slate/600 */
+  --tgg-color-primitives-slate-700: #5a5a5a; /* VariableID:3919:36540 | Color Primitives/Slate/700 */
+  --tgg-color-primitives-slate-800: #434343; /* VariableID:3919:36541 | Color Primitives/Slate/800 */
+  --tgg-color-primitives-slate-900: #303030; /* VariableID:3919:36542 | Color Primitives/Slate/900 */
+  --tgg-color-primitives-slate-1000: #242424; /* VariableID:3919:36543 | Color Primitives/Slate/1000 */
+  --tgg-color-primitives-yellow-100: #fffbeb; /* VariableID:3919:36644 | Color Primitives/Yellow/100 */
+  --tgg-color-primitives-yellow-200: #fff1c2; /* VariableID:3919:36645 | Color Primitives/Yellow/200 */
+  --tgg-color-primitives-yellow-300: #ffe8a3; /* VariableID:3919:36646 | Color Primitives/Yellow/300 */
+  --tgg-color-primitives-yellow-400: #e8b931; /* VariableID:3919:36647 | Color Primitives/Yellow/400 */
+  --tgg-color-primitives-yellow-500: #e5a000; /* VariableID:3919:36648 | Color Primitives/Yellow/500 */
+  --tgg-color-primitives-yellow-600: #bf6a02; /* VariableID:3919:36649 | Color Primitives/Yellow/600 */
+  --tgg-color-primitives-yellow-700: #975102; /* VariableID:3919:36650 | Color Primitives/Yellow/700 */
+  --tgg-color-primitives-yellow-800: #682d03; /* VariableID:3919:36651 | Color Primitives/Yellow/800 */
+  --tgg-color-primitives-yellow-900: #522504; /* VariableID:3919:36652 | Color Primitives/Yellow/900 */
+  --tgg-color-primitives-yellow-1000: #401b01; /* VariableID:3919:36653 | Color Primitives/Yellow/1000 */
+  --tgg-color-primitives-blue-100: #bdddf9; /* VariableID:3006:11814 | Color Primitives/Blue/100 */
+  --tgg-color-primitives-blue-200: #74b8f7; /* VariableID:3006:11802 | Color Primitives/Blue/200 */
+  --tgg-color-primitives-blue-300: #4da4f9; /* VariableID:3006:11803 | Color Primitives/Blue/300 */
+  --tgg-color-primitives-blue-400: #268ffb; /* VariableID:3006:11804 | Color Primitives/Blue/400 */
+  --tgg-color-primitives-blue-500: #007aff; /* VariableID:3006:11805 | Color Primitives/Blue/500 */
+  --tgg-color-primitives-blue-600: #066cdb; /* VariableID:3006:11806 | Color Primitives/Blue/600 */
+  --tgg-color-primitives-blue-700: #095fbb; /* VariableID:3006:11807 | Color Primitives/Blue/700 */
+  --tgg-color-primitives-blue-800: #0c529c; /* VariableID:3006:11808 | Color Primitives/Blue/800 */
+  --tgg-color-primitives-blue-900: #0d437a; /* VariableID:3006:11809 | Color Primitives/Blue/900 */
+  --tgg-color-primitives-blue-1000: #0d3762; /* VariableID:3006:11815 | Color Primitives/Blue/1000 */
+  --tgg-color-primitives-lemon-yellow-100: #fcffe5; /* VariableID:3080:10942 | Color Primitives/Lemon Yellow/100 */
+  --tgg-color-primitives-lemon-yellow-200: #f9ffcc; /* VariableID:3080:10943 | Color Primitives/Lemon Yellow/200 */
+  --tgg-color-primitives-lemon-yellow-300: #f3ff99; /* VariableID:3080:10944 | Color Primitives/Lemon Yellow/300 */
+  --tgg-color-primitives-lemon-yellow-400: #edff66; /* VariableID:3080:10945 | Color Primitives/Lemon Yellow/400 */
+  --tgg-color-primitives-lemon-yellow-500: #e1ff01; /* VariableID:3080:10946 | Color Primitives/Lemon Yellow/500 */
+  --tgg-color-primitives-lemon-yellow-600: #b4cc00; /* VariableID:3080:10947 | Color Primitives/Lemon Yellow/600 */
+  --tgg-color-primitives-lemon-yellow-700: #879900; /* VariableID:3080:10948 | Color Primitives/Lemon Yellow/700 */
+  --tgg-color-primitives-lemon-yellow-800: #5a6600; /* VariableID:3080:10949 | Color Primitives/Lemon Yellow/800 */
+  --tgg-color-primitives-lemon-yellow-900: #2d3300; /* VariableID:3080:10950 | Color Primitives/Lemon Yellow/900 */
+  --tgg-color-primitives-lemon-yellow-1000: #171900; /* VariableID:3080:10951 | Color Primitives/Lemon Yellow/1000 */
+  --tgg-color-primitives-midnight-green-100: #c2dae0; /* VariableID:3080:10952 | Color Primitives/Midnight Green/100 */
+  --tgg-color-primitives-midnight-green-200: #86b6c1; /* VariableID:3080:10953 | Color Primitives/Midnight Green/200 */
+  --tgg-color-primitives-midnight-green-300: #508d9b; /* VariableID:3080:10954 | Color Primitives/Midnight Green/300 */
+  --tgg-color-primitives-midnight-green-400: #30565e; /* VariableID:3080:10955 | Color Primitives/Midnight Green/400 */
+  --tgg-color-primitives-midnight-green-500: #122023; /* VariableID:3080:10956 | Color Primitives/Midnight Green/500 */
+  --tgg-color-primitives-midnight-green-600: #0e191b; /* VariableID:3080:10957 | Color Primitives/Midnight Green/600 */
+  --tgg-color-primitives-midnight-green-700: #0a1214; /* VariableID:3080:10958 | Color Primitives/Midnight Green/700 */
+  --tgg-color-primitives-midnight-green-800: #070c0d; /* VariableID:3080:10959 | Color Primitives/Midnight Green/800 */
+  --tgg-color-primitives-midnight-green-900: #030607; /* VariableID:3080:10960 | Color Primitives/Midnight Green/900 */
+  --tgg-color-primitives-midnight-green-1000: #020303; /* VariableID:3080:10961 | Color Primitives/Midnight Green/1000 */
+  --tgg-color-primitives-sand-oat-100: #fbfbf8; /* VariableID:3081:8520 | Color Primitives/Sand Oat/100 */
+  --tgg-color-primitives-sand-oat-200: #f2f0e8; /* VariableID:3081:8521 | Color Primitives/Sand Oat/200 */
+  --tgg-color-primitives-sand-oat-300: #edeade; /* VariableID:3081:8522 | Color Primitives/Sand Oat/300 */
+  --tgg-color-primitives-sand-oat-400: #e6e1d1; /* VariableID:3081:8523 | Color Primitives/Sand Oat/400 */
+  --tgg-color-primitives-sand-oat-500: #e0dbc7; /* VariableID:3081:8524 | Color Primitives/Sand Oat/500 */
+  --tgg-color-primitives-sand-oat-600: #c1b78f; /* VariableID:3081:8525 | Color Primitives/Sand Oat/600 */
+  --tgg-color-primitives-sand-oat-700: #a4955b; /* VariableID:3081:8526 | Color Primitives/Sand Oat/700 */
+  --tgg-color-primitives-sand-oat-800: #6c633c; /* VariableID:3081:8527 | Color Primitives/Sand Oat/800 */
+  --tgg-color-primitives-sand-oat-900: #38331f; /* VariableID:3081:8528 | Color Primitives/Sand Oat/900 */
+  --tgg-color-primitives-sand-oat-1000: #1a180f; /* VariableID:3081:8529 | Color Primitives/Sand Oat/1000 */
+  --tgg-color-primitives-pacific-blue-100: #eaeff5; /* VariableID:3081:8530 | Color Primitives/Pacific Blue/100 */
+  --tgg-color-primitives-pacific-blue-200: #b3c3db; /* VariableID:3081:8531 | Color Primitives/Pacific Blue/200 */
+  --tgg-color-primitives-pacific-blue-300: #8da5c9; /* VariableID:3081:8532 | Color Primitives/Pacific Blue/300 */
+  --tgg-color-primitives-pacific-blue-400: #6787b7; /* VariableID:3081:8533 | Color Primitives/Pacific Blue/400 */
+  --tgg-color-primitives-pacific-blue-500: #49699a; /* VariableID:3081:8534 | Color Primitives/Pacific Blue/500 */
+  --tgg-color-primitives-pacific-blue-600: #3b557d; /* VariableID:3081:8535 | Color Primitives/Pacific Blue/600 */
+  --tgg-color-primitives-pacific-blue-700: #2c405d; /* VariableID:3081:8536 | Color Primitives/Pacific Blue/700 */
+  --tgg-color-primitives-pacific-blue-800: #1e2b3e; /* VariableID:3081:8537 | Color Primitives/Pacific Blue/800 */
+  --tgg-color-primitives-pacific-blue-900: #0f151f; /* VariableID:3081:8538 | Color Primitives/Pacific Blue/900 */
+  --tgg-color-primitives-pacific-blue-1000: #07090e; /* VariableID:3081:8539 | Color Primitives/Pacific Blue/1000 */
+  --tgg-color-primitives-olive-gold-100: #fffedb; /* VariableID:3081:8540 | Color Primitives/Olive Gold/100 */
+  --tgg-color-primitives-olive-gold-200: #fffd7a; /* VariableID:3081:8541 | Color Primitives/Olive Gold/200 */
+  --tgg-color-primitives-olive-gold-300: #fffc38; /* VariableID:3081:8542 | Color Primitives/Olive Gold/300 */
+  --tgg-color-primitives-olive-gold-400: #f5f100; /* VariableID:3081:8543 | Color Primitives/Olive Gold/400 */
+  --tgg-color-primitives-olive-gold-500: #b0ad00; /* VariableID:3081:8544 | Color Primitives/Olive Gold/500 */
+  --tgg-color-primitives-olive-gold-600: #8f8c00; /* VariableID:3081:8545 | Color Primitives/Olive Gold/600 */
+  --tgg-color-primitives-olive-gold-700: #6b6900; /* VariableID:3081:8546 | Color Primitives/Olive Gold/700 */
+  --tgg-color-primitives-olive-gold-800: #474600; /* VariableID:3081:8547 | Color Primitives/Olive Gold/800 */
+  --tgg-color-primitives-olive-gold-900: #242300; /* VariableID:3081:8548 | Color Primitives/Olive Gold/900 */
+  --tgg-color-primitives-olive-gold-1000: #0f0f00; /* VariableID:3081:8549 | Color Primitives/Olive Gold/1000 */
+  --tgg-color-primitives-sunset-pink-100: #fef6f7; /* VariableID:3081:8550 | Color Primitives/Sunset Pink/100 */
+  --tgg-color-primitives-sunset-pink-200: #f9d7da; /* VariableID:3081:8551 | Color Primitives/Sunset Pink/200 */
+  --tgg-color-primitives-sunset-pink-300: #f7c5ca; /* VariableID:3081:8552 | Color Primitives/Sunset Pink/300 */
+  --tgg-color-primitives-sunset-pink-400: #f4b3ba; /* VariableID:3081:8553 | Color Primitives/Sunset Pink/400 */
+  --tgg-color-primitives-sunset-pink-500: #f19ea6; /* VariableID:3081:8554 | Color Primitives/Sunset Pink/500 */
+  --tgg-color-primitives-sunset-pink-600: #e75a68; /* VariableID:3081:8555 | Color Primitives/Sunset Pink/600 */
+  --tgg-color-primitives-sunset-pink-700: #d11e30; /* VariableID:3081:8556 | Color Primitives/Sunset Pink/700 */
+  --tgg-color-primitives-sunset-pink-800: #8a1420; /* VariableID:3081:8557 | Color Primitives/Sunset Pink/800 */
+  --tgg-color-primitives-sunset-pink-900: #470a10; /* VariableID:3081:8558 | Color Primitives/Sunset Pink/900 */
+  --tgg-color-primitives-sunset-pink-1000: #240508; /* VariableID:3081:8559 | Color Primitives/Sunset Pink/1000 */
+  --tgg-color-primitives-aqua-blue-100: #eefcf9; /* VariableID:3081:8560 | Color Primitives/Aqua Blue/100 */
+  --tgg-color-primitives-aqua-blue-200: #c3f4ea; /* VariableID:3081:8561 | Color Primitives/Aqua Blue/200 */
+  --tgg-color-primitives-aqua-blue-300: #a4efe0; /* VariableID:3081:8562 | Color Primitives/Aqua Blue/300 */
+  --tgg-color-primitives-aqua-blue-400: #82e8d4; /* VariableID:3081:8563 | Color Primitives/Aqua Blue/400 */
+  --tgg-color-primitives-aqua-blue-500: #65e3ca; /* VariableID:3081:8564 | Color Primitives/Aqua Blue/500 */
+  --tgg-color-primitives-aqua-blue-600: #2cd9b6; /* VariableID:3081:8565 | Color Primitives/Aqua Blue/600 */
+  --tgg-color-primitives-aqua-blue-700: #1fa88d; /* VariableID:3081:8566 | Color Primitives/Aqua Blue/700 */
+  --tgg-color-primitives-aqua-blue-800: #14705e; /* VariableID:3081:8567 | Color Primitives/Aqua Blue/800 */
+  --tgg-color-primitives-aqua-blue-900: #0a382f; /* VariableID:3081:8568 | Color Primitives/Aqua Blue/900 */
+  --tgg-color-primitives-aqua-blue-1000: #051a16; /* VariableID:3081:8569 | Color Primitives/Aqua Blue/1000 */
+  --tgg-typography-primitives-unbounded: "Unbounded"; /* VariableID:9:11199 | Typography Primitives/Unbounded */
+  --tgg-typography-primitives-dm-sans: "DM Sans"; /* VariableID:9:11200 | Typography Primitives/DM Sans */
+  --tgg-typography-primitives-dm-mono: "DM Mono"; /* VariableID:9:11201 | Typography Primitives/DM Mono */
+  --tgg-typography-primitives-scale-01: 12; /* VariableID:9:11198 | Typography Primitives/Scale 01 */
+  --tgg-typography-primitives-scale-02: 14; /* VariableID:9:11197 | Typography Primitives/Scale 02 */
+  --tgg-typography-primitives-scale-03: 16; /* VariableID:9:11196 | Typography Primitives/Scale 03 */
+  --tgg-typography-primitives-scale-04: 20; /* VariableID:9:11195 | Typography Primitives/Scale 04 */
+  --tgg-typography-primitives-scale-05: 24; /* VariableID:9:11194 | Typography Primitives/Scale 05 */
+  --tgg-typography-primitives-scale-06: 32; /* VariableID:9:11193 | Typography Primitives/Scale 06 */
+  --tgg-typography-primitives-scale-07: 40; /* VariableID:9:11192 | Typography Primitives/Scale 07 */
+  --tgg-typography-primitives-scale-08: 48; /* VariableID:9:11191 | Typography Primitives/Scale 08 */
+  --tgg-typography-primitives-scale-09: 64; /* VariableID:9:11190 | Typography Primitives/Scale 09 */
+  --tgg-typography-primitives-scale-10: 72; /* VariableID:9:11189 | Typography Primitives/Scale 10 */
+  --tgg-typography-primitives-weight-thin: 100; /* VariableID:9:11180 | Typography Primitives/Weight Thin */
+  --tgg-typography-primitives-weight-thin-italic: "Thin Italic"; /* VariableID:66:10200 | Typography Primitives/Weight Thin Italic */
+  --tgg-typography-primitives-weight-extra-light: 200; /* VariableID:9:11181 | Typography Primitives/Weight Extra Light */
+  --tgg-typography-primitives-weight-extralight-italic: "Extra Light Italic"; /* VariableID:66:10201 | Typography Primitives/Weight Extralight Italic */
+  --tgg-typography-primitives-weight-light: 300; /* VariableID:9:11182 | Typography Primitives/Weight Light */
+  --tgg-typography-primitives-weight-light-italic: "Light Italic"; /* VariableID:56:8551 | Typography Primitives/Weight Light Italic */
+  --tgg-typography-primitives-weight-regular: 400; /* VariableID:9:11183 | Typography Primitives/Weight Regular */
+  --tgg-typography-primitives-weight-regular-italic: "Italic"; /* VariableID:56:8552 | Typography Primitives/Weight Regular Italic */
+  --tgg-typography-primitives-weight-medium: 500; /* VariableID:9:11184 | Typography Primitives/Weight Medium */
+  --tgg-typography-primitives-weight-medium-italic: "Medium Italic"; /* VariableID:66:10202 | Typography Primitives/Weight Medium Italic */
+  --tgg-typography-primitives-weight-semibold: 600; /* VariableID:9:11185 | Typography Primitives/Weight Semibold */
+  --tgg-typography-primitives-weight-semibold-italic: "Semi Bold Italic"; /* VariableID:66:10203 | Typography Primitives/Weight Semibold Italic */
+  --tgg-typography-primitives-weight-bold: 700; /* VariableID:9:11186 | Typography Primitives/Weight Bold */
+  --tgg-typography-primitives-weight-bold-italic: "Bold Italic"; /* VariableID:56:8553 | Typography Primitives/Weight Bold Italic */
+  --tgg-typography-primitives-weight-extra-bold: 800; /* VariableID:9:11187 | Typography Primitives/Weight Extra Bold */
+  --tgg-typography-primitives-weight-extra-bold-italic: "Extra Bold Italic"; /* VariableID:66:10204 | Typography Primitives/Weight Extra Bold Italic */
+  --tgg-typography-primitives-weight-black: 900; /* VariableID:9:11188 | Typography Primitives/Weight Black */
+  --tgg-typography-primitives-weight-black-italic: "Black Italic"; /* VariableID:66:10208 | Typography Primitives/Weight Black Italic */
+  --tgg-typography-title-hero-font-family: var(--tgg-typography-primitives-unbounded); /* VariableID:66:10188 | Typography/Title Hero/Font Family */
+  --tgg-typography-title-hero-size: calc(var(--tgg-typography-primitives-scale-06) * 1px); /* VariableID:66:10189 | Typography/Title Hero/Size */
+  --tgg-typography-title-hero-font-weight: var(--tgg-typography-primitives-weight-semibold); /* VariableID:66:10190 | Typography/Title Hero/Font Weight */
+  --tgg-typography-title-page-font-family: var(--tgg-typography-primitives-unbounded); /* VariableID:58:8569 | Typography/Title Page/Font Family */
+  --tgg-typography-title-page-size-small: calc(var(--tgg-typography-primitives-scale-04) * 1px); /* VariableID:58:8574 | Typography/Title Page/Size Small */
+  --tgg-typography-title-page-size-base: calc(var(--tgg-typography-primitives-scale-05) * 1px); /* VariableID:66:10197 | Typography/Title Page/Size Base */
+  --tgg-typography-title-page-size-large: calc(var(--tgg-typography-primitives-scale-06) * 1px); /* VariableID:66:10198 | Typography/Title Page/Size Large */
+  --tgg-typography-title-page-font-weight: var(--tgg-typography-primitives-weight-semibold); /* VariableID:58:8572 | Typography/Title Page/Font Weight */
+  --tgg-typography-subtitle-font-family: var(--tgg-typography-primitives-dm-sans); /* VariableID:66:10176 | Typography/Subtitle/Font Family */
+  --tgg-typography-subtitle-size-small: calc(var(--tgg-typography-primitives-scale-04) * 1px); /* VariableID:66:10210 | Typography/Subtitle/Size Small */
+  --tgg-typography-subtitle-size-base: calc(var(--tgg-typography-primitives-scale-05) * 1px); /* VariableID:66:10177 | Typography/Subtitle/Size Base */
+  --tgg-typography-subtitle-size-large: calc(var(--tgg-typography-primitives-scale-06) * 1px); /* VariableID:66:10209 | Typography/Subtitle/Size Large */
+  --tgg-typography-subtitle-font-weight: var(--tgg-typography-primitives-weight-regular); /* VariableID:66:10178 | Typography/Subtitle/Font Weight */
+  --tgg-typography-heading-font-family: var(--tgg-typography-primitives-unbounded); /* VariableID:66:10185 | Typography/Heading/Font Family */
+  --tgg-typography-heading-size-small: calc(var(--tgg-typography-primitives-scale-03) * 1px); /* VariableID:66:10212 | Typography/Heading/Size Small */
+  --tgg-typography-heading-size-base: calc(var(--tgg-typography-primitives-scale-04) * 1px); /* VariableID:66:10186 | Typography/Heading/Size Base */
+  --tgg-typography-heading-size-large: calc(var(--tgg-typography-primitives-scale-05) * 1px); /* VariableID:66:10211 | Typography/Heading/Size Large */
+  --tgg-typography-heading-font-weight: var(--tgg-typography-primitives-weight-semibold); /* VariableID:66:10187 | Typography/Heading/Font Weight */
+  --tgg-typography-subheading-font-family: var(--tgg-typography-primitives-dm-sans); /* VariableID:2103:22306 | Typography/Subheading/Font Family */
+  --tgg-typography-subheading-size-small: calc(var(--tgg-typography-primitives-scale-02) * 1px); /* VariableID:2103:22307 | Typography/Subheading/Size Small */
+  --tgg-typography-subheading-size-medium: calc(var(--tgg-typography-primitives-scale-03) * 1px); /* VariableID:2103:22308 | Typography/Subheading/Size Medium */
+  --tgg-typography-subheading-size-large: calc(var(--tgg-typography-primitives-scale-04) * 1px); /* VariableID:2103:22309 | Typography/Subheading/Size Large */
+  --tgg-typography-subheading-font-weight: var(--tgg-typography-primitives-weight-light); /* VariableID:2103:22310 | Typography/Subheading/Font Weight */
+  --tgg-typography-body-font-family: var(--tgg-typography-primitives-dm-sans); /* VariableID:66:10179 | Typography/Body/Font Family */
+  --tgg-typography-caption-font-family: var(--tgg-typography-primitives-dm-sans); /* VariableID:3285:40370 | Typography/Caption/Font Family */
+  --tgg-typography-caption-font-family-2: var(--tgg-typography-primitives-unbounded); /* VariableID:3285:40371 | Typography/Caption/Font Family 2 */
+  --tgg-typography-caption-size-small: calc(var(--tgg-typography-primitives-scale-01) * 1px); /* VariableID:3285:40372 | Typography/Caption/Size Small */
+  --tgg-typography-caption-size-medium: calc(var(--tgg-typography-primitives-scale-02) * 1px); /* VariableID:3285:40373 | Typography/Caption/Size Medium */
+  --tgg-typography-caption-size-large: calc(var(--tgg-typography-primitives-scale-03) * 1px); /* VariableID:3285:40374 | Typography/Caption/Size Large */
+  --tgg-typography-caption-font-weight-regular: var(--tgg-typography-primitives-weight-regular); /* VariableID:3285:40375 | Typography/Caption/Font Weight Regular */
+  --tgg-typography-caption-font-weight-strong: var(--tgg-typography-primitives-weight-bold); /* VariableID:3285:40376 | Typography/Caption/Font Weight Strong */
+  --tgg-typography-caption-font-style-italic: var(--tgg-typography-primitives-weight-regular-italic); /* VariableID:3285:40377 | Typography/Caption/Font Style Italic */
+  --tgg-typography-body-font-family-2: var(--tgg-typography-primitives-unbounded); /* VariableID:3011:12364 | Typography/Body/Font Family 2 */
+  --tgg-typography-body-size-small: calc(var(--tgg-typography-primitives-scale-02) * 1px); /* VariableID:66:10216 | Typography/Body/Size Small */
+  --tgg-typography-body-size-medium: calc(var(--tgg-typography-primitives-scale-03) * 1px); /* VariableID:66:10180 | Typography/Body/Size Medium */
+  --tgg-typography-body-size-large: calc(var(--tgg-typography-primitives-scale-04) * 1px); /* VariableID:66:10215 | Typography/Body/Size Large */
+  --tgg-typography-body-font-weight-regular: var(--tgg-typography-primitives-weight-regular); /* VariableID:66:10181 | Typography/Body/Font Weight Regular */
+  --tgg-typography-body-font-weight-strong: var(--tgg-typography-primitives-weight-bold); /* VariableID:66:14844 | Typography/Body/Font Weight Strong */
+  --tgg-typography-body-font-style-italic: var(--tgg-typography-primitives-weight-regular-italic); /* VariableID:66:14846 | Typography/Body/Font Style Italic */
+  --tgg-typography-code-font-family: var(--tgg-typography-primitives-dm-mono); /* VariableID:66:10182 | Typography/Code/Font Family */
+  --tgg-typography-code-size-small: var(--tgg-typography-body-size-small); /* VariableID:66:10218 | Typography/Code/Size Small */
+  --tgg-typography-code-size-base: var(--tgg-typography-body-size-medium); /* VariableID:66:10183 | Typography/Code/Size Base */
+  --tgg-typography-code-size-large: var(--tgg-typography-body-size-large); /* VariableID:66:10217 | Typography/Code/Size Large */
+  --tgg-typography-code-font-weight: var(--tgg-typography-body-font-weight-regular); /* VariableID:66:10184 | Typography/Code/Font Weight */
+  --tgg-size-space-0: 0px; /* VariableID:364:11151 | Size/Space/0 */
+  --tgg-size-space-050: 2px; /* VariableID:364:11161 | Size/Space/050 */
+  --tgg-size-space-100: 4px; /* VariableID:9:11258 | Size/Space/100 */
+  --tgg-size-space-150: 6px; /* VariableID:364:11163 | Size/Space/150 */
+  --tgg-size-space-200: 8px; /* VariableID:9:11259 | Size/Space/200 */
+  --tgg-size-space-300: 12px; /* VariableID:9:11260 | Size/Space/300 */
+  --tgg-size-space-400: 16px; /* VariableID:9:11261 | Size/Space/400 */
+  --tgg-size-space-600: 24px; /* VariableID:9:11262 | Size/Space/600 */
+  --tgg-size-space-800: 32px; /* VariableID:346:10902 | Size/Space/800 */
+  --tgg-size-space-1200: 48px; /* VariableID:346:10903 | Size/Space/1200 */
+  --tgg-size-space-1600: 64px; /* VariableID:107:11150 | Size/Space/1600 */
+  --tgg-size-space-2400: 96px; /* VariableID:346:10904 | Size/Space/2400 */
+  --tgg-size-space-4000: 160px; /* VariableID:346:10896 | Size/Space/4000 */
+  --tgg-size-space-negative-100: -4px; /* VariableID:9:11263 | Size/Space/Negative 100 */
+  --tgg-size-space-negative-200: -8px; /* VariableID:9:11264 | Size/Space/Negative 200 */
+  --tgg-size-space-negative-300: -12px; /* VariableID:9:11265 | Size/Space/Negative 300 */
+  --tgg-size-space-negative-400: -16px; /* VariableID:9:11266 | Size/Space/Negative 400 */
+  --tgg-size-space-negative-600: -24px; /* VariableID:9:11267 | Size/Space/Negative 600 */
+  --tgg-size-radius-100: 4px; /* VariableID:9:11274 | Size/Radius/100 */
+  --tgg-size-radius-200: 8px; /* VariableID:9:11275 | Size/Radius/200 */
+  --tgg-size-radius-400: 16px; /* VariableID:9:11277 | Size/Radius/400 */
+  --tgg-size-radius-600: 24px; /* VariableID:4568:7706 | Size/Radius/600 */
+  --tgg-size-blur-100: 4px; /* VariableID:228:6769 | Size/Blur/100 */
+  --tgg-size-radius-full: 9999px; /* VariableID:56:9308 | Size/Radius/Full */
+  --tgg-size-depth-0: 0px; /* VariableID:9:11280 | Size/Depth/0 */
+  --tgg-size-depth-025: 1px; /* VariableID:9:11281 | Size/Depth/025 */
+  --tgg-size-depth-100: 4px; /* VariableID:9:11282 | Size/Depth/100 */
+  --tgg-size-depth-200: 8px; /* VariableID:9:11283 | Size/Depth/200 */
+  --tgg-size-depth-400: 16px; /* VariableID:9:11284 | Size/Depth/400 */
+  --tgg-size-depth-800: 32px; /* VariableID:9:11285 | Size/Depth/800 */
+  --tgg-size-depth-1200: 48px; /* VariableID:9:11286 | Size/Depth/1200 */
+  --tgg-size-depth-negative-025: -1px; /* VariableID:9:11287 | Size/Depth/Negative 025 */
+  --tgg-size-depth-negative-100: -4px; /* VariableID:9:11288 | Size/Depth/Negative 100 */
+  --tgg-size-depth-negative-200: -8px; /* VariableID:9:11289 | Size/Depth/Negative 200 */
+  --tgg-size-depth-negative-400: -16px; /* VariableID:9:11290 | Size/Depth/Negative 400 */
+  --tgg-size-depth-negative-800: -32px; /* VariableID:9:11291 | Size/Depth/Negative 800 */
+  --tgg-size-depth-negative-1200: -48px; /* VariableID:9:11292 | Size/Depth/Negative 1200 */
+  --tgg-size-stroke-border: 1px; /* VariableID:197:17450 | Size/Stroke/Border */
+  --tgg-size-stroke-focus-ring: 2px; /* VariableID:197:17451 | Size/Stroke/Focus Ring */
+  --tgg-size-stroke-icon: 3px; /* VariableID:3090:10923 | Size/Stroke/Icon */
+  --tgg-size-icon-small: 24px; /* VariableID:409:8191 | Size/Icon/Small */
+  --tgg-size-icon-medium: 32px; /* VariableID:409:8192 | Size/Icon/Medium */
+  --tgg-size-icon-large: 40px; /* VariableID:409:8193 | Size/Icon/Large */
+  --tgg-size-number: 0; /* VariableID:3090:10922 | Size/Number */
+  --tgg-responsive-device: "desktop"; /* VariableID:234:21585 | Responsive/Device */
+  --tgg-responsive-device-width: 1200px; /* VariableID:9:11219 | Responsive/Device Width */
+  --tgg-responsive-root-font-size: calc(var(--tgg-typography-primitives-scale-03) * 1px); /* VariableID:9:11224 | Responsive/Root Font Size */
+  --tgg-responsive-scale: 1; /* VariableID:231:21547 | Responsive/Scale */
+  --tgg-color-primitives-brand-400: #cac8bd; /* VariableID:3919:36617 | Color Primitives/Brand/400 (resolved alias dependency) */
+  --tgg-color-primitives-brand-500: #122023; /* VariableID:3919:36618 | Color Primitives/Brand/500 (resolved alias dependency) */
+  --tgg-color-background-default-default: var(--tgg-color-primitives-white-1000); /* VariableID:3919:36423 | Color/Background/Default/Default */
+  --tgg-color-background-neutral-default: var(--tgg-color-primitives-slate-700); /* VariableID:106:12464 | Color/Background/Neutral/Default */
+  --tgg-color-background-neutral-hover: var(--tgg-color-primitives-slate-800); /* VariableID:106:12465 | Color/Background/Neutral/Hover */
+  --tgg-color-background-neutral-secondary: var(--tgg-color-primitives-slate-300); /* VariableID:106:12466 | Color/Background/Neutral/Secondary */
+  --tgg-color-background-neutral-secondary-hover: var(--tgg-color-primitives-slate-400); /* VariableID:106:12467 | Color/Background/Neutral/Secondary Hover */
+  --tgg-color-background-neutral-tertiary: var(--tgg-color-primitives-slate-200); /* VariableID:106:12468 | Color/Background/Neutral/Tertiary */
+  --tgg-color-background-neutral-tertiary-hover: var(--tgg-color-primitives-slate-300); /* VariableID:106:12469 | Color/Background/Neutral/Tertiary Hover */
+  --tgg-color-background-default-default-hover: var(--tgg-color-primitives-gray-100); /* VariableID:3919:36426 | Color/Background/Default/Default Hover */
+  --tgg-color-background-default-secondary: var(--tgg-color-primitives-gray-100); /* VariableID:3919:36424 | Color/Background/Default/Secondary */
+  --tgg-color-background-default-secondary-hover: var(--tgg-color-primitives-gray-200); /* VariableID:56:9309 | Color/Background/Default/Secondary Hover */
+  --tgg-color-background-default-tertiary: var(--tgg-color-primitives-gray-300); /* VariableID:3919:36425 | Color/Background/Default/Tertiary */
+  --tgg-color-background-default-tertiary-hover: var(--tgg-color-primitives-gray-400); /* VariableID:56:9310 | Color/Background/Default/Tertiary Hover */
+  --tgg-color-background-brand-default: var(--tgg-color-primitives-lemon-yellow-500); /* VariableID:3919:36428 | Color/Background/Brand/Default */
+  --tgg-color-background-brand-hover: var(--tgg-color-primitives-lemon-yellow-700); /* VariableID:3919:36431 | Color/Background/Brand/Hover */
+  --tgg-color-background-brand-secondary: var(--tgg-color-primitives-midnight-green-500); /* VariableID:3919:36430 | Color/Background/Brand/Secondary */
+  --tgg-color-background-brand-secondary-hover: var(--tgg-color-primitives-midnight-green-800); /* VariableID:4035:5558 | Color/Background/Brand/Secondary Hover */
+  --tgg-color-background-brand-tertiary: var(--tgg-color-primitives-sand-oat-500); /* VariableID:9670:11772 | Color/Background/Brand/Tertiary */
+  --tgg-color-background-brand-tertiary-hover: var(--tgg-color-primitives-sand-oat-700); /* VariableID:9670:12886 | Color/Background/Brand/Tertiary Hover */
+  --tgg-color-background-positive-default: var(--tgg-color-primitives-green-500); /* VariableID:3919:36433 | Color/Background/Positive/Default */
+  --tgg-color-background-positive-hover: var(--tgg-color-primitives-green-600); /* VariableID:3919:36436 | Color/Background/Positive/Hover */
+  --tgg-color-background-positive-secondary: var(--tgg-color-primitives-green-200); /* VariableID:3919:36435 | Color/Background/Positive/Secondary */
+  --tgg-color-background-positive-secondary-hover: var(--tgg-color-primitives-green-300); /* VariableID:56:9907 | Color/Background/Positive/Secondary Hover */
+  --tgg-color-background-positive-tertiary: var(--tgg-color-primitives-green-100); /* VariableID:2002:7433 | Color/Background/Positive/Tertiary */
+  --tgg-color-background-positive-tertiary-hover: var(--tgg-color-primitives-green-200); /* VariableID:2002:7447 | Color/Background/Positive/Tertiary Hover */
+  --tgg-color-background-information-default: var(--tgg-color-primitives-blue-400); /* VariableID:3006:14290 | Color/Background/Information/Default */
+  --tgg-color-background-information-hover: var(--tgg-color-primitives-blue-500); /* VariableID:3006:14291 | Color/Background/Information/Hover */
+  --tgg-color-background-information-secondary: var(--tgg-color-primitives-blue-200); /* VariableID:3006:14292 | Color/Background/Information/Secondary */
+  --tgg-color-background-information-secondary-hover: var(--tgg-color-primitives-blue-300); /* VariableID:3006:14293 | Color/Background/Information/Secondary Hover */
+  --tgg-color-background-information-tertiary: var(--tgg-color-primitives-blue-100); /* VariableID:3006:14294 | Color/Background/Information/Tertiary */
+  --tgg-color-background-information-tertiary-hover: var(--tgg-color-primitives-blue-200); /* VariableID:3006:14295 | Color/Background/Information/Tertiary Hover */
+  --tgg-color-background-warning-default: var(--tgg-color-primitives-yellow-400); /* VariableID:3919:36438 | Color/Background/Warning/Default */
+  --tgg-color-background-warning-hover: var(--tgg-color-primitives-yellow-500); /* VariableID:3919:36441 | Color/Background/Warning/Hover */
+  --tgg-color-background-warning-secondary: var(--tgg-color-primitives-yellow-200); /* VariableID:3919:36440 | Color/Background/Warning/Secondary */
+  --tgg-color-background-warning-secondary-hover: var(--tgg-color-primitives-yellow-300); /* VariableID:56:9908 | Color/Background/Warning/Secondary Hover */
+  --tgg-color-background-warning-tertiary: var(--tgg-color-primitives-yellow-100); /* VariableID:2002:7448 | Color/Background/Warning/Tertiary */
+  --tgg-color-background-warning-tertiary-hover: var(--tgg-color-primitives-yellow-200); /* VariableID:2002:7449 | Color/Background/Warning/Tertiary Hover */
+  --tgg-color-background-danger-default: var(--tgg-color-primitives-red-500); /* VariableID:3919:36443 | Color/Background/Danger/Default */
+  --tgg-color-background-danger-hover: var(--tgg-color-primitives-red-600); /* VariableID:3919:36446 | Color/Background/Danger/Hover */
+  --tgg-color-background-danger-secondary: var(--tgg-color-primitives-red-200); /* VariableID:3919:36445 | Color/Background/Danger/Secondary */
+  --tgg-color-background-danger-secondary-hover: var(--tgg-color-primitives-red-300); /* VariableID:56:9909 | Color/Background/Danger/Secondary Hover */
+  --tgg-color-background-danger-tertiary: var(--tgg-color-primitives-red-100); /* VariableID:2002:7450 | Color/Background/Danger/Tertiary */
+  --tgg-color-background-danger-tertiary-hover: var(--tgg-color-primitives-red-200); /* VariableID:2002:7451 | Color/Background/Danger/Tertiary Hover */
+  --tgg-color-background-disabled-default: var(--tgg-color-background-default-default-hover); /* VariableID:3919:36448 | Color/Background/Disabled/Default */
+  --tgg-color-background-utilities-scrim: rgba(255, 255, 255, 0.80000001192092896); /* VariableID:7753:3701 | Color/Background/Utilities/Scrim */
+  --tgg-color-background-utilities-blanket: rgba(0, 0, 0, 0.69999998807907104); /* VariableID:2142:11243 | Color/Background/Utilities/Blanket */
+  --tgg-color-background-utilities-overlay: rgba(0, 0, 0, 0.5); /* VariableID:7786:36548 | Color/Background/Utilities/Overlay */
+  --tgg-color-background-utilities-measurement: var(--tgg-color-primitives-pink-200); /* VariableID:72:9197 | Color/Background/Utilities/Measurement */
+  --tgg-color-text-default-default-black: var(--tgg-color-primitives-gray-1000); /* VariableID:3919:36450 | Color/Text/Default/Default Black */
+  --tgg-color-text-default-default-white: var(--tgg-color-primitives-white-1000); /* VariableID:3173:31394 | Color/Text/Default/Default White */
+  --tgg-color-text-default-secondary: var(--tgg-color-primitives-gray-600); /* VariableID:3919:36451 | Color/Text/Default/Secondary */
+  --tgg-color-text-default-tertiary: var(--tgg-color-primitives-gray-400); /* VariableID:3919:36452 | Color/Text/Default/Tertiary */
+  --tgg-color-text-neutral-default: var(--tgg-color-primitives-slate-900); /* VariableID:106:12473 | Color/Text/Neutral/Default */
+  --tgg-color-text-neutral-secondary: var(--tgg-color-primitives-slate-700); /* VariableID:106:12474 | Color/Text/Neutral/Secondary */
+  --tgg-color-text-neutral-tertiary: var(--tgg-color-primitives-slate-600); /* VariableID:106:12475 | Color/Text/Neutral/Tertiary */
+  --tgg-color-text-neutral-on-neutral: var(--tgg-color-primitives-slate-100); /* VariableID:106:12476 | Color/Text/Neutral/On Neutral */
+  --tgg-color-text-neutral-on-neutral-secondary: var(--tgg-color-primitives-slate-900); /* VariableID:106:12477 | Color/Text/Neutral/On Neutral Secondary */
+  --tgg-color-text-neutral-on-neutral-tertiary: var(--tgg-color-primitives-slate-800); /* VariableID:106:12478 | Color/Text/Neutral/On Neutral Tertiary */
+  --tgg-color-text-brand-default: var(--tgg-color-primitives-lemon-yellow-500); /* VariableID:3919:36456 | Color/Text/Brand/Default */
+  --tgg-color-text-brand-secondary: var(--tgg-color-primitives-midnight-green-500); /* VariableID:3919:36457 | Color/Text/Brand/Secondary */
+  --tgg-color-text-brand-tertiary: var(--tgg-color-primitives-sand-oat-500); /* VariableID:3919:36458 | Color/Text/Brand/Tertiary */
+  --tgg-color-text-brand-on-brand: var(--tgg-color-primitives-midnight-green-500); /* VariableID:3919:36459 | Color/Text/Brand/On Brand */
+  --tgg-color-text-brand-on-brand-secondary: var(--tgg-color-primitives-lemon-yellow-500); /* VariableID:3919:36461 | Color/Text/Brand/On Brand Secondary */
+  --tgg-color-text-brand-on-brand-tertiary: var(--tgg-color-primitives-midnight-green-500); /* VariableID:9670:11773 | Color/Text/Brand/On Brand Tertiary */
+  --tgg-color-text-positive-default: var(--tgg-color-primitives-green-800); /* VariableID:3919:36462 | Color/Text/Positive/Default */
+  --tgg-color-text-positive-secondary: var(--tgg-color-primitives-green-600); /* VariableID:3919:36463 | Color/Text/Positive/Secondary */
+  --tgg-color-text-positive-tertiary: var(--tgg-color-primitives-green-500); /* VariableID:3919:36464 | Color/Text/Positive/Tertiary */
+  --tgg-color-text-positive-on-positive: var(--tgg-color-primitives-green-100); /* VariableID:3919:36465 | Color/Text/Positive/On Positive */
+  --tgg-color-text-positive-on-positive-secondary: var(--tgg-color-primitives-green-800); /* VariableID:3919:36467 | Color/Text/Positive/On Positive Secondary */
+  --tgg-color-text-positive-on-positive-tertiary: var(--tgg-color-primitives-green-800); /* VariableID:2002:7455 | Color/Text/Positive/On Positive Tertiary */
+  --tgg-color-text-information-default: var(--tgg-color-primitives-blue-800); /* VariableID:3006:14296 | Color/Text/Information/Default */
+  --tgg-color-text-information-secondary: var(--tgg-color-primitives-blue-600); /* VariableID:3006:14297 | Color/Text/Information/Secondary */
+  --tgg-color-text-information-tertiary: var(--tgg-color-primitives-blue-500); /* VariableID:3006:14298 | Color/Text/Information/Tertiary */
+  --tgg-color-text-information-on-information: var(--tgg-color-primitives-blue-100); /* VariableID:3006:14299 | Color/Text/Information/On Information */
+  --tgg-color-text-information-on-information-secondary: var(--tgg-color-primitives-blue-800); /* VariableID:3006:14300 | Color/Text/Information/On Information Secondary */
+  --tgg-color-text-information-on-information-tertiary: var(--tgg-color-primitives-blue-800); /* VariableID:3006:14301 | Color/Text/Information/On Information Tertiary */
+  --tgg-color-text-warning-default: var(--tgg-color-primitives-yellow-900); /* VariableID:3919:36468 | Color/Text/Warning/Default */
+  --tgg-color-text-warning-secondary: var(--tgg-color-primitives-yellow-700); /* VariableID:3919:36469 | Color/Text/Warning/Secondary */
+  --tgg-color-text-warning-tertiary: var(--tgg-color-primitives-yellow-600); /* VariableID:3919:36470 | Color/Text/Warning/Tertiary */
+  --tgg-color-text-warning-on-warning: var(--tgg-color-primitives-yellow-1000); /* VariableID:3919:36471 | Color/Text/Warning/On Warning */
+  --tgg-color-text-warning-on-warning-secondary: var(--tgg-color-primitives-yellow-800); /* VariableID:3919:36473 | Color/Text/Warning/On Warning Secondary */
+  --tgg-color-text-warning-on-warning-tertiary: var(--tgg-color-primitives-yellow-900); /* VariableID:2002:7453 | Color/Text/Warning/On Warning Tertiary */
+  --tgg-color-text-danger-default: var(--tgg-color-primitives-red-700); /* VariableID:3919:36474 | Color/Text/Danger/Default */
+  --tgg-color-text-danger-secondary: var(--tgg-color-primitives-red-600); /* VariableID:3919:36475 | Color/Text/Danger/Secondary */
+  --tgg-color-text-danger-tertiari: var(--tgg-color-primitives-red-500); /* VariableID:3919:36476 | Color/Text/Danger/Tertiari */
+  --tgg-color-text-danger-on-danger: var(--tgg-color-primitives-red-100); /* VariableID:3919:36477 | Color/Text/Danger/On Danger */
+  --tgg-color-text-danger-on-danger-secondary: var(--tgg-color-primitives-red-700); /* VariableID:3919:36479 | Color/Text/Danger/On Danger Secondary */
+  --tgg-color-text-danger-on-danger-tertiary: var(--tgg-color-primitives-red-700); /* VariableID:2002:7454 | Color/Text/Danger/On Danger Tertiary */
+  --tgg-color-text-disabled-default: var(--tgg-color-text-default-tertiary); /* VariableID:3919:36480 | Color/Text/Disabled/Default */
+  --tgg-color-text-utilities-text-on-overlay: var(--tgg-color-primitives-black-1000); /* VariableID:9643:10770 | Color/Text/Utilities/Text On Overlay */
+  --tgg-color-text-utilities-text-on-measurement: var(--tgg-color-primitives-pink-800); /* VariableID:72:10153 | Color/Text/Utilities/Text On Measurement */
+  --tgg-color-text-disabled-on-disabled: var(--tgg-color-text-default-tertiary); /* VariableID:3919:36481 | Color/Text/Disabled/On Disabled */
+  --tgg-color-border-default-default: var(--tgg-color-primitives-gray-300); /* VariableID:3919:36514 | Color/Border/Default/Default */
+  --tgg-color-border-default-secondary: var(--tgg-color-primitives-gray-500); /* VariableID:3919:36515 | Color/Border/Default/Secondary */
+  --tgg-color-border-default-tertiary: var(--tgg-color-primitives-gray-700); /* VariableID:159:12723 | Color/Border/Default/tertiary */
+  --tgg-color-border-neutral-default: var(--tgg-color-primitives-slate-900); /* VariableID:106:12485 | Color/Border/Neutral/Default */
+  --tgg-color-border-neutral-secondary: var(--tgg-color-primitives-slate-600); /* VariableID:106:12486 | Color/Border/Neutral/Secondary */
+  --tgg-color-border-neutral-tertiary: var(--tgg-color-primitives-slate-400); /* VariableID:159:12724 | Color/Border/Neutral/tertiary */
+  --tgg-color-border-brand-default: var(--tgg-color-primitives-lemon-yellow-500); /* VariableID:3919:36516 | Color/Border/Brand/Default */
+  --tgg-color-border-brand-secondary: var(--tgg-color-primitives-midnight-green-500); /* VariableID:3919:36517 | Color/Border/Brand/Secondary */
+  --tgg-color-border-brand-tertiary: var(--tgg-color-primitives-sand-oat-500); /* VariableID:159:12725 | Color/Border/Brand/Tertiary */
+  --tgg-color-border-positive-default: var(--tgg-color-primitives-green-800); /* VariableID:3919:36520 | Color/Border/Positive/Default */
+  --tgg-color-border-positive-secondary: var(--tgg-color-primitives-green-600); /* VariableID:3919:36521 | Color/Border/Positive/Secondary */
+  --tgg-color-border-positive-tertiary: var(--tgg-color-primitives-green-500); /* VariableID:159:12726 | Color/Border/Positive/tertiary */
+  --tgg-color-border-information-default: var(--tgg-color-primitives-blue-800); /* VariableID:3006:14302 | Color/Border/Information/Default */
+  --tgg-color-border-information-secondary: var(--tgg-color-primitives-blue-600); /* VariableID:3006:14303 | Color/Border/Information/Secondary */
+  --tgg-color-border-information-tertiary: var(--tgg-color-primitives-blue-500); /* VariableID:3006:14304 | Color/Border/Information/tertiary */
+  --tgg-color-border-warning-default: var(--tgg-color-primitives-yellow-900); /* VariableID:3919:36524 | Color/Border/Warning/Default */
+  --tgg-color-border-warning-secondary: var(--tgg-color-primitives-yellow-700); /* VariableID:3919:36525 | Color/Border/Warning/Secondary */
+  --tgg-color-border-warning-tertiary: var(--tgg-color-primitives-yellow-600); /* VariableID:159:12727 | Color/Border/Warning/tertiary */
+  --tgg-color-border-danger-default: var(--tgg-color-primitives-red-700); /* VariableID:3919:36528 | Color/Border/Danger/Default */
+  --tgg-color-border-danger-secondary: var(--tgg-color-primitives-red-600); /* VariableID:3919:36529 | Color/Border/Danger/Secondary */
+  --tgg-color-border-danger-tertiary: var(--tgg-color-primitives-red-500); /* VariableID:159:12728 | Color/Border/Danger/Tertiary */
+  --tgg-color-border-disabled-default: var(--tgg-color-border-default-default); /* VariableID:3919:36532 | Color/Border/Disabled/default */
+  --tgg-color-border-utilities-measurement: var(--tgg-color-primitives-pink-400); /* VariableID:72:10154 | Color/Border/Utilities/Measurement */
+  --tgg-color-border-utilities-swatch: rgba(0, 0, 0, 0.23999999463558197); /* VariableID:315:32841 | Color/Border/Utilities/Swatch */
+  --tgg-color-icon-default-default: var(--tgg-color-primitives-gray-900); /* VariableID:3919:36482 | Color/Icon/Default/Default */
+  --tgg-color-icon-neutral-default: var(--tgg-color-primitives-slate-900); /* VariableID:106:12479 | Color/Icon/Neutral/Default */
+  --tgg-color-icon-neutral-secondary: var(--tgg-color-primitives-slate-700); /* VariableID:106:12480 | Color/Icon/Neutral/Secondary */
+  --tgg-color-icon-neutral-tertiary: var(--tgg-color-primitives-slate-600); /* VariableID:106:12481 | Color/Icon/Neutral/Tertiary */
+  --tgg-color-icon-neutral-on-neutral: var(--tgg-color-primitives-slate-100); /* VariableID:106:12482 | Color/Icon/Neutral/On Neutral */
+  --tgg-color-icon-neutral-on-neutral-secondary: var(--tgg-color-primitives-slate-900); /* VariableID:106:12483 | Color/Icon/Neutral/On Neutral Secondary */
+  --tgg-color-icon-neutral-on-neutral-tertiary: var(--tgg-color-primitives-slate-800); /* VariableID:106:12484 | Color/Icon/Neutral/On Neutral Tertiary */
+  --tgg-color-icon-default-secondary: var(--tgg-color-primitives-gray-500); /* VariableID:3919:36483 | Color/Icon/Default/Secondary */
+  --tgg-color-icon-default-tertiary: var(--tgg-color-primitives-gray-400); /* VariableID:3919:36484 | Color/Icon/Default/Tertiary */
+  --tgg-color-icon-brand-default: var(--tgg-color-primitives-lemon-yellow-500); /* VariableID:3919:36488 | Color/Icon/Brand/Default */
+  --tgg-color-icon-brand-secondary: var(--tgg-color-primitives-midnight-green-500); /* VariableID:3919:36489 | Color/Icon/Brand/Secondary */
+  --tgg-color-icon-brand-tertiary: var(--tgg-color-primitives-sand-oat-500); /* VariableID:3919:36490 | Color/Icon/Brand/Tertiary */
+  --tgg-color-icon-brand-on-brand: var(--tgg-color-primitives-midnight-green-500); /* VariableID:3919:36491 | Color/Icon/Brand/On Brand */
+  --tgg-color-icon-brand-on-brand-secondary: var(--tgg-color-primitives-lemon-yellow-500); /* VariableID:3919:36493 | Color/Icon/Brand/On Brand Secondary */
+  --tgg-color-icon-brand-on-brand-tertiary: var(--tgg-color-primitives-midnight-green-500); /* VariableID:106:5932 | Color/Icon/Brand/On Brand Tertiary */
+  --tgg-color-icon-positive-default: var(--tgg-color-primitives-green-800); /* VariableID:3919:36494 | Color/Icon/Positive/Default */
+  --tgg-color-icon-positive-secondary: var(--tgg-color-primitives-green-600); /* VariableID:3919:36495 | Color/Icon/Positive/Secondary */
+  --tgg-color-icon-positive-tertiary: var(--tgg-color-primitives-green-500); /* VariableID:3919:36496 | Color/Icon/Positive/Tertiary */
+  --tgg-color-icon-positive-on-positive: var(--tgg-color-primitives-green-100); /* VariableID:3919:36497 | Color/Icon/Positive/On Positive */
+  --tgg-color-icon-positive-on-positive-secondary: var(--tgg-color-primitives-green-800); /* VariableID:3919:36498 | Color/Icon/Positive/On Positive Secondary */
+  --tgg-color-icon-positive-on-positive-tertiary: var(--tgg-color-primitives-green-900); /* VariableID:106:5935 | Color/Icon/Positive/On Positive Tertiary */
+  --tgg-color-icon-information-default: var(--tgg-color-primitives-blue-800); /* VariableID:3006:14305 | Color/Icon/Information/Default */
+  --tgg-color-icon-information-secondary: var(--tgg-color-primitives-blue-600); /* VariableID:3006:14306 | Color/Icon/Information/Secondary */
+  --tgg-color-icon-information-tertiary: var(--tgg-color-primitives-blue-500); /* VariableID:3006:14307 | Color/Icon/Information/Tertiary */
+  --tgg-color-icon-information-on-positive: var(--tgg-color-primitives-blue-100); /* VariableID:3006:14308 | Color/Icon/Information/On Positive */
+  --tgg-color-icon-information-on-positive-secondary: var(--tgg-color-primitives-blue-800); /* VariableID:3006:14309 | Color/Icon/Information/On Positive Secondary */
+  --tgg-color-icon-information-on-positive-tertiary: var(--tgg-color-primitives-blue-900); /* VariableID:3006:14310 | Color/Icon/Information/On Positive Tertiary */
+  --tgg-color-icon-warning-default: var(--tgg-color-primitives-yellow-900); /* VariableID:3919:36500 | Color/Icon/Warning/Default */
+  --tgg-color-icon-warning-secondary: var(--tgg-color-primitives-yellow-700); /* VariableID:3919:36501 | Color/Icon/Warning/Secondary */
+  --tgg-color-icon-warning-tertiary: var(--tgg-color-primitives-yellow-600); /* VariableID:3919:36502 | Color/Icon/Warning/Tertiary */
+  --tgg-color-icon-warning-on-warning: var(--tgg-color-primitives-yellow-1000); /* VariableID:3919:36503 | Color/Icon/Warning/On Warning */
+  --tgg-color-icon-warning-on-warning-secondary: var(--tgg-color-primitives-yellow-800); /* VariableID:3919:36504 | Color/Icon/Warning/On Warning Secondary */
+  --tgg-color-icon-warning-on-warning-tertiary: var(--tgg-color-primitives-yellow-900); /* VariableID:106:5933 | Color/Icon/Warning/On Warning Tertiary */
+  --tgg-color-icon-danger-default: var(--tgg-color-primitives-red-700); /* VariableID:3919:36506 | Color/Icon/Danger/Default */
+  --tgg-color-icon-danger-secondary: var(--tgg-color-primitives-red-600); /* VariableID:3919:36507 | Color/Icon/Danger/Secondary */
+  --tgg-color-icon-danger-tertiary: var(--tgg-color-primitives-red-500); /* VariableID:3919:36508 | Color/Icon/Danger/Tertiary */
+  --tgg-color-icon-danger-on-danger: var(--tgg-color-primitives-red-100); /* VariableID:3919:36509 | Color/Icon/Danger/On Danger */
+  --tgg-color-icon-danger-on-danger-secondary: var(--tgg-color-primitives-red-700); /* VariableID:3919:36510 | Color/Icon/Danger/On Danger Secondary */
+  --tgg-color-icon-danger-on-danger-tertiary: var(--tgg-color-primitives-red-700); /* VariableID:106:5934 | Color/Icon/Danger/On Danger Tertiary */
+  --tgg-color-icon-disabled-default: var(--tgg-color-primitives-brand-400); /* VariableID:3919:36512 | Color/Icon/Disabled/Default */
+  --tgg-color-icon-utilities-icon: var(--tgg-color-primitives-pink-600); /* VariableID:320:298 | Color/Icon/Utilities/Icon */
+  --tgg-color-icon-utilities-icon-on-measurement: var(--tgg-color-primitives-pink-800); /* VariableID:280:16549 | Color/Icon/Utilities/Icon On Measurement */
+  --tgg-color-icon-disabled-on-disabled: var(--tgg-color-primitives-brand-400); /* VariableID:3919:36513 | Color/Icon/Disabled/On Disabled */
+}
+
+[data-tgg-theme="light"] {
+  --tgg-color-background-default-default: var(--tgg-color-primitives-white-1000);
+  --tgg-color-background-neutral-default: var(--tgg-color-primitives-slate-700);
+  --tgg-color-background-neutral-hover: var(--tgg-color-primitives-slate-800);
+  --tgg-color-background-neutral-secondary: var(--tgg-color-primitives-slate-300);
+  --tgg-color-background-neutral-secondary-hover: var(--tgg-color-primitives-slate-400);
+  --tgg-color-background-neutral-tertiary: var(--tgg-color-primitives-slate-200);
+  --tgg-color-background-neutral-tertiary-hover: var(--tgg-color-primitives-slate-300);
+  --tgg-color-background-default-default-hover: var(--tgg-color-primitives-gray-100);
+  --tgg-color-background-default-secondary: var(--tgg-color-primitives-gray-100);
+  --tgg-color-background-default-secondary-hover: var(--tgg-color-primitives-gray-200);
+  --tgg-color-background-default-tertiary: var(--tgg-color-primitives-gray-300);
+  --tgg-color-background-default-tertiary-hover: var(--tgg-color-primitives-gray-400);
+  --tgg-color-background-brand-default: var(--tgg-color-primitives-lemon-yellow-500);
+  --tgg-color-background-brand-hover: var(--tgg-color-primitives-lemon-yellow-700);
+  --tgg-color-background-brand-secondary: var(--tgg-color-primitives-midnight-green-500);
+  --tgg-color-background-brand-secondary-hover: var(--tgg-color-primitives-midnight-green-800);
+  --tgg-color-background-brand-tertiary: var(--tgg-color-primitives-sand-oat-500);
+  --tgg-color-background-brand-tertiary-hover: var(--tgg-color-primitives-sand-oat-700);
+  --tgg-color-background-positive-default: var(--tgg-color-primitives-green-500);
+  --tgg-color-background-positive-hover: var(--tgg-color-primitives-green-600);
+  --tgg-color-background-positive-secondary: var(--tgg-color-primitives-green-200);
+  --tgg-color-background-positive-secondary-hover: var(--tgg-color-primitives-green-300);
+  --tgg-color-background-positive-tertiary: var(--tgg-color-primitives-green-100);
+  --tgg-color-background-positive-tertiary-hover: var(--tgg-color-primitives-green-200);
+  --tgg-color-background-information-default: var(--tgg-color-primitives-blue-400);
+  --tgg-color-background-information-hover: var(--tgg-color-primitives-blue-500);
+  --tgg-color-background-information-secondary: var(--tgg-color-primitives-blue-200);
+  --tgg-color-background-information-secondary-hover: var(--tgg-color-primitives-blue-300);
+  --tgg-color-background-information-tertiary: var(--tgg-color-primitives-blue-100);
+  --tgg-color-background-information-tertiary-hover: var(--tgg-color-primitives-blue-200);
+  --tgg-color-background-warning-default: var(--tgg-color-primitives-yellow-400);
+  --tgg-color-background-warning-hover: var(--tgg-color-primitives-yellow-500);
+  --tgg-color-background-warning-secondary: var(--tgg-color-primitives-yellow-200);
+  --tgg-color-background-warning-secondary-hover: var(--tgg-color-primitives-yellow-300);
+  --tgg-color-background-warning-tertiary: var(--tgg-color-primitives-yellow-100);
+  --tgg-color-background-warning-tertiary-hover: var(--tgg-color-primitives-yellow-200);
+  --tgg-color-background-danger-default: var(--tgg-color-primitives-red-500);
+  --tgg-color-background-danger-hover: var(--tgg-color-primitives-red-600);
+  --tgg-color-background-danger-secondary: var(--tgg-color-primitives-red-200);
+  --tgg-color-background-danger-secondary-hover: var(--tgg-color-primitives-red-300);
+  --tgg-color-background-danger-tertiary: var(--tgg-color-primitives-red-100);
+  --tgg-color-background-danger-tertiary-hover: var(--tgg-color-primitives-red-200);
+  --tgg-color-background-disabled-default: var(--tgg-color-background-default-default-hover);
+  --tgg-color-background-utilities-scrim: rgba(255, 255, 255, 0.80000001192092896);
+  --tgg-color-background-utilities-blanket: rgba(0, 0, 0, 0.69999998807907104);
+  --tgg-color-background-utilities-overlay: rgba(0, 0, 0, 0.5);
+  --tgg-color-background-utilities-measurement: var(--tgg-color-primitives-pink-200);
+  --tgg-color-text-default-default-black: var(--tgg-color-primitives-gray-1000);
+  --tgg-color-text-default-default-white: var(--tgg-color-primitives-white-1000);
+  --tgg-color-text-default-secondary: var(--tgg-color-primitives-gray-600);
+  --tgg-color-text-default-tertiary: var(--tgg-color-primitives-gray-400);
+  --tgg-color-text-neutral-default: var(--tgg-color-primitives-slate-900);
+  --tgg-color-text-neutral-secondary: var(--tgg-color-primitives-slate-700);
+  --tgg-color-text-neutral-tertiary: var(--tgg-color-primitives-slate-600);
+  --tgg-color-text-neutral-on-neutral: var(--tgg-color-primitives-slate-100);
+  --tgg-color-text-neutral-on-neutral-secondary: var(--tgg-color-primitives-slate-900);
+  --tgg-color-text-neutral-on-neutral-tertiary: var(--tgg-color-primitives-slate-800);
+  --tgg-color-text-brand-default: var(--tgg-color-primitives-lemon-yellow-500);
+  --tgg-color-text-brand-secondary: var(--tgg-color-primitives-midnight-green-500);
+  --tgg-color-text-brand-tertiary: var(--tgg-color-primitives-sand-oat-500);
+  --tgg-color-text-brand-on-brand: var(--tgg-color-primitives-midnight-green-500);
+  --tgg-color-text-brand-on-brand-secondary: var(--tgg-color-primitives-lemon-yellow-500);
+  --tgg-color-text-brand-on-brand-tertiary: var(--tgg-color-primitives-midnight-green-500);
+  --tgg-color-text-positive-default: var(--tgg-color-primitives-green-800);
+  --tgg-color-text-positive-secondary: var(--tgg-color-primitives-green-600);
+  --tgg-color-text-positive-tertiary: var(--tgg-color-primitives-green-500);
+  --tgg-color-text-positive-on-positive: var(--tgg-color-primitives-green-100);
+  --tgg-color-text-positive-on-positive-secondary: var(--tgg-color-primitives-green-800);
+  --tgg-color-text-positive-on-positive-tertiary: var(--tgg-color-primitives-green-800);
+  --tgg-color-text-information-default: var(--tgg-color-primitives-blue-800);
+  --tgg-color-text-information-secondary: var(--tgg-color-primitives-blue-600);
+  --tgg-color-text-information-tertiary: var(--tgg-color-primitives-blue-500);
+  --tgg-color-text-information-on-information: var(--tgg-color-primitives-blue-100);
+  --tgg-color-text-information-on-information-secondary: var(--tgg-color-primitives-blue-800);
+  --tgg-color-text-information-on-information-tertiary: var(--tgg-color-primitives-blue-800);
+  --tgg-color-text-warning-default: var(--tgg-color-primitives-yellow-900);
+  --tgg-color-text-warning-secondary: var(--tgg-color-primitives-yellow-700);
+  --tgg-color-text-warning-tertiary: var(--tgg-color-primitives-yellow-600);
+  --tgg-color-text-warning-on-warning: var(--tgg-color-primitives-yellow-1000);
+  --tgg-color-text-warning-on-warning-secondary: var(--tgg-color-primitives-yellow-800);
+  --tgg-color-text-warning-on-warning-tertiary: var(--tgg-color-primitives-yellow-900);
+  --tgg-color-text-danger-default: var(--tgg-color-primitives-red-700);
+  --tgg-color-text-danger-secondary: var(--tgg-color-primitives-red-600);
+  --tgg-color-text-danger-tertiari: var(--tgg-color-primitives-red-500);
+  --tgg-color-text-danger-on-danger: var(--tgg-color-primitives-red-100);
+  --tgg-color-text-danger-on-danger-secondary: var(--tgg-color-primitives-red-700);
+  --tgg-color-text-danger-on-danger-tertiary: var(--tgg-color-primitives-red-700);
+  --tgg-color-text-disabled-default: var(--tgg-color-text-default-tertiary);
+  --tgg-color-text-utilities-text-on-overlay: var(--tgg-color-primitives-black-1000);
+  --tgg-color-text-utilities-text-on-measurement: var(--tgg-color-primitives-pink-800);
+  --tgg-color-text-disabled-on-disabled: var(--tgg-color-text-default-tertiary);
+  --tgg-color-border-default-default: var(--tgg-color-primitives-gray-300);
+  --tgg-color-border-default-secondary: var(--tgg-color-primitives-gray-500);
+  --tgg-color-border-default-tertiary: var(--tgg-color-primitives-gray-700);
+  --tgg-color-border-neutral-default: var(--tgg-color-primitives-slate-900);
+  --tgg-color-border-neutral-secondary: var(--tgg-color-primitives-slate-600);
+  --tgg-color-border-neutral-tertiary: var(--tgg-color-primitives-slate-400);
+  --tgg-color-border-brand-default: var(--tgg-color-primitives-lemon-yellow-500);
+  --tgg-color-border-brand-secondary: var(--tgg-color-primitives-midnight-green-500);
+  --tgg-color-border-brand-tertiary: var(--tgg-color-primitives-sand-oat-500);
+  --tgg-color-border-positive-default: var(--tgg-color-primitives-green-800);
+  --tgg-color-border-positive-secondary: var(--tgg-color-primitives-green-600);
+  --tgg-color-border-positive-tertiary: var(--tgg-color-primitives-green-500);
+  --tgg-color-border-information-default: var(--tgg-color-primitives-blue-800);
+  --tgg-color-border-information-secondary: var(--tgg-color-primitives-blue-600);
+  --tgg-color-border-information-tertiary: var(--tgg-color-primitives-blue-500);
+  --tgg-color-border-warning-default: var(--tgg-color-primitives-yellow-900);
+  --tgg-color-border-warning-secondary: var(--tgg-color-primitives-yellow-700);
+  --tgg-color-border-warning-tertiary: var(--tgg-color-primitives-yellow-600);
+  --tgg-color-border-danger-default: var(--tgg-color-primitives-red-700);
+  --tgg-color-border-danger-secondary: var(--tgg-color-primitives-red-600);
+  --tgg-color-border-danger-tertiary: var(--tgg-color-primitives-red-500);
+  --tgg-color-border-disabled-default: var(--tgg-color-border-default-default);
+  --tgg-color-border-utilities-measurement: var(--tgg-color-primitives-pink-400);
+  --tgg-color-border-utilities-swatch: rgba(0, 0, 0, 0.23999999463558197);
+  --tgg-color-icon-default-default: var(--tgg-color-primitives-gray-900);
+  --tgg-color-icon-neutral-default: var(--tgg-color-primitives-slate-900);
+  --tgg-color-icon-neutral-secondary: var(--tgg-color-primitives-slate-700);
+  --tgg-color-icon-neutral-tertiary: var(--tgg-color-primitives-slate-600);
+  --tgg-color-icon-neutral-on-neutral: var(--tgg-color-primitives-slate-100);
+  --tgg-color-icon-neutral-on-neutral-secondary: var(--tgg-color-primitives-slate-900);
+  --tgg-color-icon-neutral-on-neutral-tertiary: var(--tgg-color-primitives-slate-800);
+  --tgg-color-icon-default-secondary: var(--tgg-color-primitives-gray-500);
+  --tgg-color-icon-default-tertiary: var(--tgg-color-primitives-gray-400);
+  --tgg-color-icon-brand-default: var(--tgg-color-primitives-lemon-yellow-500);
+  --tgg-color-icon-brand-secondary: var(--tgg-color-primitives-midnight-green-500);
+  --tgg-color-icon-brand-tertiary: var(--tgg-color-primitives-sand-oat-500);
+  --tgg-color-icon-brand-on-brand: var(--tgg-color-primitives-midnight-green-500);
+  --tgg-color-icon-brand-on-brand-secondary: var(--tgg-color-primitives-lemon-yellow-500);
+  --tgg-color-icon-brand-on-brand-tertiary: var(--tgg-color-primitives-midnight-green-500);
+  --tgg-color-icon-positive-default: var(--tgg-color-primitives-green-800);
+  --tgg-color-icon-positive-secondary: var(--tgg-color-primitives-green-600);
+  --tgg-color-icon-positive-tertiary: var(--tgg-color-primitives-green-500);
+  --tgg-color-icon-positive-on-positive: var(--tgg-color-primitives-green-100);
+  --tgg-color-icon-positive-on-positive-secondary: var(--tgg-color-primitives-green-800);
+  --tgg-color-icon-positive-on-positive-tertiary: var(--tgg-color-primitives-green-900);
+  --tgg-color-icon-information-default: var(--tgg-color-primitives-blue-800);
+  --tgg-color-icon-information-secondary: var(--tgg-color-primitives-blue-600);
+  --tgg-color-icon-information-tertiary: var(--tgg-color-primitives-blue-500);
+  --tgg-color-icon-information-on-positive: var(--tgg-color-primitives-blue-100);
+  --tgg-color-icon-information-on-positive-secondary: var(--tgg-color-primitives-blue-800);
+  --tgg-color-icon-information-on-positive-tertiary: var(--tgg-color-primitives-blue-900);
+  --tgg-color-icon-warning-default: var(--tgg-color-primitives-yellow-900);
+  --tgg-color-icon-warning-secondary: var(--tgg-color-primitives-yellow-700);
+  --tgg-color-icon-warning-tertiary: var(--tgg-color-primitives-yellow-600);
+  --tgg-color-icon-warning-on-warning: var(--tgg-color-primitives-yellow-1000);
+  --tgg-color-icon-warning-on-warning-secondary: var(--tgg-color-primitives-yellow-800);
+  --tgg-color-icon-warning-on-warning-tertiary: var(--tgg-color-primitives-yellow-900);
+  --tgg-color-icon-danger-default: var(--tgg-color-primitives-red-700);
+  --tgg-color-icon-danger-secondary: var(--tgg-color-primitives-red-600);
+  --tgg-color-icon-danger-tertiary: var(--tgg-color-primitives-red-500);
+  --tgg-color-icon-danger-on-danger: var(--tgg-color-primitives-red-100);
+  --tgg-color-icon-danger-on-danger-secondary: var(--tgg-color-primitives-red-700);
+  --tgg-color-icon-danger-on-danger-tertiary: var(--tgg-color-primitives-red-700);
+  --tgg-color-icon-disabled-default: var(--tgg-color-primitives-brand-400);
+  --tgg-color-icon-utilities-icon: var(--tgg-color-primitives-pink-600);
+  --tgg-color-icon-utilities-icon-on-measurement: var(--tgg-color-primitives-pink-800);
+  --tgg-color-icon-disabled-on-disabled: var(--tgg-color-primitives-brand-400);
+}
+
+[data-tgg-theme="dark"] {
+  --tgg-color-background-default-default: var(--tgg-color-primitives-gray-900);
+  --tgg-color-background-neutral-default: var(--tgg-color-primitives-slate-400);
+  --tgg-color-background-neutral-hover: var(--tgg-color-primitives-slate-500);
+  --tgg-color-background-neutral-secondary: var(--tgg-color-primitives-slate-900);
+  --tgg-color-background-neutral-secondary-hover: var(--tgg-color-primitives-slate-1000);
+  --tgg-color-background-neutral-tertiary: var(--tgg-color-primitives-slate-900);
+  --tgg-color-background-neutral-tertiary-hover: var(--tgg-color-primitives-slate-1000);
+  --tgg-color-background-default-default-hover: var(--tgg-color-primitives-gray-700);
+  --tgg-color-background-default-secondary: var(--tgg-color-primitives-gray-800);
+  --tgg-color-background-default-secondary-hover: var(--tgg-color-primitives-gray-900);
+  --tgg-color-background-default-tertiary: var(--tgg-color-primitives-gray-600);
+  --tgg-color-background-default-tertiary-hover: var(--tgg-color-primitives-gray-700);
+  --tgg-color-background-brand-default: var(--tgg-color-primitives-lemon-yellow-500);
+  --tgg-color-background-brand-hover: var(--tgg-color-primitives-lemon-yellow-700);
+  --tgg-color-background-brand-secondary: var(--tgg-color-primitives-lemon-yellow-500);
+  --tgg-color-background-brand-secondary-hover: var(--tgg-color-primitives-lemon-yellow-700);
+  --tgg-color-background-brand-tertiary: var(--tgg-color-primitives-gray-800);
+  --tgg-color-background-brand-tertiary-hover: var(--tgg-color-primitives-gray-900);
+  --tgg-color-background-positive-default: var(--tgg-color-primitives-green-700);
+  --tgg-color-background-positive-hover: var(--tgg-color-primitives-green-800);
+  --tgg-color-background-positive-secondary: var(--tgg-color-primitives-green-800);
+  --tgg-color-background-positive-secondary-hover: var(--tgg-color-primitives-green-900);
+  --tgg-color-background-positive-tertiary: var(--tgg-color-primitives-green-900);
+  --tgg-color-background-positive-tertiary-hover: var(--tgg-color-primitives-green-1000);
+  --tgg-color-background-information-default: var(--tgg-color-primitives-blue-400);
+  --tgg-color-background-information-hover: var(--tgg-color-primitives-blue-500);
+  --tgg-color-background-information-secondary: var(--tgg-color-primitives-blue-800);
+  --tgg-color-background-information-secondary-hover: var(--tgg-color-primitives-blue-900);
+  --tgg-color-background-information-tertiary: var(--tgg-color-primitives-blue-900);
+  --tgg-color-background-information-tertiary-hover: var(--tgg-color-primitives-blue-1000);
+  --tgg-color-background-warning-default: var(--tgg-color-primitives-yellow-400);
+  --tgg-color-background-warning-hover: var(--tgg-color-primitives-yellow-500);
+  --tgg-color-background-warning-secondary: var(--tgg-color-primitives-yellow-800);
+  --tgg-color-background-warning-secondary-hover: var(--tgg-color-primitives-yellow-900);
+  --tgg-color-background-warning-tertiary: var(--tgg-color-primitives-yellow-900);
+  --tgg-color-background-warning-tertiary-hover: var(--tgg-color-primitives-yellow-1000);
+  --tgg-color-background-danger-default: var(--tgg-color-primitives-red-600);
+  --tgg-color-background-danger-hover: var(--tgg-color-primitives-red-700);
+  --tgg-color-background-danger-secondary: var(--tgg-color-primitives-red-800);
+  --tgg-color-background-danger-secondary-hover: var(--tgg-color-primitives-red-900);
+  --tgg-color-background-danger-tertiary: var(--tgg-color-primitives-red-900);
+  --tgg-color-background-danger-tertiary-hover: var(--tgg-color-primitives-red-1000);
+  --tgg-color-background-disabled-default: var(--tgg-color-background-neutral-default);
+  --tgg-color-background-utilities-scrim: rgba(0, 0, 0, 0.80000001192092896);
+  --tgg-color-background-utilities-blanket: rgba(0, 0, 0, 0.69999998807907104);
+  --tgg-color-background-utilities-overlay: rgba(0, 0, 0, 0.5);
+  --tgg-color-background-utilities-measurement: var(--tgg-color-primitives-pink-800);
+  --tgg-color-text-default-default-black: var(--tgg-color-primitives-white-1000);
+  --tgg-color-text-default-default-white: var(--tgg-color-primitives-gray-1000);
+  --tgg-color-text-default-secondary: var(--tgg-color-primitives-white-500);
+  --tgg-color-text-default-tertiary: var(--tgg-color-primitives-white-400);
+  --tgg-color-text-neutral-default: var(--tgg-color-primitives-slate-200);
+  --tgg-color-text-neutral-secondary: var(--tgg-color-primitives-slate-300);
+  --tgg-color-text-neutral-tertiary: var(--tgg-color-primitives-slate-400);
+  --tgg-color-text-neutral-on-neutral: var(--tgg-color-primitives-slate-1000);
+  --tgg-color-text-neutral-on-neutral-secondary: var(--tgg-color-primitives-slate-100);
+  --tgg-color-text-neutral-on-neutral-tertiary: var(--tgg-color-primitives-slate-100);
+  --tgg-color-text-brand-default: var(--tgg-color-primitives-lemon-yellow-500);
+  --tgg-color-text-brand-secondary: var(--tgg-color-primitives-lemon-yellow-500);
+  --tgg-color-text-brand-tertiary: var(--tgg-color-primitives-sand-oat-500);
+  --tgg-color-text-brand-on-brand: var(--tgg-color-primitives-midnight-green-500);
+  --tgg-color-text-brand-on-brand-secondary: var(--tgg-color-primitives-midnight-green-500);
+  --tgg-color-text-brand-on-brand-tertiary: var(--tgg-color-primitives-midnight-green-500);
+  --tgg-color-text-positive-default: var(--tgg-color-primitives-green-200);
+  --tgg-color-text-positive-secondary: var(--tgg-color-primitives-green-400);
+  --tgg-color-text-positive-tertiary: var(--tgg-color-primitives-green-600);
+  --tgg-color-text-positive-on-positive: var(--tgg-color-primitives-green-100);
+  --tgg-color-text-positive-on-positive-secondary: var(--tgg-color-primitives-green-100);
+  --tgg-color-text-positive-on-positive-tertiary: var(--tgg-color-primitives-green-100);
+  --tgg-color-text-information-default: var(--tgg-color-primitives-blue-200);
+  --tgg-color-text-information-secondary: var(--tgg-color-primitives-blue-400);
+  --tgg-color-text-information-tertiary: var(--tgg-color-primitives-blue-600);
+  --tgg-color-text-information-on-information: var(--tgg-color-primitives-blue-100);
+  --tgg-color-text-information-on-information-secondary: var(--tgg-color-primitives-blue-100);
+  --tgg-color-text-information-on-information-tertiary: var(--tgg-color-primitives-blue-100);
+  --tgg-color-text-warning-default: var(--tgg-color-primitives-yellow-200);
+  --tgg-color-text-warning-secondary: var(--tgg-color-primitives-yellow-400);
+  --tgg-color-text-warning-tertiary: var(--tgg-color-primitives-yellow-600);
+  --tgg-color-text-warning-on-warning: var(--tgg-color-primitives-yellow-1000);
+  --tgg-color-text-warning-on-warning-secondary: var(--tgg-color-primitives-yellow-100);
+  --tgg-color-text-warning-on-warning-tertiary: var(--tgg-color-primitives-yellow-100);
+  --tgg-color-text-danger-default: var(--tgg-color-primitives-red-200);
+  --tgg-color-text-danger-secondary: var(--tgg-color-primitives-red-400);
+  --tgg-color-text-danger-tertiari: var(--tgg-color-primitives-red-500);
+  --tgg-color-text-danger-on-danger: var(--tgg-color-primitives-red-100);
+  --tgg-color-text-danger-on-danger-secondary: var(--tgg-color-primitives-red-100);
+  --tgg-color-text-danger-on-danger-tertiary: var(--tgg-color-primitives-red-100);
+  --tgg-color-text-disabled-default: var(--tgg-color-text-default-tertiary);
+  --tgg-color-text-utilities-text-on-overlay: var(--tgg-color-primitives-white-1000);
+  --tgg-color-text-utilities-text-on-measurement: var(--tgg-color-primitives-pink-200);
+  --tgg-color-text-disabled-on-disabled: var(--tgg-color-text-default-tertiary);
+  --tgg-color-border-default-default: var(--tgg-color-primitives-gray-600);
+  --tgg-color-border-default-secondary: var(--tgg-color-primitives-gray-500);
+  --tgg-color-border-default-tertiary: var(--tgg-color-primitives-gray-400);
+  --tgg-color-border-neutral-default: var(--tgg-color-primitives-slate-100);
+  --tgg-color-border-neutral-secondary: var(--tgg-color-primitives-slate-500);
+  --tgg-color-border-neutral-tertiary: var(--tgg-color-primitives-slate-600);
+  --tgg-color-border-brand-default: var(--tgg-color-primitives-lemon-yellow-500);
+  --tgg-color-border-brand-secondary: var(--tgg-color-primitives-midnight-green-1000);
+  --tgg-color-border-brand-tertiary: var(--tgg-color-primitives-sand-oat-500);
+  --tgg-color-border-positive-default: var(--tgg-color-primitives-green-200);
+  --tgg-color-border-positive-secondary: var(--tgg-color-primitives-green-400);
+  --tgg-color-border-positive-tertiary: var(--tgg-color-primitives-green-600);
+  --tgg-color-border-information-default: var(--tgg-color-primitives-blue-200);
+  --tgg-color-border-information-secondary: var(--tgg-color-primitives-blue-400);
+  --tgg-color-border-information-tertiary: var(--tgg-color-primitives-blue-600);
+  --tgg-color-border-warning-default: var(--tgg-color-primitives-yellow-200);
+  --tgg-color-border-warning-secondary: var(--tgg-color-primitives-yellow-400);
+  --tgg-color-border-warning-tertiary: var(--tgg-color-primitives-yellow-600);
+  --tgg-color-border-danger-default: var(--tgg-color-primitives-red-200);
+  --tgg-color-border-danger-secondary: var(--tgg-color-primitives-red-400);
+  --tgg-color-border-danger-tertiary: var(--tgg-color-primitives-red-500);
+  --tgg-color-border-disabled-default: var(--tgg-color-border-default-default);
+  --tgg-color-border-utilities-measurement: var(--tgg-color-primitives-pink-600);
+  --tgg-color-border-utilities-swatch: rgba(255, 255, 255, 0.23999999463558197);
+  --tgg-color-icon-default-default: var(--tgg-color-primitives-white-1000);
+  --tgg-color-icon-neutral-default: var(--tgg-color-primitives-slate-200);
+  --tgg-color-icon-neutral-secondary: var(--tgg-color-primitives-slate-300);
+  --tgg-color-icon-neutral-tertiary: var(--tgg-color-primitives-slate-400);
+  --tgg-color-icon-neutral-on-neutral: var(--tgg-color-primitives-slate-1000);
+  --tgg-color-icon-neutral-on-neutral-secondary: var(--tgg-color-primitives-slate-100);
+  --tgg-color-icon-neutral-on-neutral-tertiary: var(--tgg-color-primitives-slate-100);
+  --tgg-color-icon-default-secondary: var(--tgg-color-primitives-white-500);
+  --tgg-color-icon-default-tertiary: var(--tgg-color-primitives-white-400);
+  --tgg-color-icon-brand-default: var(--tgg-color-primitives-lemon-yellow-500);
+  --tgg-color-icon-brand-secondary: var(--tgg-color-primitives-lemon-yellow-500);
+  --tgg-color-icon-brand-tertiary: var(--tgg-color-primitives-sand-oat-500);
+  --tgg-color-icon-brand-on-brand: var(--tgg-color-primitives-midnight-green-500);
+  --tgg-color-icon-brand-on-brand-secondary: var(--tgg-color-primitives-midnight-green-500);
+  --tgg-color-icon-brand-on-brand-tertiary: var(--tgg-color-primitives-midnight-green-500);
+  --tgg-color-icon-positive-default: var(--tgg-color-primitives-green-200);
+  --tgg-color-icon-positive-secondary: var(--tgg-color-primitives-green-400);
+  --tgg-color-icon-positive-tertiary: var(--tgg-color-primitives-green-600);
+  --tgg-color-icon-positive-on-positive: var(--tgg-color-primitives-green-100);
+  --tgg-color-icon-positive-on-positive-secondary: var(--tgg-color-primitives-green-100);
+  --tgg-color-icon-positive-on-positive-tertiary: var(--tgg-color-primitives-green-100);
+  --tgg-color-icon-information-default: var(--tgg-color-primitives-blue-200);
+  --tgg-color-icon-information-secondary: var(--tgg-color-primitives-blue-400);
+  --tgg-color-icon-information-tertiary: var(--tgg-color-primitives-blue-600);
+  --tgg-color-icon-information-on-positive: var(--tgg-color-primitives-blue-100);
+  --tgg-color-icon-information-on-positive-secondary: var(--tgg-color-primitives-blue-100);
+  --tgg-color-icon-information-on-positive-tertiary: var(--tgg-color-primitives-blue-100);
+  --tgg-color-icon-warning-default: var(--tgg-color-primitives-yellow-200);
+  --tgg-color-icon-warning-secondary: var(--tgg-color-primitives-yellow-400);
+  --tgg-color-icon-warning-tertiary: var(--tgg-color-primitives-yellow-600);
+  --tgg-color-icon-warning-on-warning: var(--tgg-color-primitives-yellow-1000);
+  --tgg-color-icon-warning-on-warning-secondary: var(--tgg-color-primitives-yellow-100);
+  --tgg-color-icon-warning-on-warning-tertiary: var(--tgg-color-primitives-yellow-100);
+  --tgg-color-icon-danger-default: var(--tgg-color-primitives-red-200);
+  --tgg-color-icon-danger-secondary: var(--tgg-color-primitives-red-400);
+  --tgg-color-icon-danger-tertiary: var(--tgg-color-primitives-red-500);
+  --tgg-color-icon-danger-on-danger: var(--tgg-color-primitives-red-100);
+  --tgg-color-icon-danger-on-danger-secondary: var(--tgg-color-primitives-red-100);
+  --tgg-color-icon-danger-on-danger-tertiary: var(--tgg-color-primitives-red-100);
+  --tgg-color-icon-disabled-default: var(--tgg-color-primitives-brand-500);
+  --tgg-color-icon-utilities-icon: var(--tgg-color-primitives-pink-400);
+  --tgg-color-icon-utilities-icon-on-measurement: var(--tgg-color-primitives-pink-200);
+  --tgg-color-icon-disabled-on-disabled: var(--tgg-color-primitives-brand-400);
+}
+
+[data-tgg-responsive="desktop"] {
+  --tgg-responsive-device: "desktop";
+  --tgg-responsive-device-width: 1200px;
+  --tgg-responsive-root-font-size: calc(var(--tgg-typography-primitives-scale-03) * 1px);
+  --tgg-responsive-scale: 1;
+}
+
+[data-tgg-responsive="mobile"] {
+  --tgg-responsive-device: "mobile";
+  --tgg-responsive-device-width: 375px;
+  --tgg-responsive-root-font-size: calc(var(--tgg-typography-primitives-scale-03) * 1px);
+  --tgg-responsive-scale: 1.25;
+}
+
+[data-tgg-responsive="tablet"] {
+  --tgg-responsive-device: "tablet";
+  --tgg-responsive-device-width: 768px;
+  --tgg-responsive-root-font-size: calc(var(--tgg-typography-primitives-scale-03) * 1px);
+  --tgg-responsive-scale: 1;
+}
+
+[data-tgg-responsive="desktop-wide"] {
+  --tgg-responsive-device: "desktop wide";
+  --tgg-responsive-device-width: 1440px;
+  --tgg-responsive-root-font-size: calc(var(--tgg-typography-primitives-scale-03) * 1px);
+  --tgg-responsive-scale: 1;
+}
+
+:root {
+/* Figma text style: Body Unbound/Body Base | S:195f904f5ac365ec56755272715eb63f4ffdcf6c, */
+--tgg-text-style-body-unbound-body-base-s-195f904f5ac365ec56755272715eb63f4ffdcf6c-font-family: "Unbounded";
+--tgg-text-style-body-unbound-body-base-s-195f904f5ac365ec56755272715eb63f4ffdcf6c-font-size: 16px;
+--tgg-text-style-body-unbound-body-base-s-195f904f5ac365ec56755272715eb63f4ffdcf6c-line-height: 1.4;
+--tgg-text-style-body-unbound-body-base-s-195f904f5ac365ec56755272715eb63f4ffdcf6c-letter-spacing: 0em;
+/* Figma text style: Body Unbound/Body Strong | S:23348458d06f01eb08f4ab792e4be5d1e4fa3815, */
+--tgg-text-style-body-unbound-body-strong-s-23348458d06f01eb08f4ab792e4be5d1e4fa3815-font-family: "Unbounded";
+--tgg-text-style-body-unbound-body-strong-s-23348458d06f01eb08f4ab792e4be5d1e4fa3815-font-size: 16px;
+--tgg-text-style-body-unbound-body-strong-s-23348458d06f01eb08f4ab792e4be5d1e4fa3815-line-height: 1.4;
+--tgg-text-style-body-unbound-body-strong-s-23348458d06f01eb08f4ab792e4be5d1e4fa3815-letter-spacing: 0em;
+/* Figma text style: Body Unbound/Body Link | S:1bb67b5f55f13559a3c730129ef72fd6291f0ce1, */
+--tgg-text-style-body-unbound-body-link-s-1bb67b5f55f13559a3c730129ef72fd6291f0ce1-font-family: "Unbounded";
+--tgg-text-style-body-unbound-body-link-s-1bb67b5f55f13559a3c730129ef72fd6291f0ce1-font-size: 16px;
+--tgg-text-style-body-unbound-body-link-s-1bb67b5f55f13559a3c730129ef72fd6291f0ce1-line-height: 1.4;
+--tgg-text-style-body-unbound-body-link-s-1bb67b5f55f13559a3c730129ef72fd6291f0ce1-letter-spacing: 0em;
+/* Figma text style: Body Unbound/Body Small | S:9d260df3d2792c4b975342bf9094c7ced283f3cd, */
+--tgg-text-style-body-unbound-body-small-s-9d260df3d2792c4b975342bf9094c7ced283f3cd-font-family: "Unbounded";
+--tgg-text-style-body-unbound-body-small-s-9d260df3d2792c4b975342bf9094c7ced283f3cd-font-size: 14px;
+--tgg-text-style-body-unbound-body-small-s-9d260df3d2792c4b975342bf9094c7ced283f3cd-line-height: 1.4;
+--tgg-text-style-body-unbound-body-small-s-9d260df3d2792c4b975342bf9094c7ced283f3cd-letter-spacing: 0em;
+/* Figma text style: Body Unbound/Body Small Strong | S:cf3199be6e9c8f51a1de3f8f1b47f2c090f0c68b, */
+--tgg-text-style-body-unbound-body-small-strong-s-cf3199be6e9c8f51a1de3f8f1b47f2c090f0c68b-font-family: "Unbounded";
+--tgg-text-style-body-unbound-body-small-strong-s-cf3199be6e9c8f51a1de3f8f1b47f2c090f0c68b-font-size: 14px;
+--tgg-text-style-body-unbound-body-small-strong-s-cf3199be6e9c8f51a1de3f8f1b47f2c090f0c68b-line-height: 1.4;
+--tgg-text-style-body-unbound-body-small-strong-s-cf3199be6e9c8f51a1de3f8f1b47f2c090f0c68b-letter-spacing: 0em;
+/* Figma text style: Body DM Sans/Body Base | S:2a7287ed68bffc95b2360a23a07c350f7535b18f, */
+--tgg-text-style-body-dm-sans-body-base-s-2a7287ed68bffc95b2360a23a07c350f7535b18f-font-family: "DM Sans";
+--tgg-text-style-body-dm-sans-body-base-s-2a7287ed68bffc95b2360a23a07c350f7535b18f-font-size: 16px;
+--tgg-text-style-body-dm-sans-body-base-s-2a7287ed68bffc95b2360a23a07c350f7535b18f-line-height: 1.4;
+--tgg-text-style-body-dm-sans-body-base-s-2a7287ed68bffc95b2360a23a07c350f7535b18f-letter-spacing: 0em;
+/* Figma text style: Body DM Sans/Body Strong | S:bb102af2ed3a5c10bdaf42b6d09c9affa4ae09ee, */
+--tgg-text-style-body-dm-sans-body-strong-s-bb102af2ed3a5c10bdaf42b6d09c9affa4ae09ee-font-family: "DM Sans";
+--tgg-text-style-body-dm-sans-body-strong-s-bb102af2ed3a5c10bdaf42b6d09c9affa4ae09ee-font-size: 16px;
+--tgg-text-style-body-dm-sans-body-strong-s-bb102af2ed3a5c10bdaf42b6d09c9affa4ae09ee-line-height: 1.4;
+--tgg-text-style-body-dm-sans-body-strong-s-bb102af2ed3a5c10bdaf42b6d09c9affa4ae09ee-letter-spacing: 0em;
+/* Figma text style: Body DM Sans/Body Emphasis | S:468072e6d8a211265ff398a2ba5787831a47bd8b, */
+--tgg-text-style-body-dm-sans-body-emphasis-s-468072e6d8a211265ff398a2ba5787831a47bd8b-font-family: "DM Sans";
+--tgg-text-style-body-dm-sans-body-emphasis-s-468072e6d8a211265ff398a2ba5787831a47bd8b-font-size: 16px;
+--tgg-text-style-body-dm-sans-body-emphasis-s-468072e6d8a211265ff398a2ba5787831a47bd8b-line-height: 1.4;
+--tgg-text-style-body-dm-sans-body-emphasis-s-468072e6d8a211265ff398a2ba5787831a47bd8b-letter-spacing: 0em;
+/* Figma text style: Body DM Sans/Body Code | S:e0dc4f29da3710bdcfb32876f6fb4339d7677717, */
+--tgg-text-style-body-dm-sans-body-code-s-e0dc4f29da3710bdcfb32876f6fb4339d7677717-font-family: "DM Mono";
+--tgg-text-style-body-dm-sans-body-code-s-e0dc4f29da3710bdcfb32876f6fb4339d7677717-font-size: 16px;
+--tgg-text-style-body-dm-sans-body-code-s-e0dc4f29da3710bdcfb32876f6fb4339d7677717-line-height: 1;
+--tgg-text-style-body-dm-sans-body-code-s-e0dc4f29da3710bdcfb32876f6fb4339d7677717-letter-spacing: 0em;
+/* Figma text style: Body DM Sans/Body Link | S:d817ba3cee1970e0602f19f857a89ae5d3528b83, */
+--tgg-text-style-body-dm-sans-body-link-s-d817ba3cee1970e0602f19f857a89ae5d3528b83-font-family: "DM Sans";
+--tgg-text-style-body-dm-sans-body-link-s-d817ba3cee1970e0602f19f857a89ae5d3528b83-font-size: 16px;
+--tgg-text-style-body-dm-sans-body-link-s-d817ba3cee1970e0602f19f857a89ae5d3528b83-line-height: 1.4;
+--tgg-text-style-body-dm-sans-body-link-s-d817ba3cee1970e0602f19f857a89ae5d3528b83-letter-spacing: 0em;
+/* Figma text style: Body DM Sans/Body Small | S:4ec38829d6c577078d3d9be8fd006d8a7528f190, */
+--tgg-text-style-body-dm-sans-body-small-s-4ec38829d6c577078d3d9be8fd006d8a7528f190-font-family: "DM Sans";
+--tgg-text-style-body-dm-sans-body-small-s-4ec38829d6c577078d3d9be8fd006d8a7528f190-font-size: 14px;
+--tgg-text-style-body-dm-sans-body-small-s-4ec38829d6c577078d3d9be8fd006d8a7528f190-line-height: 1.4;
+--tgg-text-style-body-dm-sans-body-small-s-4ec38829d6c577078d3d9be8fd006d8a7528f190-letter-spacing: 0em;
+/* Figma text style: Body DM Sans/Body Small Strong | S:004345b1ac2cdfbeb63ffe3f678bc1e73e0c1da3, */
+--tgg-text-style-body-dm-sans-body-small-strong-s-004345b1ac2cdfbeb63ffe3f678bc1e73e0c1da3-font-family: "DM Sans";
+--tgg-text-style-body-dm-sans-body-small-strong-s-004345b1ac2cdfbeb63ffe3f678bc1e73e0c1da3-font-size: 14px;
+--tgg-text-style-body-dm-sans-body-small-strong-s-004345b1ac2cdfbeb63ffe3f678bc1e73e0c1da3-line-height: 1.4;
+--tgg-text-style-body-dm-sans-body-small-strong-s-004345b1ac2cdfbeb63ffe3f678bc1e73e0c1da3-letter-spacing: 0em;
+/* Figma text style: Caption Unbound/Caption Base | S:68d5f8186c39491d2d8f80384801e28fe4e1067f, */
+--tgg-text-style-caption-unbound-caption-base-s-68d5f8186c39491d2d8f80384801e28fe4e1067f-font-family: "Unbounded";
+--tgg-text-style-caption-unbound-caption-base-s-68d5f8186c39491d2d8f80384801e28fe4e1067f-font-size: 14px;
+--tgg-text-style-caption-unbound-caption-base-s-68d5f8186c39491d2d8f80384801e28fe4e1067f-line-height: 1.4;
+--tgg-text-style-caption-unbound-caption-base-s-68d5f8186c39491d2d8f80384801e28fe4e1067f-letter-spacing: 0em;
+/* Figma text style: Caption Unbound/Caption Strong | S:3373244d4b10bc75ea7567b445c12e227f802356, */
+--tgg-text-style-caption-unbound-caption-strong-s-3373244d4b10bc75ea7567b445c12e227f802356-font-family: "Unbounded";
+--tgg-text-style-caption-unbound-caption-strong-s-3373244d4b10bc75ea7567b445c12e227f802356-font-size: 14px;
+--tgg-text-style-caption-unbound-caption-strong-s-3373244d4b10bc75ea7567b445c12e227f802356-line-height: 1.4;
+--tgg-text-style-caption-unbound-caption-strong-s-3373244d4b10bc75ea7567b445c12e227f802356-letter-spacing: 0em;
+/* Figma text style: Caption Unbound/Caption Link | S:46ee2d978229da4ad75a87e44d041dbb733c33ec, */
+--tgg-text-style-caption-unbound-caption-link-s-46ee2d978229da4ad75a87e44d041dbb733c33ec-font-family: "Unbounded";
+--tgg-text-style-caption-unbound-caption-link-s-46ee2d978229da4ad75a87e44d041dbb733c33ec-font-size: 14px;
+--tgg-text-style-caption-unbound-caption-link-s-46ee2d978229da4ad75a87e44d041dbb733c33ec-line-height: 1.4;
+--tgg-text-style-caption-unbound-caption-link-s-46ee2d978229da4ad75a87e44d041dbb733c33ec-letter-spacing: 0em;
+/* Figma text style: Caption Unbound/Catpion Small | S:033d61b660e43b2b9eaafd5a7f45810d4314cf27, */
+--tgg-text-style-caption-unbound-catpion-small-s-033d61b660e43b2b9eaafd5a7f45810d4314cf27-font-family: "Unbounded";
+--tgg-text-style-caption-unbound-catpion-small-s-033d61b660e43b2b9eaafd5a7f45810d4314cf27-font-size: 12px;
+--tgg-text-style-caption-unbound-catpion-small-s-033d61b660e43b2b9eaafd5a7f45810d4314cf27-line-height: 1.4;
+--tgg-text-style-caption-unbound-catpion-small-s-033d61b660e43b2b9eaafd5a7f45810d4314cf27-letter-spacing: 0em;
+/* Figma text style: Caption Unbound/Caption Small Strong | S:96360d399e445a5e22e330bca712c9f5cdd821f7, */
+--tgg-text-style-caption-unbound-caption-small-strong-s-96360d399e445a5e22e330bca712c9f5cdd821f7-font-family: "Unbounded";
+--tgg-text-style-caption-unbound-caption-small-strong-s-96360d399e445a5e22e330bca712c9f5cdd821f7-font-size: 12px;
+--tgg-text-style-caption-unbound-caption-small-strong-s-96360d399e445a5e22e330bca712c9f5cdd821f7-line-height: 1.4;
+--tgg-text-style-caption-unbound-caption-small-strong-s-96360d399e445a5e22e330bca712c9f5cdd821f7-letter-spacing: 0em;
+/* Figma text style: Caption DM Sans/Caption Base | S:bbd21ed04d314f3cde93068296d9f9564dad5fbd, */
+--tgg-text-style-caption-dm-sans-caption-base-s-bbd21ed04d314f3cde93068296d9f9564dad5fbd-font-family: "DM Sans";
+--tgg-text-style-caption-dm-sans-caption-base-s-bbd21ed04d314f3cde93068296d9f9564dad5fbd-font-size: 14px;
+--tgg-text-style-caption-dm-sans-caption-base-s-bbd21ed04d314f3cde93068296d9f9564dad5fbd-line-height: 1.4;
+--tgg-text-style-caption-dm-sans-caption-base-s-bbd21ed04d314f3cde93068296d9f9564dad5fbd-letter-spacing: 0em;
+/* Figma text style: Caption DM Sans/Caption Strong | S:afba243b0956f2879b8524a72402133d4041a8af, */
+--tgg-text-style-caption-dm-sans-caption-strong-s-afba243b0956f2879b8524a72402133d4041a8af-font-family: "DM Sans";
+--tgg-text-style-caption-dm-sans-caption-strong-s-afba243b0956f2879b8524a72402133d4041a8af-font-size: 14px;
+--tgg-text-style-caption-dm-sans-caption-strong-s-afba243b0956f2879b8524a72402133d4041a8af-line-height: 1.4;
+--tgg-text-style-caption-dm-sans-caption-strong-s-afba243b0956f2879b8524a72402133d4041a8af-letter-spacing: 0em;
+/* Figma text style: Caption DM Sans/Caption Emphasis | S:d3874ac44938776976028bcc5607a3d5d2eca2b0, */
+--tgg-text-style-caption-dm-sans-caption-emphasis-s-d3874ac44938776976028bcc5607a3d5d2eca2b0-font-family: "DM Sans";
+--tgg-text-style-caption-dm-sans-caption-emphasis-s-d3874ac44938776976028bcc5607a3d5d2eca2b0-font-size: 14px;
+--tgg-text-style-caption-dm-sans-caption-emphasis-s-d3874ac44938776976028bcc5607a3d5d2eca2b0-line-height: 1.4;
+--tgg-text-style-caption-dm-sans-caption-emphasis-s-d3874ac44938776976028bcc5607a3d5d2eca2b0-letter-spacing: 0em;
+/* Figma text style: Caption DM Sans/Caption Link | S:c34472cbfaa9c5bf173701330db5078fdd31c932, */
+--tgg-text-style-caption-dm-sans-caption-link-s-c34472cbfaa9c5bf173701330db5078fdd31c932-font-family: "DM Sans";
+--tgg-text-style-caption-dm-sans-caption-link-s-c34472cbfaa9c5bf173701330db5078fdd31c932-font-size: 14px;
+--tgg-text-style-caption-dm-sans-caption-link-s-c34472cbfaa9c5bf173701330db5078fdd31c932-line-height: 1.4;
+--tgg-text-style-caption-dm-sans-caption-link-s-c34472cbfaa9c5bf173701330db5078fdd31c932-letter-spacing: 0em;
+/* Figma text style: Caption DM Sans/Caption Code | S:c84ef3feb99fda9e3c847d44a6447feb4a5db8bb, */
+--tgg-text-style-caption-dm-sans-caption-code-s-c84ef3feb99fda9e3c847d44a6447feb4a5db8bb-font-family: "DM Mono";
+--tgg-text-style-caption-dm-sans-caption-code-s-c84ef3feb99fda9e3c847d44a6447feb4a5db8bb-font-size: 14px;
+--tgg-text-style-caption-dm-sans-caption-code-s-c84ef3feb99fda9e3c847d44a6447feb4a5db8bb-line-height: 1;
+--tgg-text-style-caption-dm-sans-caption-code-s-c84ef3feb99fda9e3c847d44a6447feb4a5db8bb-letter-spacing: 0em;
+/* Figma text style: Caption DM Sans/Catpion Small | S:11e82838240d6e58d6dda6d8d33021e6ba277a20, */
+--tgg-text-style-caption-dm-sans-catpion-small-s-11e82838240d6e58d6dda6d8d33021e6ba277a20-font-family: "DM Sans";
+--tgg-text-style-caption-dm-sans-catpion-small-s-11e82838240d6e58d6dda6d8d33021e6ba277a20-font-size: 12px;
+--tgg-text-style-caption-dm-sans-catpion-small-s-11e82838240d6e58d6dda6d8d33021e6ba277a20-line-height: 1.4;
+--tgg-text-style-caption-dm-sans-catpion-small-s-11e82838240d6e58d6dda6d8d33021e6ba277a20-letter-spacing: 0em;
+/* Figma text style: Caption DM Sans/Caption Small Strong | S:00d792a16cde7274078a326c0d12f5fee97ad6a4, */
+--tgg-text-style-caption-dm-sans-caption-small-strong-s-00d792a16cde7274078a326c0d12f5fee97ad6a4-font-family: "DM Sans";
+--tgg-text-style-caption-dm-sans-caption-small-strong-s-00d792a16cde7274078a326c0d12f5fee97ad6a4-font-size: 12px;
+--tgg-text-style-caption-dm-sans-caption-small-strong-s-00d792a16cde7274078a326c0d12f5fee97ad6a4-line-height: 1.4;
+--tgg-text-style-caption-dm-sans-caption-small-strong-s-00d792a16cde7274078a326c0d12f5fee97ad6a4-letter-spacing: 0em;
+/* Figma text style: Single Line/Body Base | S:97418c9ee49ee9467224eff3255b3cea141ae352, */
+--tgg-text-style-single-line-body-base-s-97418c9ee49ee9467224eff3255b3cea141ae352-font-family: "Unbounded";
+--tgg-text-style-single-line-body-base-s-97418c9ee49ee9467224eff3255b3cea141ae352-font-size: 16px;
+--tgg-text-style-single-line-body-base-s-97418c9ee49ee9467224eff3255b3cea141ae352-line-height: 1.2;
+--tgg-text-style-single-line-body-base-s-97418c9ee49ee9467224eff3255b3cea141ae352-letter-spacing: 0em;
+/* Figma text style: Single Line/Body Base | S:63241dbc3caf036f176dec635a08b80689fd6157, */
+--tgg-text-style-single-line-body-base-s-63241dbc3caf036f176dec635a08b80689fd6157-font-family: "DM Sans";
+--tgg-text-style-single-line-body-base-s-63241dbc3caf036f176dec635a08b80689fd6157-font-size: 16px;
+--tgg-text-style-single-line-body-base-s-63241dbc3caf036f176dec635a08b80689fd6157-line-height: 1.2;
+--tgg-text-style-single-line-body-base-s-63241dbc3caf036f176dec635a08b80689fd6157-letter-spacing: 0em;
+/* Figma text style: .Utilities/Component notes/Regular | S:235dc4d500bcb01c50b2d095b0d979d553b837ef, */
+--tgg-text-style-utilities-component-notes-regular-s-235dc4d500bcb01c50b2d095b0d979d553b837ef-font-family: "DM Mono";
+--tgg-text-style-utilities-component-notes-regular-s-235dc4d500bcb01c50b2d095b0d979d553b837ef-font-size: 16px;
+--tgg-text-style-utilities-component-notes-regular-s-235dc4d500bcb01c50b2d095b0d979d553b837ef-line-height: 1.4;
+--tgg-text-style-utilities-component-notes-regular-s-235dc4d500bcb01c50b2d095b0d979d553b837ef-letter-spacing: 0em;
+/* Figma text style: Title Hero | S:6cbdc7dbd417955b7d14481b3392131801cbfcbf, */
+--tgg-text-style-title-hero-s-6cbdc7dbd417955b7d14481b3392131801cbfcbf-font-family: "Unbounded";
+--tgg-text-style-title-hero-s-6cbdc7dbd417955b7d14481b3392131801cbfcbf-font-size: 32px;
+--tgg-text-style-title-hero-s-6cbdc7dbd417955b7d14481b3392131801cbfcbf-line-height: 1.4;
+--tgg-text-style-title-hero-s-6cbdc7dbd417955b7d14481b3392131801cbfcbf-letter-spacing: -0.03em;
+/* Figma text style: Title Page | S:c0bd4fb98985b9e8a6be84891271786e5501461c, */
+--tgg-text-style-title-page-s-c0bd4fb98985b9e8a6be84891271786e5501461c-font-family: "Unbounded";
+--tgg-text-style-title-page-s-c0bd4fb98985b9e8a6be84891271786e5501461c-font-size: 24px;
+--tgg-text-style-title-page-s-c0bd4fb98985b9e8a6be84891271786e5501461c-line-height: 1.4;
+--tgg-text-style-title-page-s-c0bd4fb98985b9e8a6be84891271786e5501461c-letter-spacing: -0.02em;
+/* Figma text style: Subtitle | S:ff106018b3b56b07da37f169c4709ec720706db0, */
+--tgg-text-style-subtitle-s-ff106018b3b56b07da37f169c4709ec720706db0-font-family: "DM Sans";
+--tgg-text-style-subtitle-s-ff106018b3b56b07da37f169c4709ec720706db0-font-size: 20px;
+--tgg-text-style-subtitle-s-ff106018b3b56b07da37f169c4709ec720706db0-line-height: 1.4;
+--tgg-text-style-subtitle-s-ff106018b3b56b07da37f169c4709ec720706db0-letter-spacing: 0em;
+/* Figma text style: Heading | S:6e0c1a861dcfd3cdf8663c747438de9dc18f6205, */
+--tgg-text-style-heading-s-6e0c1a861dcfd3cdf8663c747438de9dc18f6205-font-family: "Unbounded";
+--tgg-text-style-heading-s-6e0c1a861dcfd3cdf8663c747438de9dc18f6205-font-size: 20px;
+--tgg-text-style-heading-s-6e0c1a861dcfd3cdf8663c747438de9dc18f6205-line-height: 1.4;
+--tgg-text-style-heading-s-6e0c1a861dcfd3cdf8663c747438de9dc18f6205-letter-spacing: -0.02em;
+/* Figma text style: Subheading | S:cef57855a51c71ec055858daa9155e82f723ac7c, */
+--tgg-text-style-subheading-s-cef57855a51c71ec055858daa9155e82f723ac7c-font-family: "DM Sans";
+--tgg-text-style-subheading-s-cef57855a51c71ec055858daa9155e82f723ac7c-font-size: 20px;
+--tgg-text-style-subheading-s-cef57855a51c71ec055858daa9155e82f723ac7c-line-height: 1.4;
+--tgg-text-style-subheading-s-cef57855a51c71ec055858daa9155e82f723ac7c-letter-spacing: 0em;
+/* Figma text style: .Utilities/Component notes/Bold | S:795541d2fb44aa204db84821f72d2d2e50fed101, */
+--tgg-text-style-utilities-component-notes-bold-s-795541d2fb44aa204db84821f72d2d2e50fed101-font-family: "DM Mono";
+--tgg-text-style-utilities-component-notes-bold-s-795541d2fb44aa204db84821f72d2d2e50fed101-font-size: 16px;
+--tgg-text-style-utilities-component-notes-bold-s-795541d2fb44aa204db84821f72d2d2e50fed101-line-height: 1.4;
+--tgg-text-style-utilities-component-notes-bold-s-795541d2fb44aa204db84821f72d2d2e50fed101-letter-spacing: 0em;
+/* Figma text style: Single Line/Body Small Strong | S:1b6809741204d462d37ff7c963eab311b6895c83, */
+--tgg-text-style-single-line-body-small-strong-s-1b6809741204d462d37ff7c963eab311b6895c83-font-family: "Unbounded";
+--tgg-text-style-single-line-body-small-strong-s-1b6809741204d462d37ff7c963eab311b6895c83-font-size: 14px;
+--tgg-text-style-single-line-body-small-strong-s-1b6809741204d462d37ff7c963eab311b6895c83-line-height: 1.2;
+--tgg-text-style-single-line-body-small-strong-s-1b6809741204d462d37ff7c963eab311b6895c83-letter-spacing: 0em;
+/* Figma text style: Single Line/Body Small Strong | S:1516bc53cb699732831b17a5894d39cf9ceb6ee4, */
+--tgg-text-style-single-line-body-small-strong-s-1516bc53cb699732831b17a5894d39cf9ceb6ee4-font-family: "DM Sans";
+--tgg-text-style-single-line-body-small-strong-s-1516bc53cb699732831b17a5894d39cf9ceb6ee4-font-size: 14px;
+--tgg-text-style-single-line-body-small-strong-s-1516bc53cb699732831b17a5894d39cf9ceb6ee4-line-height: 1.2;
+--tgg-text-style-single-line-body-small-strong-s-1516bc53cb699732831b17a5894d39cf9ceb6ee4-letter-spacing: 0em;
+/* Figma effect style: Drop Shadow Default/100 | S:3794654fc22a2874a746086e0d2e643a465852a6, */
+--tgg-effect-style-drop-shadow-default-100-s-3794654fc22a2874a746086e0d2e643a465852a6: 0px 1px 4px 1px rgba(12, 12, 13, 0.2);
+/* Figma effect style: Drop Shadow Yellow/100 | S:860fc0af3bc90d387ebc808758f5a2db4b0aea69, */
+--tgg-effect-style-drop-shadow-yellow-100-s-860fc0af3bc90d387ebc808758f5a2db4b0aea69: 0px 1px 4px 1px rgba(135, 153, 0, 1);
+/* Figma effect style: Drop Shadow Dark/100 | S:4d06e27e7f8ca48e583ee2ea57ac6aec9e041ae5, */
+--tgg-effect-style-drop-shadow-dark-100-s-4d06e27e7f8ca48e583ee2ea57ac6aec9e041ae5: 0px 1px 4px 1px rgba(12, 12, 13, 0.95);
+/* Figma effect style: Drop Shadow Default/200 | S:44466ff9c30fc275021467e1c2d916423468f8ab, */
+--tgg-effect-style-drop-shadow-default-200-s-44466ff9c30fc275021467e1c2d916423468f8ab: 0px 1px 4px 0px rgba(12, 12, 13, 0.05), 1px 4px 4px 4px rgba(12, 12, 13, 0.2);
+/* Figma effect style: Drop Shadow Yellow/200 | S:05024b79ed8d256aaff6a1167aadc8ee22146c28, */
+--tgg-effect-style-drop-shadow-yellow-200-s-05024b79ed8d256aaff6a1167aadc8ee22146c28: 0px 1px 4px 0px rgba(180, 204, 0, 1), 1px 4px 4px 4px rgba(135, 153, 0, 1);
+/* Figma effect style: Drop Shadow Dark/200 | S:c150fc9fad62e492d2284a1bf6d2868621ac2108, */
+--tgg-effect-style-drop-shadow-dark-200-s-c150fc9fad62e492d2284a1bf6d2868621ac2108: 0px 1px 4px -1px rgba(12, 12, 13, 0.05), 1px 4px 4px 4px rgba(12, 12, 13, 0.4);
+/* Figma effect style: Drop Shadow Default/300 | S:b49f9a2bd5a64b149b94ec219d19dafc999a9b96, */
+--tgg-effect-style-drop-shadow-default-300-s-b49f9a2bd5a64b149b94ec219d19dafc999a9b96: 0px 4px 4px -1px rgba(12, 12, 13, 0.05), 0px 4px 8px -8px rgba(12, 12, 13, 0.2);
+/* Figma effect style: Drop Shadow Yellow/300 | S:b18aac8a406ceed00214f35791dd3a3aa4cf30b1, */
+--tgg-effect-style-drop-shadow-yellow-300-s-b18aac8a406ceed00214f35791dd3a3aa4cf30b1: 0px 4px 4px -1px rgba(180, 204, 0, 1), 0px 4px 8px -8px rgba(135, 153, 0, 1);
+/* Figma effect style: Drop Shadow Dark/300 | S:c4b39f321de9ac16cc62bfaef103e3b26c7ecfd0, */
+--tgg-effect-style-drop-shadow-dark-300-s-c4b39f321de9ac16cc62bfaef103e3b26c7ecfd0: 0px 4px 4px -1px rgba(12, 12, 13, 0.05), 0px 4px 8px -8px rgba(12, 12, 13, 0.4);
+/* Figma effect style: Drop Shadow Default/400 | S:6a8b1be59bd710713e49292250e5f5e51096026f, */
+--tgg-effect-style-drop-shadow-default-400-s-6a8b1be59bd710713e49292250e5f5e51096026f: 0px 4px 4px -4px rgba(12, 12, 13, 0.05), 4px 8px 16px -16px rgba(12, 12, 13, 0.2);
+/* Figma effect style: Drop Shadow Yellow/400 | S:6c2f015545a37c5cac9202481eeaf0a18af6a0ec, */
+--tgg-effect-style-drop-shadow-yellow-400-s-6c2f015545a37c5cac9202481eeaf0a18af6a0ec: 0px 4px 4px -4px rgba(180, 204, 0, 1), 4px 8px 16px -16px rgba(135, 153, 0, 1);
+/* Figma effect style: Drop Shadow Dark/400 | S:fe20c857f7c53e9001b45d6926c4e4c85048d9f8, */
+--tgg-effect-style-drop-shadow-dark-400-s-fe20c857f7c53e9001b45d6926c4e4c85048d9f8: 0px 4px 4px -4px rgba(12, 12, 13, 0.05), 4px 8px 16px -16px rgba(12, 12, 13, 0.7);
+/* Figma effect style: Drop Shadow Default/500 | S:6e4ddf58e4a9753f17963cbdb78c36f868d76dde, */
+--tgg-effect-style-drop-shadow-default-500-s-6e4ddf58e4a9753f17963cbdb78c36f868d76dde: 0px 4px 4px -4px rgba(12, 12, 13, 0.05), 4px 16px 32px -32px rgba(12, 12, 13, 0.2);
+/* Figma effect style: Drop Shadow Yellow/500 | S:2bbc98a9d75c2c0211ad8b6d92b9def035a574d9, */
+--tgg-effect-style-drop-shadow-yellow-500-s-2bbc98a9d75c2c0211ad8b6d92b9def035a574d9: 0px 4px 4px -4px rgba(180, 204, 0, 1), 4px 16px 48px -32px rgba(135, 153, 0, 1);
+/* Figma effect style: Drop Shadow Dark/500 | S:6d0c93ae153aee2712010afb06a1e7983797e40a, */
+--tgg-effect-style-drop-shadow-dark-500-s-6d0c93ae153aee2712010afb06a1e7983797e40a: 0px 4px 4px -4px rgba(12, 12, 13, 0.05), 4px 16px 32px -32px rgba(12, 12, 13, 0.9);
+/* Figma effect style: Drop Shadow Default/600 | S:417c586c94def42558e574f3699d1a0e78ee9451, */
+--tgg-effect-style-drop-shadow-default-600-s-417c586c94def42558e574f3699d1a0e78ee9451: 0px 4px 4px -32px rgba(12, 12, 13, 0.05), 4px 32px 48px -48px rgba(12, 12, 13, 0.2);
+/* Figma effect style: Drop Shadow Yellow/600 | S:27777a2c653d22acc7b7a80619b9d8b3588cccd6, */
+--tgg-effect-style-drop-shadow-yellow-600-s-27777a2c653d22acc7b7a80619b9d8b3588cccd6: 0px 4px 4px -32px rgba(180, 204, 0, 1), 4px 32px 48px -48px rgba(135, 153, 0, 1);
+/* Figma effect style: Drop Shadow Dark/600 | S:9b755db6756e24ce78aa9af655fa2c0cae4f3ba1, */
+--tgg-effect-style-drop-shadow-dark-600-s-9b755db6756e24ce78aa9af655fa2c0cae4f3ba1: 0px 4px 4px -32px rgba(0, 0, 0, 0.25), 4px 32px 48px -48px rgba(12, 12, 13, 1);
+/* Figma effect style: Blur/Overlay | S:4695f64057e502cf99a31296e940a30a64389f3d, */
+--tgg-effect-style-blur-overlay-s-4695f64057e502cf99a31296e940a30a64389f3d: blur(4px);
+/* Figma effect style: Inner Shadow/100 | S:56be8f06925be5fb74752a51f8d3d1367568cbc5, */
+--tgg-effect-style-inner-shadow-100-s-56be8f06925be5fb74752a51f8d3d1367568cbc5: inset 0px 1px 4px 0px rgba(12, 12, 13, 0.05);
+/* Figma effect style: Inner Shadow/200 | S:9e38fdf329b5a2696b9981c9487469490b2f48ed, */
+--tgg-effect-style-inner-shadow-200-s-9e38fdf329b5a2696b9981c9487469490b2f48ed: inset 0px 1px 4px 0px rgba(12, 12, 13, 0.05);
+/* Figma effect style: Inner Shadow/300 | S:fbb6449de5f062fa459043126a66d74db5a1e388, */
+--tgg-effect-style-inner-shadow-300-s-fbb6449de5f062fa459043126a66d74db5a1e388: inset 0px 4px 4px -1px rgba(12, 12, 13, 0.05);
+/* Figma effect style: Inner Shadow/400 | S:4c29141f84a83db307787d1e75ee78bde0a06170, */
+--tgg-effect-style-inner-shadow-400-s-4c29141f84a83db307787d1e75ee78bde0a06170: inset 0px 16px 32px -4px rgba(12, 12, 13, 0.1);
+/* Figma effect style: Inner Shadow/500 | S:11469c253f34f4c4161d6770616e2032782365de, */
+--tgg-effect-style-inner-shadow-500-s-11469c253f34f4c4161d6770616e2032782365de: inset 0px 16px 16px -8px rgba(12, 12, 13, 0.1);
+/* Figma effect style: Inner Shadow/600 | S:3e8f101c1da4719a56de2faadeda478a51207da3, */
+--tgg-effect-style-inner-shadow-600-s-3e8f101c1da4719a56de2faadeda478a51207da3: inset 0px 16px 32px -8px rgba(12, 12, 13, 0.4);
+/* Figma effect style: Blur/Layer | S:bd984af7ef121ef4a4127385e150c69d2f5c56c0, */
+--tgg-effect-style-blur-layer-s-bd984af7ef121ef4a4127385e150c69d2f5c56c0: blur(4px);
+/* Figma effect style: Blur/Glass | S:4e5b5271072672b8f94644332571a6bad508038f, */
+--tgg-effect-style-blur-glass-s-4e5b5271072672b8f94644332571a6bad508038f: blur(4px);
+}

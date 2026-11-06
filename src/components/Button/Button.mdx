@@ -1,0 +1,222 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks'
+import * as ButtonStories from './Button.stories'
+
+<Meta title="TGG/Button API" />
+
+# Button
+
+The Travelgoogoo Button component provides the Primary, Neutral, and Subtle
+actions used throughout the UI kit. Use a button to trigger an action, submit a
+form, or continue a user flow. Choose the variant based on the action's
+importance and use the same label conventions across a flow.
+
+Use the controls below to try the component API. The toolbar above the canvas
+switches between SDS Light and SDS Dark.
+
+<Canvas of={ButtonStories.Playground} />
+
+<Controls of={ButtonStories.Playground} />
+
+## Variants
+
+- **Primary** — prominent action. Its default background is Midnight Green in
+  SDS Light and Lemon Yellow in SDS Dark.
+- **Neutral** — a clear secondary action, with a Lemon Yellow background.
+- **Subtle** — a quieter, outlined action; its default background is
+  transparent.
+
+The variant controls colors and state styling, not the button's semantic HTML
+behavior.
+
+<Canvas of={ButtonStories.VariantAndSizeMatrix} />
+
+## Sizes
+
+`size` defaults to `Medium`. Both sizes use Unbounded Bold at 700 weight and
+120% line height.
+
+| Size | Label size | Standard padding | Split height and trailing circle |
+| --- | ---: | --- | --- |
+| Medium | 16px | 12px vertical, 16px horizontal | 40px high; 32 × 32px circle |
+| Small | 14px | 8px vertical, 12px horizontal | 32px high; 24 × 24px circle |
+
+Standard buttons size to their content; they do not have a fixed height in the
+component CSS. Split buttons use the heights shown above. Their labels stay on
+one line; when a fixed- or full-width container is too narrow, the button can
+overflow it rather than wrap or truncate the label. The split layout uses 24px
+left padding, 4px right and vertical padding, and a 48px minimum gap between
+label and trailing icon.
+
+## Layouts
+
+### Standard
+
+The default layout centers its contents and supports optional `startIcon` and
+`endIcon` slots. Use it for regular actions and when inline icons should sit
+beside the label.
+
+### Split
+
+Set `layout="split"` for a left-aligned label and circular trailing arrow. The
+arrow is pushed to the far right when the button is given a wider width. The
+label remains on one line; if the container is too narrow, the button's minimum
+intrinsic width lets it extend beyond the container without overlapping the
+icon. Use this layout when the action needs a distinct trailing arrow
+affordance.
+
+Split layout always renders the Figma Arrow up-right icon unless `endIcon` is
+provided. In split layout, `endIcon` **replaces** that arrow inside the circle;
+it does not add another trailing slot. `startIcon` remains an optional icon
+before the label, with the audited 8px Standard icon-to-label gap. Custom split
+`endIcon` dimensions are controlled by the supplied React node and centered in
+the circle. The default Figma arrow is 27 × 27px.
+
+<Canvas of={ButtonStories.SplitDefaultMatrix} />
+
+### Split icons and single-line labels
+
+<Canvas of={ButtonStories.SplitWithCustomEndIcon} />
+
+<Canvas of={ButtonStories.SplitWithStartIcon} />
+
+<Canvas of={ButtonStories.SplitSingleLineOverflow} />
+
+### Split at different widths
+
+The trailing icon remains inset from the right edge as the button expands.
+
+<Canvas of={ButtonStories.SplitContainerWidths} />
+
+## States
+
+- **Default** — the base appearance for the selected variant and size.
+- **Hover** — applied by the browser's `:hover` state on enabled buttons.
+- **Pressed** — standard buttons use the browser's `:active` state. The Figma
+  Button Fill set does not define a separate pressed variant for split layout;
+  split buttons inherit the existing variant `:active` styling.
+- **Disabled** — set `disabled` to use the native disabled button behavior and
+  disabled styles. Disabled buttons do not receive the hover or active styles.
+
+Hover and disabled appearances for each split variant and size:
+
+<Canvas of={ButtonStories.SplitHoverMatrix} />
+
+<Canvas of={ButtonStories.SplitDisabledMatrix} />
+
+## Icon usage
+
+`startIcon` and `endIcon` accept any React node. Reusable React icon components
+are recommended. Standard layout displays each supplied icon in the 16 × 16px
+icon slot; no icons appear by default.
+
+In split layout, the component supplies its own Arrow up-right icon by default.
+Passing `endIcon` replaces it inside the circular container. Icon content is
+decorative to the Button and is hidden from assistive technology; the button
+label should still communicate the action.
+
+The repository's `PlusIcon` follows the existing icon component convention and
+uses `currentColor`, so it inherits the color applied by its surrounding slot.
+
+## API reference
+
+### Button props
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `variant` | `'Primary' \| 'Neutral' \| 'Subtle'` | `'Primary'` | Selects the button color variant. |
+| `size` | `'Medium' \| 'Small'` | `'Medium'` | Selects the label size, padding, and (for split layout) single-line minimum height and circle size. |
+| `layout` | `'standard' \| 'split'` | `'standard'` | Selects centered inline content or the left-label/trailing-circle layout. |
+| `children` | `ReactNode` | `undefined` | Button content. When supplied, it takes precedence over `label`. |
+| `label` | `ReactNode` | `undefined` | Fallback button content, used when `children` is nullish. |
+| `startIcon` | `ReactNode` | `undefined` | Optional leading icon. In split layout it appears before the label. |
+| `endIcon` | `ReactNode` | `undefined` | Optional trailing icon in standard layout; replaces the default arrow inside the split circle. |
+| `disabled` | `boolean` | `false` (native button default) | Native disabled state; prevents activation and applies disabled styling. |
+| `type` | `'button' \| 'submit' \| 'reset'` | `'button'` | Native button type. Explicitly set `submit` when the button should submit a form. |
+| `className` | `string` | `undefined` | Additional class name, appended to the component's variant, size, and layout classes. |
+
+`ButtonProps` also accepts the standard React
+[`ButtonHTMLAttributes<HTMLButtonElement>`](https://react.dev/reference/react-dom/components/common#props)
+except `children`, which is redeclared as an optional `ReactNode`. This includes
+native attributes and event handlers such as `onClick`, `name`, `value`,
+`form`, `aria-*`, and `data-*`.
+
+### Code examples
+
+Import the component and the reusable icon where needed:
+
+```tsx
+import { Button } from './components/Button/Button'
+import { PlusIcon } from './components/icons/PlusIcon'
+```
+
+#### Standard Primary Button
+
+```tsx
+<Button variant="Primary" onClick={handleContinue}>
+  Continue
+</Button>
+```
+
+#### Neutral Button
+
+```tsx
+<Button variant="Neutral" onClick={handleSave}>
+  Save draft
+</Button>
+```
+
+#### Subtle Button
+
+```tsx
+<Button variant="Subtle" onClick={handleCancel}>
+  Cancel
+</Button>
+```
+
+#### Small Button
+
+```tsx
+<Button size="Small" variant="Primary">
+  Add item
+</Button>
+```
+
+#### Button with a start icon
+
+```tsx
+<Button startIcon={<PlusIcon />}>
+  Add item
+</Button>
+```
+
+#### Button with an end icon
+
+```tsx
+<Button endIcon={<PlusIcon />}>
+  More options
+</Button>
+```
+
+#### Split Button
+
+```tsx
+<Button layout="split" variant="Primary">
+  View details
+</Button>
+```
+
+#### Disabled Button
+
+```tsx
+<Button disabled>
+  Not available
+</Button>
+```
+
+#### Full-width Split Button
+
+```tsx
+<Button layout="split" variant="Neutral" style={{ width: '100%' }}>
+  Continue to checkout
+</Button>
+```

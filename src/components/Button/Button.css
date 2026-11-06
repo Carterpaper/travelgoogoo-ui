@@ -1,0 +1,272 @@
+.tgg-button {
+  --_tgg-button-background: transparent;
+  --_tgg-button-foreground: var(--tgg-color-text-brand-on-brand);
+  --_tgg-button-border: transparent;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--tgg-size-space-200);
+  padding: var(--tgg-size-space-300) var(--tgg-size-space-400);
+  border: 0;
+  border-radius: var(--tgg-size-radius-full);
+  background-color: var(--_tgg-button-background);
+  box-shadow: inset 0 0 0 var(--tgg-size-stroke-border) var(--_tgg-button-border);
+  color: var(--_tgg-button-foreground);
+  font-family: var(--tgg-typography-primitives-unbounded), sans-serif;
+  font-size: calc(var(--tgg-typography-primitives-scale-03) * 1px);
+  font-weight: var(--tgg-typography-primitives-weight-bold);
+  line-height: 120%;
+  cursor: pointer;
+}
+
+.tgg-button--small {
+  padding: var(--tgg-size-space-200) var(--tgg-size-space-300);
+  font-size: calc(var(--tgg-typography-primitives-scale-02) * 1px);
+}
+
+.tgg-button--primary {
+  --_tgg-button-background: var(--tgg-color-background-brand-secondary);
+  --_tgg-button-foreground: var(--tgg-color-text-brand-on-brand-secondary);
+  --_tgg-button-border: var(--tgg-color-border-brand-secondary);
+}
+
+.tgg-button--primary:hover:not(:disabled) {
+  --_tgg-button-background: var(--tgg-color-primitives-midnight-green-1000);
+  --_tgg-button-foreground: var(--tgg-color-primitives-lemon-yellow-600);
+  --_tgg-button-border: var(--tgg-color-primitives-midnight-green-1000);
+}
+
+.tgg-button--primary:active:not(:disabled) {
+  --_tgg-button-background: var(--tgg-color-primitives-midnight-green-500);
+  --_tgg-button-foreground: var(--tgg-color-primitives-lemon-yellow-700);
+  --_tgg-button-border: var(--tgg-color-primitives-midnight-green-500);
+}
+
+.tgg-button--primary:disabled {
+  --_tgg-button-background: var(--tgg-color-background-default-secondary-hover);
+  --_tgg-button-foreground: var(--tgg-color-text-disabled-on-disabled);
+  --_tgg-button-border: transparent;
+
+  cursor: not-allowed;
+}
+
+.tgg-button--neutral {
+  --_tgg-button-background: var(--tgg-color-background-brand-default);
+  --_tgg-button-foreground: var(--tgg-color-text-brand-on-brand);
+  --_tgg-button-border: var(--tgg-color-border-brand-default);
+}
+
+.tgg-button--neutral:hover:not(:disabled) {
+  --_tgg-button-background: var(--tgg-color-primitives-lemon-yellow-600);
+  --_tgg-button-foreground: var(--tgg-color-text-brand-on-brand);
+  --_tgg-button-border: transparent;
+}
+
+.tgg-button--neutral:active:not(:disabled) {
+  --_tgg-button-background: var(--tgg-color-primitives-lemon-yellow-700);
+  --_tgg-button-foreground: var(--tgg-color-primitives-midnight-green-600);
+  --_tgg-button-border: transparent;
+}
+
+.tgg-button--neutral:disabled {
+  --_tgg-button-background: var(--tgg-color-background-default-secondary-hover);
+  --_tgg-button-foreground: var(--tgg-color-text-disabled-on-disabled);
+  --_tgg-button-border: transparent;
+
+  cursor: not-allowed;
+}
+
+.tgg-button--subtle {
+  --_tgg-button-background: transparent;
+  --_tgg-button-foreground: var(--tgg-color-text-neutral-default);
+  --_tgg-button-border: var(--tgg-color-border-default-default);
+}
+
+.tgg-button--subtle:hover:not(:disabled) {
+  --_tgg-button-background: var(--tgg-color-background-default-secondary);
+  --_tgg-button-foreground: var(--tgg-color-text-default-default-black);
+  --_tgg-button-border: var(--tgg-color-border-default-default);
+}
+
+.tgg-button--subtle:active:not(:disabled) {
+  --_tgg-button-background: var(--tgg-color-background-default-tertiary);
+  --_tgg-button-foreground: var(--tgg-color-text-neutral-secondary);
+  --_tgg-button-border: var(--tgg-color-border-default-default);
+}
+
+.tgg-button--subtle:disabled {
+  --_tgg-button-background: transparent;
+  --_tgg-button-foreground: var(--tgg-color-text-disabled-on-disabled);
+  --_tgg-button-border: var(--tgg-color-border-default-default);
+
+  cursor: not-allowed;
+}
+
+.tgg-button--subtle.tgg-button--small:not(:hover, :active, :disabled) {
+  --_tgg-button-foreground: var(--tgg-color-text-default-default-black);
+  --_tgg-button-border: var(--tgg-color-border-neutral-tertiary);
+}
+
+.tgg-button--neutral.tgg-button--small:hover:not(:disabled) {
+  --_tgg-button-foreground: var(--tgg-color-primitives-midnight-green-600);
+}
+
+.tgg-button__icon {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+.tgg-button__icon > svg {
+  width: 16px;
+  height: 16px;
+}
+
+.tgg-button--split {
+  box-sizing: border-box;
+  justify-content: flex-start;
+  gap: var(--tgg-size-space-1200);
+  width: auto;
+  min-width: max-content;
+  padding: var(--tgg-size-space-100);
+  padding-left: var(--tgg-size-space-600);
+  text-align: left;
+}
+
+.tgg-button--split.tgg-button--medium {
+  min-height: 40px;
+}
+
+.tgg-button--split.tgg-button--small {
+  min-height: 32px;
+  padding: var(--tgg-size-space-100);
+  padding-left: var(--tgg-size-space-600);
+}
+
+.tgg-button__split-content {
+  display: inline-flex;
+  min-width: max-content;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: var(--tgg-size-space-200);
+}
+
+.tgg-button__split-label {
+  white-space: nowrap;
+}
+
+.tgg-button__split-icon {
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  overflow: visible;
+  border-radius: var(--tgg-size-radius-full);
+  background-color: var(--_tgg-button-split-icon-background);
+  color: var(--_tgg-button-split-icon-color);
+}
+
+.tgg-button--split.tgg-button--small .tgg-button__split-icon {
+  width: 24px;
+  height: 24px;
+  flex-basis: 24px;
+}
+
+.tgg-button__split-arrow {
+  width: 27px;
+  height: 27px;
+  flex: 0 0 27px;
+}
+
+.tgg-button--split.tgg-button--primary {
+  --_tgg-button-background: var(--tgg-color-background-brand-secondary);
+  --_tgg-button-foreground: var(--tgg-color-text-brand-on-brand-secondary);
+  --_tgg-button-border: var(--tgg-color-border-brand-secondary);
+  --_tgg-button-split-icon-background: var(--tgg-color-background-brand-default);
+  --_tgg-button-split-icon-color: var(--tgg-color-icon-brand-on-brand);
+}
+
+.tgg-button--split.tgg-button--primary:hover:not(:disabled) {
+  --_tgg-button-background: var(--tgg-color-background-brand-secondary-hover);
+  --_tgg-button-foreground: var(--tgg-color-primitives-lemon-yellow-700);
+  --_tgg-button-border: var(--tgg-color-border-brand-secondary);
+  --_tgg-button-split-icon-color: var(--tgg-color-icon-brand-on-brand);
+}
+
+.tgg-button--split.tgg-button--primary.tgg-button--medium:hover:not(:disabled) {
+  --_tgg-button-split-icon-background: var(--tgg-color-primitives-lemon-yellow-600);
+}
+
+.tgg-button--split.tgg-button--primary.tgg-button--small:hover:not(:disabled) {
+  --_tgg-button-split-icon-background: var(--tgg-color-background-brand-hover);
+}
+
+.tgg-button--split.tgg-button--primary:disabled {
+  --_tgg-button-background: var(--tgg-color-background-disabled-default);
+  --_tgg-button-foreground: var(--tgg-color-text-disabled-on-disabled);
+  --_tgg-button-border: var(--tgg-color-border-disabled-default);
+  --_tgg-button-split-icon-background: var(--tgg-color-background-default-secondary-hover);
+  --_tgg-button-split-icon-color: var(--tgg-color-icon-disabled-on-disabled);
+}
+
+.tgg-button--split.tgg-button--neutral {
+  --_tgg-button-background: var(--tgg-color-background-brand-default);
+  --_tgg-button-foreground: var(--tgg-color-text-brand-on-brand);
+  --_tgg-button-border: var(--tgg-color-border-brand-default);
+  --_tgg-button-split-icon-background: var(--tgg-color-background-brand-secondary);
+  --_tgg-button-split-icon-color: var(--tgg-color-icon-brand-on-brand-secondary);
+}
+
+.tgg-button--split.tgg-button--neutral:hover:not(:disabled) {
+  --_tgg-button-background: var(--tgg-color-primitives-lemon-yellow-600);
+  --_tgg-button-foreground: var(--tgg-color-text-brand-on-brand);
+  --_tgg-button-border: transparent;
+  --_tgg-button-split-icon-background: var(--tgg-color-background-brand-secondary-hover);
+  --_tgg-button-split-icon-color: var(--tgg-color-primitives-lemon-yellow-600);
+}
+
+.tgg-button--split.tgg-button--neutral:disabled {
+  --_tgg-button-background: var(--tgg-color-background-disabled-default);
+  --_tgg-button-foreground: var(--tgg-color-text-disabled-on-disabled);
+  --_tgg-button-border: var(--tgg-color-border-disabled-default);
+  --_tgg-button-split-icon-background: var(--tgg-color-background-default-secondary-hover);
+  --_tgg-button-split-icon-color: var(--tgg-color-icon-disabled-on-disabled);
+}
+
+.tgg-button--split.tgg-button--subtle {
+  --_tgg-button-background: transparent;
+  --_tgg-button-foreground: var(--tgg-color-text-neutral-default);
+  --_tgg-button-border: var(--tgg-color-border-default-default);
+  --_tgg-button-split-icon-background: var(--tgg-color-background-brand-default);
+  --_tgg-button-split-icon-color: var(--tgg-color-icon-brand-on-brand);
+}
+
+.tgg-button--split.tgg-button--subtle:hover:not(:disabled) {
+  --_tgg-button-foreground: var(--tgg-color-text-default-default-black);
+  --_tgg-button-border: var(--tgg-color-border-default-default);
+  --_tgg-button-split-icon-background: var(--tgg-color-background-brand-hover);
+  --_tgg-button-split-icon-color: var(--tgg-color-icon-brand-on-brand);
+}
+
+.tgg-button--split.tgg-button--subtle.tgg-button--medium:hover:not(:disabled) {
+  --_tgg-button-background: var(--tgg-color-background-default-secondary-hover);
+}
+
+.tgg-button--split.tgg-button--subtle.tgg-button--small:hover:not(:disabled) {
+  --_tgg-button-background: var(--tgg-color-background-default-secondary);
+}
+
+.tgg-button--split.tgg-button--subtle:disabled {
+  --_tgg-button-background: var(--tgg-color-background-disabled-default);
+  --_tgg-button-foreground: var(--tgg-color-text-disabled-on-disabled);
+  --_tgg-button-border: var(--tgg-color-border-disabled-default);
+  --_tgg-button-split-icon-background: var(--tgg-color-background-default-secondary-hover);
+  --_tgg-button-split-icon-color: var(--tgg-color-icon-disabled-on-disabled);
+}

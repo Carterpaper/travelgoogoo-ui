@@ -1,0 +1,84 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks'
+import * as DangerButtonStories from './DangerButton.stories'
+
+<Meta title="TGG/Danger Button API" />
+
+# Danger Button
+
+The Travelgoogoo Danger Button is a separate action component for destructive
+or high-risk actions. It provides Primary and Subtle variants in Medium and
+Small sizes. The Storybook toolbar switches between SDS Light and SDS Dark.
+
+<Canvas of={DangerButtonStories.Playground} />
+
+<Controls of={DangerButtonStories.Playground} />
+
+## Variants and sizes
+
+Primary is the filled danger action. Subtle is outlined, with a transparent
+default background. Both variants use Unbounded Bold at 700 weight and 120%
+line height.
+
+| Size | Label size | Padding | Icon size |
+| --- | ---: | ---: | ---: |
+| Medium | 16px | 12px on all sides | 16px |
+| Small | 14px | 8px on all sides | 16px |
+
+Both sizes use an 8px icon-to-label gap, a 9999px border radius, and a 1px
+inside border. Button width and height follow the content and these metrics.
+
+<Canvas of={DangerButtonStories.PrimaryAndSubtleVariants} />
+
+<Canvas of={DangerButtonStories.MediumAndSmallSizes} />
+
+<Canvas of={DangerButtonStories.VariantAndSizeMatrix} />
+
+## States
+
+Enabled buttons use the native `:hover` and `:active` states. Set the native
+`disabled` attribute for the disabled state; disabled buttons cannot be
+activated. The Subtle Disabled appearance keeps its background transparent.
+
+<Canvas of={DangerButtonStories.HoverAndPressed} />
+
+<Canvas of={DangerButtonStories.DisabledCombinations} />
+
+<Canvas of={DangerButtonStories.VisualComparisonMatrix} />
+
+## Icons
+
+`startIcon` and `endIcon` accept optional React nodes. No icons are rendered by
+default. Icon content is decorative and hidden from assistive technology, so
+the button still needs a text label that communicates its action.
+
+<Canvas of={DangerButtonStories.WithStartIcon} />
+
+<Canvas of={DangerButtonStories.WithEndIcon} />
+
+<Canvas of={DangerButtonStories.WithBothIcons} />
+
+## Theme comparison
+
+Danger colors use generated semantic tokens and resolve independently in Light
+and Dark modes.
+
+<Canvas of={DangerButtonStories.LightAndDarkThemes} />
+
+## API reference
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `variant` | `'Primary' \| 'Subtle'` | `'Primary'` | Selects the filled or outlined danger appearance. |
+| `size` | `'Medium' \| 'Small'` | `'Medium'` | Selects label size and padding. |
+| `children` | `ReactNode` | `undefined` | Button content; takes precedence over `label`. |
+| `label` | `ReactNode` | `undefined` | Fallback content when `children` is nullish. |
+| `startIcon` | `ReactNode` | `undefined` | Optional leading icon. |
+| `endIcon` | `ReactNode` | `undefined` | Optional trailing icon. |
+| `disabled` | `boolean` | `false` | Native disabled state and disabled styling. |
+| `type` | `'button' \| 'submit' \| 'reset'` | `'button'` | Native button type. |
+| `className` | `string` | `undefined` | Additional class name appended to component classes. |
+
+`DangerButtonProps` also accepts native
+[`ButtonHTMLAttributes<HTMLButtonElement>`](https://react.dev/reference/react-dom/components/common#props)
+except `children`, which is redeclared as an optional `ReactNode`. This
+includes standard event handlers and `aria-*` and `data-*` attributes.

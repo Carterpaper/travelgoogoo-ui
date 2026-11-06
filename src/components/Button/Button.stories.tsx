@@ -118,10 +118,12 @@ export const DisabledMatrix: Story = {
 export const HoverAndPressed: Story = {
   render: (args) => (
     <div style={matrixStyle}>
-      <p>Hover over a button, or press and hold it, to see its native states.</p>
+      <p className="tgg-button-story__description">
+        Hover over a button, or press and hold it, to see its native states.
+      </p>
       {sizes.map((size) => (
         <section key={size}>
-          <h2>{size}</h2>
+          <h2 className="tgg-button-story__section-heading">{size}</h2>
           <div style={rowStyle}>
             {variants.map((variant) => (
               <Button

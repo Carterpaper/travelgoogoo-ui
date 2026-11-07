@@ -15,7 +15,7 @@ const states = ['Default', 'Hover', 'Pressed', 'Disabled'] as const
 type VisualState = (typeof states)[number]
 
 const meta = {
-  title: 'TGG/Danger Button',
+  title: 'TGG/Components/Danger Button',
   component: DangerButton,
   parameters: {
     layout: 'fullscreen',

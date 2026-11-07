@@ -148,7 +148,12 @@ function ThemeComparison({ args }: MatrixProps) {
   )
 }
 
-export const Playground: Story = {}
+// valueType switches between an uncontrolled initial value and a placeholder.
+// Remount the preview when that mode changes so the native input is initialized
+// with the correct mode instead of retaining its previous uncontrolled value.
+export const Playground: Story = {
+  render: (args) => <InputField key={args.valueType} {...args} />,
+}
 
 export const FigmaVariantGallery: Story = {
   render: (args) => renderFigmaVariantGallery({ args }),

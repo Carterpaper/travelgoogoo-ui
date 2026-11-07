@@ -1,0 +1,111 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks'
+import * as CheckboxStories from './Checkbox.stories'
+
+<Meta title="TGG/Checkbox/Documentation/Checkbox" />
+
+# Checkbox
+
+The Travelgoogoo Checkbox represents a selectable value with an associated
+label and optional description. It uses native checkbox semantics and supports
+the Default and Disabled states, with Unchecked, Checked, and Indeterminate
+values. The Storybook toolbar switches between SDS Light and SDS Dark.
+
+<Canvas of={CheckboxStories.Playground} />
+
+<Controls of={CheckboxStories.Playground} />
+
+## Values and states
+
+`valueType` selects the initial Figma value presentation. The native checkbox
+remains interactive: users can toggle it, and an indeterminate checkbox moves
+to its checked or unchecked value when activated. Use `state="Disabled"` or
+the native `disabled` attribute to prevent interaction.
+
+| State | Unchecked | Checked | Indeterminate |
+| --- | --- | --- | --- |
+| Default | White surface with brand-tertiary border | Brand-default surface and Check icon | Brand-default surface and Minus icon |
+| Disabled | Disabled surface and border | Disabled surface and Check icon | Disabled surface and Minus icon |
+
+The design defines no separate hover, pressed, focus, or error appearance.
+
+<Canvas of={CheckboxStories.ValueTypeMatrix} />
+
+<Canvas of={CheckboxStories.DisabledMatrix} />
+
+<Canvas of={CheckboxStories.FullVisualComparisonMatrix} />
+
+## Dimensions and typography
+
+The checkbox frame is 20 × 20px, with a 16 × 16px inner control and a 2px
+inset. The control has a 1px border and 4px radius. The label and description
+use DM Sans Regular at 14px with 140% line height. The label row and the
+description row use a 12px gap; the description aligns with the label text.
+
+## Description
+
+Set `hasDescription` to show or hide the description row. When present, the
+description is associated with the native input through `aria-describedby`.
+The disabled description follows the Figma opacity treatment.
+
+<Canvas of={CheckboxStories.LightAndDarkThemeComparison} />
+
+## Accessibility
+
+The native checkbox is nested in a `<label>`, so the label text provides its
+accessible name and clicking the label toggles the control. The optional
+description is exposed as its description. Native attributes such as `name`,
+`value`, `required`, `checked`, `defaultChecked`, `onChange`, and `aria-*` are
+preserved. The indeterminate DOM property is synchronized from `valueType`
+with a ref and effect.
+
+## API reference
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `state` | `'Default' \| 'Disabled'` | `'Default'` | Selects the Figma state; Disabled also sets the native `disabled` property. |
+| `valueType` | `'Unchecked' \| 'Checked' \| 'Indeterminate'` | `'Unchecked'` | Sets the initial checked or indeterminate presentation. |
+| `label` | `ReactNode` | `'Label'` | Label associated with the native checkbox. |
+| `description` | `ReactNode` | `'Description'` | Optional descriptive text. |
+| `hasDescription` | `boolean` | `true` | Shows or hides the description row. |
+| `checked` | `boolean` | `undefined` | Native controlled checked value. |
+| `defaultChecked` | `boolean` | Derived from `valueType` | Native initial checked value when uncontrolled. |
+| `disabled` | `boolean` | `false` | Native disabled attribute; combines with the Disabled Figma state. |
+| `className` | `string` | `undefined` | Additional class name appended to the component class. |
+
+`CheckboxProps` also accepts native
+[`InputHTMLAttributes<HTMLInputElement>`](https://react.dev/reference/react-dom/components/input#props)
+except `type`, which is always `checkbox`.
+
+## Examples
+
+```tsx
+import { Checkbox } from './components/Checkbox/Checkbox'
+```
+
+### Unchecked with a description
+
+```tsx
+<Checkbox
+  label="Email updates"
+  description="Receive occasional product news."
+  hasDescription
+/>
+```
+
+### Checked
+
+```tsx
+<Checkbox label="Accept the terms" valueType="Checked" />
+```
+
+### Indeterminate
+
+```tsx
+<Checkbox label="Select all items" valueType="Indeterminate" />
+```
+
+### Disabled
+
+```tsx
+<Checkbox label="Unavailable option" state="Disabled" />
+```

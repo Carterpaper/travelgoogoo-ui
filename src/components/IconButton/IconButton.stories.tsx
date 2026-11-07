@@ -15,7 +15,7 @@ const states = ['Default', 'Hover', 'Pressed', 'Disabled'] as const
 type VisualState = (typeof states)[number]
 
 const meta = {
-  title: 'TGG/Components/Icon Button',
+  title: 'TGG/Components/Button/Icon',
   component: IconButton,
   parameters: {
     layout: 'fullscreen',

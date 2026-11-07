@@ -1,0 +1,87 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks'
+import * as IconButtonStories from './IconButton.stories'
+
+<Meta title="TGG/Icon Button API" />
+
+# Icon Button
+
+The Travelgoogoo Icon Button provides a compact, icon-only action. Use it for
+well-known actions when a visible text label would be unnecessary; always
+provide an accessible name with `aria-label`. The Storybook toolbar switches
+between SDS Light and SDS Dark.
+
+<Canvas of={IconButtonStories.Playground} />
+
+<Controls of={IconButtonStories.Playground} />
+
+## Variants and sizes
+
+Choose Primary for a prominent action, Neutral for a highlighted secondary
+action, and Subtle for a quieter action.
+
+| Variant | Medium frame | Medium inset | Small frame | Small inset |
+| --- | ---: | ---: | ---: | ---: |
+| Primary | 44 × 44px | 12px | 36 × 36px | 8px |
+| Neutral | 44 × 44px | 12px | 36 × 36px | 8px |
+| Subtle | 40 × 40px | 10px | 36 × 36px | 8px |
+
+The icon slot is 20 × 20px. Buttons use the full-radius token and a 1px inside
+border. The Medium Subtle frame intentionally remains smaller than the other
+Medium buttons.
+
+<Canvas of={IconButtonStories.DefaultVariantAndSizeMatrix} />
+
+## States
+
+Enabled buttons use native `:hover` and `:active` styling. Use the native
+`disabled` attribute for the disabled state; disabled buttons cannot be
+activated and do not receive hover or pressed styling.
+
+<Canvas of={IconButtonStories.HoverAndPressed} />
+
+<Canvas of={IconButtonStories.DisabledMatrix} />
+
+<Canvas of={IconButtonStories.FullVisualComparisonMatrix} />
+
+## Theme comparison
+
+The component uses generated semantic and primitive tokens that resolve for
+both SDS Light and SDS Dark modes.
+
+<Canvas of={IconButtonStories.LightAndDarkThemeComparison} />
+
+## Accessibility
+
+Provide a concise, non-empty `aria-label` that describes the action. The icon
+is decorative and hidden from assistive technology. Use the native `disabled`
+attribute to prevent activation. A visible focus indicator is provided for
+keyboard navigation.
+
+## API reference
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `variant` | `'Primary' \| 'Neutral' \| 'Subtle'` | `'Primary'` | Selects the button color treatment. |
+| `size` | `'Medium' \| 'Small'` | `'Medium'` | Selects the frame dimensions and inset. |
+| `icon` | `ReactNode` | Required | Icon content. No icon is provided by default. |
+| `aria-label` | `string` | Required | Non-empty accessible name describing the action. |
+| `disabled` | `boolean` | `false` | Native disabled state and disabled styling. |
+| `type` | `'button' \| 'submit' \| 'reset'` | `'button'` | Native button type. |
+| `className` | `string` | `undefined` | Additional class name appended to component classes. |
+
+`IconButtonProps` accepts native
+[`ButtonHTMLAttributes<HTMLButtonElement>`](https://react.dev/reference/react-dom/components/common#props)
+except `aria-label`, which is redeclared as required.
+
+## Example
+
+```tsx
+import { IconButton } from './components/IconButton/IconButton'
+import { PlusIcon } from './components/icons/PlusIcon'
+
+<IconButton
+  icon={<PlusIcon />}
+  aria-label="Add item"
+  onClick={handleAdd}
+/>
+```

@@ -1,0 +1,202 @@
+.tgg-icon-button {
+  --_tgg-icon-button-background: transparent;
+  --_tgg-icon-button-border: transparent;
+  --_tgg-icon-button-icon: var(--tgg-color-icon-neutral-default);
+
+  box-sizing: border-box;
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: var(--tgg-size-space-300);
+  border: 0;
+  border-radius: var(--tgg-size-radius-full);
+  background-color: var(--_tgg-icon-button-background);
+  box-shadow: inset 0 0 0 var(--tgg-size-stroke-border)
+    var(--_tgg-icon-button-border);
+  color: var(--_tgg-icon-button-icon);
+  cursor: pointer;
+}
+
+.tgg-icon-button--small {
+  width: 36px;
+  height: 36px;
+  padding: var(--tgg-size-space-200);
+}
+
+.tgg-icon-button--primary {
+  --_tgg-icon-button-background: var(--tgg-color-background-brand-secondary);
+  --_tgg-icon-button-border: var(--tgg-color-border-brand-secondary);
+  --_tgg-icon-button-icon: var(--tgg-color-icon-brand-on-brand-secondary);
+}
+
+.tgg-icon-button--primary:hover:not(:disabled),
+.tgg-icon-button-story__state--hover
+  .tgg-icon-button--primary:not(:disabled) {
+  --_tgg-icon-button-background: var(
+    --tgg-color-primitives-midnight-green-1000
+  );
+  --_tgg-icon-button-border: var(--tgg-color-primitives-midnight-green-1000);
+  --_tgg-icon-button-icon: var(--tgg-color-primitives-lemon-yellow-600);
+}
+
+.tgg-icon-button--primary:active:not(:disabled),
+.tgg-icon-button-story__state--pressed
+  .tgg-icon-button--primary:not(:disabled) {
+  --_tgg-icon-button-background: var(--tgg-color-primitives-midnight-green-500);
+  --_tgg-icon-button-border: var(--tgg-color-primitives-midnight-green-500);
+  --_tgg-icon-button-icon: var(--tgg-color-primitives-lemon-yellow-700);
+}
+
+.tgg-icon-button--primary:disabled {
+  --_tgg-icon-button-background: var(
+    --tgg-color-background-default-secondary-hover
+  );
+  --_tgg-icon-button-border: var(--_tgg-icon-button-disabled-border);
+  --_tgg-icon-button-icon: var(--tgg-color-icon-disabled-on-disabled);
+
+  cursor: not-allowed;
+}
+
+.tgg-icon-button--primary.tgg-icon-button--medium {
+  --_tgg-icon-button-disabled-border: var(
+    --tgg-color-border-default-secondary
+  );
+}
+
+.tgg-icon-button--primary.tgg-icon-button--small {
+  --_tgg-icon-button-disabled-border: var(
+    --tgg-color-border-disabled-default
+  );
+}
+
+.tgg-icon-button--neutral {
+  --_tgg-icon-button-background: var(--tgg-color-background-brand-default);
+  --_tgg-icon-button-border: var(--tgg-color-border-brand-default);
+  --_tgg-icon-button-icon: var(--tgg-color-icon-brand-on-brand);
+}
+
+.tgg-icon-button--neutral:hover:not(:disabled),
+.tgg-icon-button-story__state--hover
+  .tgg-icon-button--neutral:not(:disabled),
+.tgg-icon-button--neutral:active:not(:disabled),
+.tgg-icon-button-story__state--pressed
+  .tgg-icon-button--neutral:not(:disabled) {
+  --_tgg-icon-button-background: var(--tgg-color-background-brand-hover);
+  --_tgg-icon-button-border: var(--tgg-color-border-brand-default);
+  --_tgg-icon-button-icon: var(--tgg-color-icon-brand-secondary);
+}
+
+.tgg-icon-button--neutral:disabled {
+  --_tgg-icon-button-background: var(
+    --tgg-color-background-default-secondary-hover
+  );
+  --_tgg-icon-button-border: var(--tgg-color-border-disabled-default);
+  --_tgg-icon-button-icon: var(--tgg-color-icon-disabled-on-disabled);
+
+  cursor: not-allowed;
+}
+
+.tgg-icon-button--subtle {
+  --_tgg-icon-button-background: transparent;
+  --_tgg-icon-button-border: var(--tgg-color-border-default-default);
+  --_tgg-icon-button-icon: var(--tgg-color-icon-neutral-default);
+}
+
+.tgg-icon-button--subtle:hover:not(:disabled),
+.tgg-icon-button-story__state--hover
+  .tgg-icon-button--subtle:not(:disabled),
+.tgg-icon-button--subtle:active:not(:disabled),
+.tgg-icon-button-story__state--pressed
+  .tgg-icon-button--subtle:not(:disabled) {
+  --_tgg-icon-button-background: var(
+    --tgg-color-background-default-default-hover
+  );
+  --_tgg-icon-button-border: transparent;
+}
+
+.tgg-icon-button--subtle.tgg-icon-button--medium {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+}
+
+.tgg-icon-button--subtle:disabled {
+  --_tgg-icon-button-background: var(--tgg-color-background-disabled-default);
+  --_tgg-icon-button-border: var(--tgg-color-border-disabled-default);
+  --_tgg-icon-button-icon: var(--tgg-color-icon-disabled-on-disabled);
+
+  cursor: not-allowed;
+}
+
+.tgg-icon-button:focus-visible:not(:disabled) {
+  outline: 2px solid var(--tgg-color-border-default-tertiary);
+  outline-offset: 2px;
+}
+
+.tgg-icon-button__icon {
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+}
+
+.tgg-icon-button__icon > svg {
+  width: 20px;
+  height: 20px;
+}
+
+.tgg-icon-button-story__matrix {
+  display: grid;
+  gap: 24px;
+}
+
+.tgg-icon-button-story__theme {
+  display: grid;
+  gap: 20px;
+  padding: 24px;
+  border: 1px solid var(--tgg-color-border-default-default);
+  border-radius: 12px;
+  background-color: var(--tgg-color-background-default-default);
+  color: var(--tgg-color-text-default-default-black);
+}
+
+.tgg-icon-button-story__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.tgg-icon-button-story__cell {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+}
+
+.tgg-icon-button-story__state-label,
+.tgg-icon-button-story__heading {
+  margin: 0;
+  font-family: var(--tgg-typography-body-font-family);
+  color: var(--tgg-color-text-default-default-black);
+}
+
+.tgg-icon-button-story__state-label {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.tgg-icon-button-story__heading {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .tgg-icon-button-story__theme {
+    padding: 16px;
+  }
+}

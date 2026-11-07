@@ -15,7 +15,7 @@ const sizes: ButtonSize[] = ['Medium', 'Small']
 const layouts: ButtonLayout[] = ['standard', 'split']
 
 const meta = {
-  title: 'TGG/Button/Component/Button',
+  title: 'ATOM/Button/Component/Button',
   component: Button,
   parameters: {
     layout: 'fullscreen',

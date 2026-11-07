@@ -1,0 +1,245 @@
+.tgg-input-field {
+  /* Temporary Figma fallback for Border/Disabled/Secondary (3919:36533). */
+  --_tgg-input-field-disabled-border: #b2b2b2;
+
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: var(--tgg-size-space-200);
+  color: var(--tgg-color-text-default-default-black);
+  font-family: var(--tgg-typography-body-font-family), sans-serif;
+}
+
+[data-tgg-theme='dark'] .tgg-input-field {
+  --_tgg-input-field-disabled-border: #10191b;
+}
+
+.tgg-input-field__title {
+  display: flex;
+  min-width: 0;
+  height: 22px;
+  align-items: center;
+  gap: var(--tgg-size-space-200);
+}
+
+.tgg-input-field__label {
+  color: var(--tgg-color-text-default-default-black);
+  font-size: var(--tgg-typography-body-size-medium);
+  font-weight: var(--tgg-typography-body-font-weight-regular);
+  line-height: 1.4;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.tgg-input-field__tooltip-icon,
+.tgg-input-field__icon {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  align-items: center;
+  justify-content: center;
+  color: var(--tgg-color-text-default-secondary);
+}
+
+.tgg-input-field__tooltip-icon > svg,
+.tgg-input-field__icon > svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+.tgg-input-field__control {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  height: 43px;
+  min-width: 0;
+  align-items: center;
+  gap: var(--tgg-size-space-200);
+  padding: 12px var(--tgg-size-space-400);
+  border: 1px solid var(--tgg-color-border-default-default);
+  border-radius: var(--tgg-size-radius-200);
+  background-color: var(--tgg-color-background-default-default);
+}
+
+.tgg-input-field--error .tgg-input-field__control {
+  border-color: var(--tgg-color-border-danger-tertiary);
+}
+
+.tgg-input-field--disabled .tgg-input-field__control,
+.tgg-input-field--native-disabled .tgg-input-field__control {
+  border-color: var(--_tgg-input-field-disabled-border);
+  background-color: var(--tgg-color-background-disabled-default);
+}
+
+.tgg-input-field__control:focus-within {
+  outline: 2px solid var(--tgg-color-border-brand-secondary);
+  outline-offset: 2px;
+}
+
+.tgg-input-field__input {
+  box-sizing: border-box;
+  width: 0;
+  min-width: 0;
+  flex: 1 1 auto;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--tgg-color-text-default-default-black);
+  font: inherit;
+  font-size: var(--tgg-typography-body-size-medium);
+  font-weight: var(--tgg-typography-body-font-weight-regular);
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.tgg-input-field__input::placeholder {
+  color: var(--tgg-color-text-default-tertiary);
+  opacity: 1;
+}
+
+.tgg-input-field--disabled .tgg-input-field__input,
+.tgg-input-field--native-disabled .tgg-input-field__input {
+  color: var(--tgg-color-text-disabled-on-disabled);
+  cursor: not-allowed;
+}
+
+.tgg-input-field--disabled .tgg-input-field__input::placeholder,
+.tgg-input-field--native-disabled .tgg-input-field__input::placeholder {
+  color: var(--tgg-color-text-disabled-on-disabled);
+}
+
+.tgg-input-field__affix {
+  flex: 0 0 auto;
+  color: var(--tgg-color-text-default-secondary);
+  font-size: var(--tgg-typography-body-size-medium);
+  font-weight: var(--tgg-typography-body-font-weight-regular);
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.tgg-input-field--disabled .tgg-input-field__affix,
+.tgg-input-field--native-disabled .tgg-input-field__affix {
+  color: var(--tgg-color-text-disabled-on-disabled);
+}
+
+.tgg-input-field__supporting {
+  display: grid;
+  gap: var(--tgg-size-space-200);
+  color: var(--tgg-color-text-default-secondary);
+  font-family: var(--tgg-typography-caption-font-family), sans-serif;
+  font-size: var(--tgg-typography-caption-size-medium);
+  font-weight: var(--tgg-typography-caption-font-weight-regular);
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+.tgg-input-field__error {
+  color: var(--tgg-color-text-danger-tertiary);
+}
+
+.tgg-input-field--disabled .tgg-input-field__supporting,
+.tgg-input-field--native-disabled .tgg-input-field__supporting {
+  color: var(--tgg-color-text-disabled-on-disabled);
+}
+
+.tgg-input-field__password-caption {
+  display: grid;
+  gap: var(--tgg-size-space-100);
+  margin: 0;
+  padding: 0;
+  color: var(--tgg-color-text-default-secondary);
+  font-family: var(--tgg-typography-caption-font-family), sans-serif;
+  font-size: var(--tgg-typography-caption-size-medium);
+  font-weight: var(--tgg-typography-caption-font-weight-regular);
+  line-height: 1.4;
+  letter-spacing: 0;
+  list-style: none;
+}
+
+.tgg-input-field--disabled .tgg-input-field__password-caption,
+.tgg-input-field--native-disabled .tgg-input-field__password-caption {
+  color: var(--tgg-color-text-disabled-on-disabled);
+}
+
+.tgg-input-field__visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.tgg-input-field-story__stack,
+.tgg-input-field-story__matrix {
+  display: grid;
+  gap: var(--tgg-size-space-600);
+}
+
+.tgg-input-field-story__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--tgg-size-space-600);
+}
+
+.tgg-input-field-story__gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--tgg-size-space-600);
+}
+
+.tgg-input-field-story__cell {
+  display: grid;
+  min-width: 0;
+  justify-items: start;
+  align-content: start;
+  gap: var(--tgg-size-space-200);
+}
+
+.tgg-input-field-story__theme {
+  display: grid;
+  gap: var(--tgg-size-space-400);
+  padding: var(--tgg-size-space-600);
+  border: 1px solid var(--tgg-color-border-default-default);
+  border-radius: var(--tgg-size-radius-200);
+  background-color: var(--tgg-color-background-default-default);
+  color: var(--tgg-color-text-default-default-black);
+}
+
+.tgg-input-field-story__heading,
+.tgg-input-field-story__caption {
+  margin: 0;
+  color: var(--tgg-color-text-default-default-black);
+  font-family: var(--tgg-typography-body-font-family), sans-serif;
+}
+
+.tgg-input-field-story__heading {
+  font-size: var(--tgg-typography-body-size-medium);
+  font-weight: var(--tgg-typography-body-font-weight-strong);
+}
+
+.tgg-input-field-story__caption {
+  font-size: var(--tgg-typography-caption-size-medium);
+  font-weight: var(--tgg-typography-caption-font-weight-regular);
+  line-height: 1.4;
+}
+
+.tgg-input-field-story__icon-example {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .tgg-input-field-story__theme {
+    padding: var(--tgg-size-space-400);
+  }
+}

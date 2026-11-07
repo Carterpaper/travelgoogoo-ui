@@ -16,7 +16,7 @@ const valueTypes: CheckboxValueType[] = [
 ]
 
 const meta = {
-  title: 'TGG/Checkbox/Component/Checkbox',
+  title: 'ATOM/Checkbox/Component/Checkbox',
   component: Checkbox,
   parameters: {
     layout: 'fullscreen',

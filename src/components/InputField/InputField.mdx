@@ -1,0 +1,181 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks'
+import * as InputFieldStories from './InputField.stories'
+
+<Meta title="ATOM/Input Field/Documentation/Input Field" />
+
+# Input Field
+
+Input Field is a native text input with optional label, supporting text,
+prefix/suffix content, tooltip icon, and password guidance. The Storybook
+toolbar switches between SDS Light and SDS Dark.
+
+<Canvas of={InputFieldStories.Playground} />
+
+<Controls of={InputFieldStories.Playground} />
+
+## States and value presentation
+
+`state` selects the Default, Error, or Disabled appearance. Error state styling
+is independent of `hasError`: the state controls the border and
+`aria-invalid`, while `hasError` controls whether the error message is shown.
+Disabled also sets the native `disabled` attribute.
+
+`valueType="Default"` starts with the `valueText` as the uncontrolled input
+value. `valueType="Placeholder"` uses `valueText` as the placeholder instead.
+Native `value`, `defaultValue`, and `placeholder` props are available when the
+input needs controlled or custom native behavior.
+
+<Canvas of={InputFieldStories.FigmaVariantGallery} />
+
+<Canvas of={InputFieldStories.DefaultExample} />
+
+<Canvas of={InputFieldStories.PlaceholderExample} />
+
+<Canvas of={InputFieldStories.ErrorExample} />
+
+<Canvas of={InputFieldStories.DisabledExample} />
+
+## Label, description, and error
+
+The Figma structure binds `hasLabel` to the visibility of the whole Group Title
+frame and `showLabel` to the Label text layer. They remain separate props:
+`hasLabel` removes the visible title row, while `showLabel` hides only its
+visible text. The input retains a visually hidden associated label when the
+text is not displayed; if the visible label group is omitted, pass a meaningful
+`aria-label` when the `label` prop is not appropriate as its accessible name.
+
+Set `hasDescription` and `hasError` to show their respective supporting text.
+Both can be displayed together and are associated with the input through
+`aria-describedby`. Supporting text extends below the 43px input frame.
+
+<Canvas of={InputFieldStories.DescriptionAndError} />
+
+## Prefix, suffix, tooltip, and password caption
+
+Prefix and suffix text appear only when their corresponding `show...Text`
+property is enabled. Icons are optional consumer-supplied React nodes; no icon
+is rendered by default. `showTooltip` also requires a supplied `tooltipIcon`.
+The project has no Info icon, so the Tooltip Slot story documents the empty-slot
+behavior rather than inventing artwork. Provide `tooltipText` to give a
+supplied informational icon an accessible name and native title.
+
+The password caption provides the three guidance lines from Figma and is
+described to the input when shown.
+
+<Canvas of={InputFieldStories.PrefixAndSuffixText} />
+
+<Canvas of={InputFieldStories.ConsumerSuppliedIcons} />
+
+<Canvas of={InputFieldStories.TooltipSlot} />
+
+<Canvas of={InputFieldStories.PasswordCaption} />
+
+## Dimensions and layout
+
+| Property | Figma measurement |
+| --- | ---: |
+| Default and Placeholder widths | 212px / 209px in Figma |
+| Input height | 43px |
+| Horizontal / vertical padding | 16px / 12px |
+| Border / radius | 1px / 8px |
+| Content gap | 8px |
+| Label row / label-to-input gap | 22px / 8px |
+
+The React component fills its available container by default
+(`width: 100%`). Set a width on the component through `className`, normal CSS,
+or a wrapper when a fixed or constrained size is needed. The audited Figma
+widths above are references rather than React variants.
+
+## Themes and interaction
+
+Default background, text, border, error, and spacing styles use generated
+semantic tokens. The verified `border/disabled/secondary` token
+(`3919:36533`) is missing from the generated CSS snapshot. No existing
+disabled-border token is equivalent, so this component temporarily uses the
+Figma Light (`#B2B2B2`) and Dark (`#10191B`) values in a scoped CSS fallback.
+Replace that fallback when the token is added to the generated snapshot.
+
+The component does not invent hover or pressed appearances. A visible
+`:focus-within` outline is included for keyboard accessibility.
+
+<Canvas of={InputFieldStories.LightAndDarkThemeComparison} />
+
+<Canvas of={InputFieldStories.NativeInputInteraction} />
+
+## Accessibility
+
+- The visible label is associated with the input using a native `<label>`.
+- When label text is visually hidden, it remains associated for assistive
+  technology. If no suitable label text is available, pass `aria-label`.
+- Description, error, and password guidance IDs are included in
+  `aria-describedby` when those contents are shown.
+- Error state sets `aria-invalid`; native disabled, keyboard editing, and input
+  types such as `password` are preserved.
+- `prefixIcon`, `suffixIcon`, and `tooltipIcon` are optional consumer-provided
+  slots. Prefix and suffix icons are decorative; use text or other accessible
+  labeling to communicate field meaning.
+
+<Canvas of={InputFieldStories.AccessibilityExamples} />
+
+## API reference
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `state` | `'Default' \| 'Error' \| 'Disabled'` | `'Default'` | Visual state; Error sets `aria-invalid`, Disabled sets native disabled. |
+| `valueType` | `'Default' \| 'Placeholder'` | `'Default'` | Chooses whether `valueText` is an initial value or placeholder. |
+| `valueText` | `string` | `'Value'` | Figma Value text used as the uncontrolled value or placeholder. |
+| `hasLabel` | `boolean` | `true` | Shows the Figma Group Title row. |
+| `showLabel` | `boolean` | `true` | Shows label text inside the title row. |
+| `label` | `ReactNode` | `'Label'` | Associated visible or visually hidden input label. |
+| `hasDescription` | `boolean` | `false` | Shows `description` below the input. |
+| `description` | `ReactNode` | `'Description'` | Supporting description text. |
+| `hasError` | `boolean` | `false` | Shows `error` below the input. |
+| `error` | `ReactNode` | `'Error'` | Error message; independent of visual Error state. |
+| `showPrefixIcon` / `prefixIcon` | `boolean` / `ReactNode` | `false` / `undefined` | Shows a supplied leading icon. |
+| `showSuffixIcon` / `suffixIcon` | `boolean` / `ReactNode` | `false` / `undefined` | Shows a supplied trailing icon. |
+| `showPrefixText` / `prefixText` | `boolean` / `string` | `false` / `'$'` | Shows leading text. |
+| `showSuffixText` / `suffixText` | `boolean` / `string` | `false` / `'USD'` | Shows trailing text. |
+| `showTooltip` / `tooltipIcon` | `boolean` / `ReactNode` | `false` / `undefined` | Shows a supplied icon only within the visible title row. |
+| `tooltipText` | `string` | `undefined` | Accessible name and native title for the supplied tooltip icon. |
+| `showPasswordCaption` | `boolean` | `false` | Shows the three Figma password guidance lines. |
+| `className` | `string` | `undefined` | Additional class on the component wrapper. |
+
+`InputFieldProps` also accepts native
+[`InputHTMLAttributes<HTMLInputElement>`](https://react.dev/reference/react-dom/components/input#props),
+including `value`, `defaultValue`, `type`, `name`, `required`, event handlers,
+and `aria-*` attributes.
+
+## Examples
+
+```tsx
+import { InputField } from './components/InputField/InputField'
+
+<InputField
+  label="Email address"
+  type="email"
+  autoComplete="email"
+  hasDescription
+  description="We will use this address for account updates."
+/>
+```
+
+### Error message
+
+```tsx
+<InputField
+  label="Email address"
+  state="Error"
+  hasError
+  error="Please enter a valid email address."
+/>
+```
+
+### Password
+
+```tsx
+<InputField
+  label="Password"
+  type="password"
+  showPasswordCaption
+/>
+```

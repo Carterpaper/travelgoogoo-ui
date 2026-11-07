@@ -3,6 +3,8 @@ import { fn } from 'storybook/test'
 
 import { InputField } from './InputField'
 import type { InputFieldState, InputFieldValueType } from './InputField'
+import { ArrowUpRightIcon } from '../icons/ArrowUpRightIcon'
+import { InfoIcon } from '../icons/InfoIcon'
 import { PlusIcon } from '../icons/PlusIcon'
 
 const states: InputFieldState[] = ['Default', 'Error', 'Disabled']
@@ -24,12 +26,16 @@ const meta = {
     description: 'Description',
     valueText: 'Value',
     showPrefixIcon: false,
+    prefixIcon: <PlusIcon />,
     showSuffixIcon: false,
+    suffixIcon: <ArrowUpRightIcon />,
     showPrefixText: false,
     prefixText: '$',
     showSuffixText: false,
     suffixText: 'USD',
     showTooltip: false,
+    tooltipIcon: <InfoIcon />,
+    tooltipText: 'More information about this field',
     hasLabel: true,
     showLabel: true,
     label: 'Label',
@@ -208,9 +214,9 @@ export const PrefixAndSuffixText: Story = {
 export const ConsumerSuppliedIcons: Story = {
   args: {
     showPrefixIcon: true,
-    prefixIcon: <PlusIcon />,
     showSuffixIcon: true,
-    suffixIcon: <PlusIcon />,
+    showTooltip: true,
+    tooltipText: 'More information about this field',
     showPrefixText: true,
     showSuffixText: true,
   },
@@ -218,26 +224,10 @@ export const ConsumerSuppliedIcons: Story = {
     docs: {
       description: {
         story:
-          'PlusIcon is supplied by this story as a custom slot example; the component does not add default icons.',
+          'Uses the example Plus, Arrow Up Right, and Info icons supplied by Storybook args. Toggle each visibility control in Controls to show or hide the corresponding icon.',
       },
     },
   },
-}
-
-export const TooltipSlot: Story = {
-  args: {
-    showTooltip: true,
-  },
-  render: (args) => (
-    <div className="tgg-input-field-story__stack">
-      <p className="tgg-input-field-story__caption">
-        No Info icon is available in the project, so no tooltip icon is drawn.
-        Supply a consumer-owned tooltipIcon to display one.
-      </p>
-      <InputField {...args} />
-    </div>
-  ),
-  parameters: { controls: { disable: true } },
 }
 
 export const PasswordCaption: Story = {

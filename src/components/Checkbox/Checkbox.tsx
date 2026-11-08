@@ -16,6 +16,7 @@ export interface CheckboxProps
   valueType?: CheckboxValueType
   label?: ReactNode
   description?: ReactNode
+  hasLabel?: boolean
   hasDescription?: boolean
 }
 
@@ -24,6 +25,7 @@ export function Checkbox({
   valueType = 'Unchecked',
   label = 'Label',
   description = 'Description',
+  hasLabel = true,
   hasDescription = true,
   className,
   disabled = false,
@@ -52,9 +54,10 @@ export function Checkbox({
   const uncontrolledChecked = currentUncontrolledValue.checked
   const isIndeterminate = currentUncontrolledValue.indeterminate
   const isDisabled = state === 'Disabled' || disabled
+  const showDescription = hasLabel && hasDescription
   const describedBy = [
     ariaDescribedBy,
-    hasDescription ? descriptionId : undefined,
+    showDescription ? descriptionId : undefined,
   ]
     .filter(Boolean)
     .join(' ') || undefined
@@ -110,17 +113,21 @@ export function Checkbox({
             aria-hidden="true"
           />
         </span>
-        <span className="tgg-checkbox__content">
-          <span className="tgg-checkbox__label">{label}</span>
-          {hasDescription && (
-            <span
-              className="tgg-checkbox__description"
-              id={descriptionId}
-            >
-              {description}
-            </span>
-          )}
-        </span>
+        {hasLabel ? (
+          <span className="tgg-checkbox__content">
+            <span className="tgg-checkbox__label">{label}</span>
+            {showDescription && (
+              <span
+                className="tgg-checkbox__description"
+                id={descriptionId}
+              >
+                {description}
+              </span>
+            )}
+          </span>
+        ) : (
+          <span className="tgg-checkbox__visually-hidden">{label}</span>
+        )}
       </label>
     </div>
   )

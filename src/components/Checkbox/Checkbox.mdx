@@ -14,6 +14,15 @@ values. The Storybook toolbar switches between SDS Light and SDS Dark.
 
 <Controls of={CheckboxStories.Playground} />
 
+## Label visibility
+
+Set `hasLabel` to show or hide the label and description together. It defaults
+to `true`. With `hasLabel={false}`, only the checkbox is visible and the
+description is omitted from `aria-describedby`. The label remains visually
+hidden and continues to provide the checkbox's accessible name.
+
+<Canvas of={CheckboxStories.LabelVisibilityExamples} />
+
 ## Values and states
 
 `valueType` selects the initial Figma value presentation. The native checkbox
@@ -65,6 +74,7 @@ with a ref and effect.
 | `state` | `'Default' \| 'Disabled'` | `'Default'` | Selects the Figma state; Disabled also sets the native `disabled` property. |
 | `valueType` | `'Unchecked' \| 'Checked' \| 'Indeterminate'` | `'Unchecked'` | Sets the initial checked or indeterminate presentation. |
 | `label` | `ReactNode` | `'Label'` | Label associated with the native checkbox. |
+| `hasLabel` | `boolean` | `true` | Shows the label and description. When false, only the checkbox is visible while its label remains available to assistive technology. |
 | `description` | `ReactNode` | `'Description'` | Optional descriptive text. |
 | `hasDescription` | `boolean` | `true` | Shows or hides the description row. |
 | `checked` | `boolean` | `undefined` | Native controlled checked value. |

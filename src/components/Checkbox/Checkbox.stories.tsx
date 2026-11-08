@@ -27,6 +27,7 @@ const meta = {
     valueType: 'Unchecked',
     label: 'Label',
     description: 'Description',
+    hasLabel: true,
     hasDescription: true,
     onChange: fn(),
   },
@@ -35,6 +36,7 @@ const meta = {
     valueType: { control: 'inline-radio', options: valueTypes },
     label: { control: 'text' },
     description: { control: 'text' },
+    hasLabel: { control: 'boolean' },
     hasDescription: { control: 'boolean' },
     disabled: { control: false },
     checked: { control: false },
@@ -118,6 +120,16 @@ function ThemeComparison({ args }: MatrixProps) {
 }
 
 export const Playground: Story = {}
+
+export const LabelVisibilityExamples: Story = {
+  render: (args) => (
+    <div style={rowStyle}>
+      <Checkbox {...args} hasLabel label="With label and description" />
+      <Checkbox {...args} hasLabel={false} label="Checkbox only" />
+    </div>
+  ),
+  parameters: { controls: { disable: true } },
+}
 
 export const ValueTypeMatrix: Story = {
   render: (args) => (

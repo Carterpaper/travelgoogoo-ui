@@ -119,6 +119,18 @@
   flex-direction: column;
 }
 
+.tgg-checkbox__visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .tgg-checkbox__label,
 .tgg-checkbox__description {
   width: 100%;

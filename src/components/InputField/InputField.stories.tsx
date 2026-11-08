@@ -94,6 +94,7 @@ const meta = {
     error: 'Error',
     hasDescription: false,
     description: 'Description',
+    type: 'text',
     valueText: 'Value',
     showPrefixIcon: false,
     showSuffixIcon: false,
@@ -106,7 +107,6 @@ const meta = {
     showLabel: true,
     label: 'Label',
     showPasswordCaption: false,
-    type: 'text',
     onChange: fn(),
   },
   argTypes: {
@@ -116,6 +116,10 @@ const meta = {
     error: { control: 'text' },
     hasDescription: { control: 'boolean' },
     description: { control: 'text' },
+    type: {
+      control: 'select',
+      options: ['text', 'password', 'email', 'search', 'tel', 'url', 'number'],
+    },
     valueText: { control: 'text' },
     showPrefixIcon: { control: 'boolean' },
     prefixIcon: { control: false },
@@ -147,10 +151,6 @@ const meta = {
     requirement3Status: {
       options: ['default', 'positive', 'error'],
       control: 'select',
-    },
-    type: {
-      control: 'select',
-      options: ['text', 'password', 'email', 'search', 'tel', 'url', 'number'],
     },
     value: { control: false },
     defaultValue: { control: false },

@@ -1,13 +1,35 @@
-import { useId } from 'react'
+import { useId, useLayoutEffect, useRef } from 'react'
 import type {
   InputHTMLAttributes,
   ReactNode,
 } from 'react'
+import { CheckIcon } from '../icons/CheckIcon'
+import { BulletIcon } from '../icons/BulletIcon'
+import { XIcon } from '../icons/XIcon'
 
 import './InputField.css'
 
 export type InputFieldState = 'Default' | 'Error' | 'Disabled'
 export type InputFieldValueType = 'Default' | 'Placeholder'
+export type PasswordRequirementStatus = 'positive' | 'default' | 'error'
+
+export interface PasswordRequirement {
+  text: string
+  status: PasswordRequirementStatus
+}
+
+const defaultPasswordRequirements: [
+  PasswordRequirement,
+  PasswordRequirement,
+  PasswordRequirement,
+] = [
+  { text: 'At least 12 characters', status: 'default' },
+  {
+    text: 'Contains at least 1 uppercase and 1 lowercase letters',
+    status: 'default',
+  },
+  { text: 'Contains at least 1 number and 1 symbol', status: 'default' },
+]
 
 export interface InputFieldProps
   extends Omit<InputHTMLAttributes<HTMLInputElement>, 'className'> {
@@ -33,14 +55,46 @@ export interface InputFieldProps
   showLabel?: boolean
   label?: ReactNode
   showPasswordCaption?: boolean
+  passwordRequirements?: [
+    PasswordRequirement,
+    PasswordRequirement,
+    PasswordRequirement,
+  ]
   className?: string
 }
 
-const passwordCaptionLines = [
-  'At least 12 characters',
-  'Contains at least 1 uppercase and 1 lowercase letters',
-  'Contains at least 1 number and 1 symbol',
-]
+interface PasswordRequirementItemProps {
+  requirement: PasswordRequirement
+}
+
+function PasswordRequirementItem({
+  requirement,
+}: PasswordRequirementItemProps) {
+  const Icon =
+    requirement.status === 'positive'
+      ? CheckIcon
+      : requirement.status === 'error'
+        ? XIcon
+        : BulletIcon
+
+  return (
+    <li
+      className={`tgg-input-field__password-requirement tgg-input-field__password-requirement--${requirement.status}`}
+    >
+      <span className="tgg-input-field__password-requirement-icon" aria-hidden="true">
+        <Icon />
+      </span>
+      <span className="tgg-input-field__visually-hidden">
+        {requirement.status === 'positive'
+          ? 'Met: '
+          : requirement.status === 'error'
+            ? 'Not met: '
+            : 'Requirement: '}
+      </span>
+      <span>{requirement.text}</span>
+    </li>
+  )
+}
 
 export function InputField({
   state = 'Default',
@@ -60,11 +114,12 @@ export function InputField({
   suffixText = 'USD',
   showTooltip = false,
   tooltipIcon,
-  tooltipText,
+  tooltipText = 'More information',
   hasLabel = true,
   showLabel = true,
   label = 'Label',
   showPasswordCaption = false,
+  passwordRequirements = defaultPasswordRequirements,
   className,
   id,
   type = 'text',
@@ -76,6 +131,10 @@ export function InputField({
   'aria-invalid': ariaInvalid,
   ...inputProps
 }: InputFieldProps) {
+  const inputRef = useRef<HTMLInputElement>(null)
+  const previousValueText = useRef(valueText)
+  const previousValueType = useRef(valueType)
+  const wasControlled = useRef(value !== undefined)
   const generatedId = useId()
   const inputId = id ?? generatedId
   const descriptionId = useId()
@@ -91,6 +150,36 @@ export function InputField({
       : defaultValue ?? (valueType === 'Default' ? valueText : undefined)
   const inputPlaceholder =
     valueType === 'Placeholder' ? (placeholder ?? valueText) : placeholder
+
+  useLayoutEffect(() => {
+    const input = inputRef.current
+    const valueTextChanged = previousValueText.current !== valueText
+    const valueTypeChanged = previousValueType.current !== valueType
+    const wasPreviouslyControlled = wasControlled.current
+
+    if (input && value === undefined) {
+      if (
+        valueType === 'Default' &&
+        ((valueTextChanged && defaultValue === undefined) ||
+          valueTypeChanged ||
+          wasPreviouslyControlled)
+      ) {
+        input.value = String(defaultValue ?? valueText)
+      } else if (
+        valueType === 'Placeholder' &&
+        defaultValue === undefined &&
+        (wasPreviouslyControlled ||
+          (valueTypeChanged && previousValueType.current === 'Default'))
+      ) {
+        input.value = ''
+      }
+    }
+
+    previousValueText.current = valueText
+    previousValueType.current = valueType
+    wasControlled.current = value !== undefined
+  }, [defaultValue, value, valueText, valueType])
+
   const describedBy =
     [
       ariaDescribedBy,
@@ -152,6 +241,7 @@ export function InputField({
         )}
         <input
           {...inputProps}
+          ref={inputRef}
           id={inputId}
           type={type}
           className="tgg-input-field__input"
@@ -193,8 +283,11 @@ export function InputField({
           className="tgg-input-field__password-caption"
           id={passwordCaptionId}
         >
-          {passwordCaptionLines.map((line) => (
-            <li key={line}>{line}</li>
+          {passwordRequirements.map((requirement, index) => (
+            <PasswordRequirementItem
+              key={index}
+              requirement={requirement}
+            />
           ))}
         </ul>
       )}

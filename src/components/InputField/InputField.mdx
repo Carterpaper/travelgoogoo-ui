@@ -20,10 +20,14 @@ is independent of `hasError`: the state controls the border and
 `aria-invalid`, while `hasError` controls whether the error message is shown.
 Disabled also sets the native `disabled` attribute.
 
-`valueType="Default"` starts with the `valueText` as the uncontrolled input
-value. `valueType="Placeholder"` uses `valueText` as the placeholder instead.
-Native `value`, `defaultValue`, and `placeholder` props are available when the
-input needs controlled or custom native behavior.
+`valueType="Default"` uses `valueText` as the uncontrolled input value. When
+`valueText` changes while the input is uncontrolled, its displayed value is
+synchronized immediately, while ordinary user typing remains editable.
+`valueType="Placeholder"` uses `valueText` as the placeholder and clears a
+value previously derived from Default mode when switching modes. Native
+`value` remains controlled, and an explicit `defaultValue` keeps its native
+initial-value behavior. Use the native `placeholder` prop for a custom
+placeholder.
 
 <Canvas of={InputFieldStories.FigmaVariantGallery} />
 
@@ -54,13 +58,30 @@ Both can be displayed together and are associated with the input through
 
 Prefix and suffix text appear only when their corresponding `show...Text`
 property is enabled. Icons are optional consumer-supplied React nodes; no icon
-is rendered by default. `showTooltip` also requires a supplied `tooltipIcon`.
-The project has no Info icon, so the Tooltip Slot story documents the empty-slot
-behavior rather than inventing artwork. Provide `tooltipText` to give a
-supplied informational icon an accessible name and native title.
+is rendered by default. `showTooltip` renders the supplied `tooltipIcon` only
+when enabled. The reusable `InfoAlertIcon` shows the intended information
+circle with an exclamation mark. `tooltipText` sets its accessible name and
+native title; it defaults to “More information”. The Playground supplies
+`InfoAlertIcon` for the tooltip and
+`PlusIcon` for the prefix and suffix, so each Boolean control can be toggled
+without first configuring a React node. The dedicated slot examples show how a
+consumer can supply icon content. Prefix and suffix text controls operate
+independently from the icon controls.
 
-The password caption provides the three guidance lines from Figma and is
-described to the input when shown.
+The password caption contains three independently configurable requirement
+items. `showPasswordCaption` controls the visibility of the complete group.
+`passwordRequirements` supplies each item's text and status. Each status selects
+its icon automatically at 16px; callers cannot override the icon separately.
+Both the Playground and the dedicated Password Requirements story expose three
+independent text controls and three independent status dropdowns rather than an
+array editor. Each status dropdown offers `default`, `positive`, and `error`.
+Storybook maps those six controls to the `passwordRequirements` array. The raw
+array prop stays hidden from Controls, while `showPasswordCaption` remains a
+Boolean control. Changes appear in the preview immediately.
+
+When `showPasswordCaption` is false, the whole requirements group is omitted
+and its ID is excluded from the input's `aria-describedby`. When true, all
+three items render and the group ID is included in `aria-describedby`.
 
 <Canvas of={InputFieldStories.PrefixAndSuffixText} />
 
@@ -68,7 +89,13 @@ described to the input when shown.
 
 <Canvas of={InputFieldStories.TooltipSlot} />
 
+<Canvas of={InputFieldStories.TooltipLayout} />
+
 <Canvas of={InputFieldStories.PasswordCaption} />
+
+<Canvas of={InputFieldStories.PasswordRequirements} />
+
+<Controls of={InputFieldStories.PasswordRequirements} />
 
 ## Dimensions and layout
 
@@ -109,6 +136,9 @@ The component does not invent hover or pressed appearances. A visible
   technology. If no suitable label text is available, pass `aria-label`.
 - Description, error, and password guidance IDs are included in
   `aria-describedby` when those contents are shown.
+- When `showPasswordCaption` is true, the requirement group is included in
+  `aria-describedby`. Requirement icons are decorative; visually hidden status
+  text communicates whether a requirement is met, unmet, or neutral.
 - Error state sets `aria-invalid`; native disabled, keyboard editing, and input
   types such as `password` are preserved.
 - `prefixIcon`, `suffixIcon`, and `tooltipIcon` are optional consumer-provided
@@ -123,7 +153,7 @@ The component does not invent hover or pressed appearances. A visible
 | --- | --- | --- | --- |
 | `state` | `'Default' \| 'Error' \| 'Disabled'` | `'Default'` | Visual state; Error sets `aria-invalid`, Disabled sets native disabled. |
 | `valueType` | `'Default' \| 'Placeholder'` | `'Default'` | Chooses whether `valueText` is an initial value or placeholder. |
-| `valueText` | `string` | `'Value'` | Figma Value text used as the uncontrolled value or placeholder. |
+| `valueText` | `string` | `'Value'` | Figma Value text used for the uncontrolled Default value or Placeholder text; updates synchronize with the selected mode. |
 | `hasLabel` | `boolean` | `true` | Shows the Figma Group Title row. |
 | `showLabel` | `boolean` | `true` | Shows label text inside the title row. |
 | `label` | `ReactNode` | `'Label'` | Associated visible or visually hidden input label. |
@@ -136,9 +166,26 @@ The component does not invent hover or pressed appearances. A visible
 | `showPrefixText` / `prefixText` | `boolean` / `string` | `false` / `'$'` | Shows leading text. |
 | `showSuffixText` / `suffixText` | `boolean` / `string` | `false` / `'USD'` | Shows trailing text. |
 | `showTooltip` / `tooltipIcon` | `boolean` / `ReactNode` | `false` / `undefined` | Shows a supplied icon only within the visible title row. |
-| `tooltipText` | `string` | `undefined` | Accessible name and native title for the supplied tooltip icon. |
-| `showPasswordCaption` | `boolean` | `false` | Shows the three Figma password guidance lines. |
+| `tooltipText` | `string` | `'More information'` | Accessible name and native title for the supplied tooltip icon. |
+| `showPasswordCaption` | `boolean` | `false` | Shows all three requirements; when hidden, the group is omitted from `aria-describedby`. |
+| `passwordRequirements` | `[PasswordRequirement, PasswordRequirement, PasswordRequirement]` | Three default-status guidance items | Text and status for each of the three password requirements. |
 | `className` | `string` | `undefined` | Additional class on the component wrapper. |
+
+`PasswordRequirement` is the item type:
+
+```ts
+export type PasswordRequirementStatus = 'positive' | 'default' | 'error'
+
+export interface PasswordRequirement {
+  text: string
+  status: PasswordRequirementStatus
+}
+```
+
+`positive` selects a check icon and positive semantic colors, `default` selects
+a neutral bullet and default colors, and `error` selects an X icon and danger
+colors. All icons are 16px. Status is also exposed as visually hidden text, so
+meaning is not conveyed by color or icon alone.
 
 `InputFieldProps` also accepts native
 [`InputHTMLAttributes<HTMLInputElement>`](https://react.dev/reference/react-dom/components/input#props),
@@ -173,9 +220,22 @@ import { InputField } from './components/InputField/InputField'
 ### Password
 
 ```tsx
+import type { PasswordRequirement } from './components/InputField/InputField'
+
+const passwordRequirements: [
+  PasswordRequirement,
+  PasswordRequirement,
+  PasswordRequirement,
+] = [
+  { text: 'At least 12 characters', status: 'positive' },
+  { text: 'Includes uppercase and lowercase letters', status: 'default' },
+  { text: 'Includes a number and a symbol', status: 'error' },
+]
+
 <InputField
   label="Password"
   type="password"
   showPasswordCaption
+  passwordRequirements={passwordRequirements}
 />
 ```

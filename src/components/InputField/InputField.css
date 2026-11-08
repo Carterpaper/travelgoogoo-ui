@@ -17,19 +17,27 @@
 
 .tgg-input-field__title {
   display: flex;
+  width: 100%;
   min-width: 0;
-  height: 22px;
+  min-height: 22px;
   align-items: center;
   gap: var(--tgg-size-space-200);
 }
 
 .tgg-input-field__label {
+  min-width: 0;
+  flex: 1 1 auto;
   color: var(--tgg-color-text-default-default-black);
   font-size: var(--tgg-typography-body-size-medium);
   font-weight: var(--tgg-typography-body-font-weight-regular);
   line-height: 1.4;
   letter-spacing: 0;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
+}
+
+.tgg-input-field__tooltip-icon {
+  margin-left: auto;
+  color: var(--tgg-color-icon-default-secondary);
 }
 
 .tgg-input-field__tooltip-icon,
@@ -158,6 +166,48 @@
   line-height: 1.4;
   letter-spacing: 0;
   list-style: none;
+}
+
+.tgg-input-field__password-requirement {
+  display: flex;
+  min-width: 0;
+  align-items: flex-start;
+  gap: var(--tgg-size-space-200);
+  color: var(--tgg-color-text-default-secondary);
+}
+
+.tgg-input-field__password-requirement--positive {
+  color: var(--tgg-color-text-positive-default);
+}
+
+.tgg-input-field__password-requirement--error {
+  color: var(--tgg-color-text-danger-tertiary);
+}
+
+.tgg-input-field__password-requirement-icon {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  align-items: center;
+  justify-content: center;
+  color: var(--tgg-color-icon-default-secondary);
+}
+
+.tgg-input-field__password-requirement-icon > svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+.tgg-input-field__password-requirement--positive
+  .tgg-input-field__password-requirement-icon {
+  color: var(--tgg-color-icon-positive-default);
+}
+
+.tgg-input-field__password-requirement--error
+  .tgg-input-field__password-requirement-icon {
+  color: var(--tgg-color-icon-danger-default);
 }
 
 .tgg-input-field--disabled .tgg-input-field__password-caption,

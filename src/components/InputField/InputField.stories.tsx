@@ -2,19 +2,91 @@ import type { Meta, StoryObj } from '@storybook/react-vite'
 import { fn } from 'storybook/test'
 
 import { InputField } from './InputField'
-import type { InputFieldState, InputFieldValueType } from './InputField'
+import type {
+  InputFieldProps,
+  InputFieldState,
+  InputFieldValueType,
+  PasswordRequirement,
+  PasswordRequirementStatus,
+} from './InputField'
+import { InfoAlertIcon } from '../icons/InfoAlertIcon'
 import { PlusIcon } from '../icons/PlusIcon'
 
 const states: InputFieldState[] = ['Default', 'Error', 'Disabled']
 const valueTypes: InputFieldValueType[] = ['Default', 'Placeholder']
 
+interface PasswordRequirementControls {
+  requirement1Text?: string
+  requirement1Status?: PasswordRequirementStatus
+  requirement2Text?: string
+  requirement2Status?: PasswordRequirementStatus
+  requirement3Text?: string
+  requirement3Status?: PasswordRequirementStatus
+}
+
+interface InputFieldStoryProps
+  extends Omit<InputFieldProps, 'passwordRequirements' | 'showPasswordCaption'>,
+    PasswordRequirementControls {
+  showPasswordCaption?: boolean
+}
+
+const defaultRequirementTexts = [
+  'At least 12 characters',
+  'Includes uppercase and lowercase letters',
+  'Includes a number and a symbol',
+] as const
+
+function InputFieldPlayground({
+  showPasswordCaption,
+  requirement1Text,
+  requirement1Status,
+  requirement2Text,
+  requirement2Status,
+  requirement3Text,
+  requirement3Status,
+  ...inputProps
+}: InputFieldStoryProps) {
+  const passwordRequirements: [
+    PasswordRequirement,
+    PasswordRequirement,
+    PasswordRequirement,
+  ] = [
+    {
+      text: requirement1Text ?? defaultRequirementTexts[0],
+      status: requirement1Status ?? 'default',
+    },
+    {
+      text: requirement2Text ?? defaultRequirementTexts[1],
+      status: requirement2Status ?? 'default',
+    },
+    {
+      text: requirement3Text ?? defaultRequirementTexts[2],
+      status: requirement3Status ?? 'default',
+    },
+  ]
+
+  return (
+    <InputField
+      {...inputProps}
+      showPasswordCaption={showPasswordCaption}
+      passwordRequirements={passwordRequirements}
+      prefixIcon={inputProps.prefixIcon ?? <PlusIcon />}
+      suffixIcon={inputProps.suffixIcon ?? <PlusIcon />}
+      tooltipIcon={inputProps.tooltipIcon ?? <InfoAlertIcon />}
+      tooltipText={inputProps.tooltipText ?? 'Additional information'}
+    />
+  )
+}
+
 const meta = {
   title: 'ATOM/Input Field/Component/Input Field',
-  component: InputField,
+  component: InputFieldPlayground,
   parameters: {
     layout: 'fullscreen',
+    controls: { sort: 'none' },
   },
   tags: ['autodocs'],
+  render: (args: InputFieldStoryProps) => <InputFieldPlayground {...args} />,
   args: {
     state: 'Default',
     valueType: 'Default',
@@ -60,6 +132,22 @@ const meta = {
     showLabel: { control: 'boolean' },
     label: { control: 'text' },
     showPasswordCaption: { control: 'boolean' },
+    passwordRequirements: { control: false, table: { disable: true } },
+    requirement1Text: { control: 'text' },
+    requirement1Status: {
+      options: ['default', 'positive', 'error'],
+      control: 'select',
+    },
+    requirement2Text: { control: 'text' },
+    requirement2Status: {
+      options: ['default', 'positive', 'error'],
+      control: 'select',
+    },
+    requirement3Text: { control: 'text' },
+    requirement3Status: {
+      options: ['default', 'positive', 'error'],
+      control: 'select',
+    },
     type: {
       control: 'select',
       options: ['text', 'password', 'email', 'search', 'tel', 'url', 'number'],
@@ -71,16 +159,36 @@ const meta = {
     className: { control: false },
     onChange: { control: false },
   },
-} satisfies Meta<typeof InputField>
+} satisfies Meta<InputFieldStoryProps> & {
+  args: Record<string, unknown>
+  argTypes: Record<string, unknown>
+}
 
 export default meta
 type Story = StoryObj<typeof meta>
+type StoryArgs = NonNullable<Story['args']>
+
+function inputFieldProps(args: StoryArgs): Omit<StoryArgs, keyof PasswordRequirementControls> {
+  const {
+    requirement1Text: _requirement1Text,
+    requirement1Status: _requirement1Status,
+    requirement2Text: _requirement2Text,
+    requirement2Status: _requirement2Status,
+    requirement3Text: _requirement3Text,
+    requirement3Status: _requirement3Status,
+    ...props
+  } = args
+
+  return props
+}
 
 interface MatrixProps {
-  args: NonNullable<Story['args']>
+  args: StoryArgs
 }
 
 function renderFigmaVariantGallery({ args }: MatrixProps) {
+  const props = inputFieldProps(args)
+
   return (
     <div className="tgg-input-field-story__gallery">
       {states.flatMap((state) =>
@@ -93,7 +201,7 @@ function renderFigmaVariantGallery({ args }: MatrixProps) {
               {state} / {valueType}
             </p>
             <InputField
-              {...args}
+              {...props}
               state={state}
               valueType={valueType}
               label="Label"
@@ -116,6 +224,8 @@ function renderFigmaVariantGallery({ args }: MatrixProps) {
 }
 
 function ThemeComparison({ args }: MatrixProps) {
+  const props = inputFieldProps(args)
+
   return (
     <div className="tgg-input-field-story__stack">
       {(['light', 'dark'] as const).map((theme) => (
@@ -128,7 +238,7 @@ function ThemeComparison({ args }: MatrixProps) {
             {theme === 'light' ? 'SDS Light' : 'SDS Dark'}
           </h2>
           <InputField
-            {...args}
+            {...props}
             state="Error"
             hasDescription
             hasError
@@ -137,7 +247,7 @@ function ThemeComparison({ args }: MatrixProps) {
             label="Label"
           />
           <InputField
-            {...args}
+            {...props}
             state="Disabled"
             valueType="Placeholder"
             label="Disabled placeholder"
@@ -148,11 +258,47 @@ function ThemeComparison({ args }: MatrixProps) {
   )
 }
 
-// valueType switches between an uncontrolled initial value and a placeholder.
-// Remount the preview when that mode changes so the native input is initialized
-// with the correct mode instead of retaining its previous uncontrolled value.
+function TooltipLayoutExamples() {
+  return (
+    <div className="tgg-input-field-story__stack">
+      {(['light', 'dark'] as const).map((theme) => (
+        <section
+          key={theme}
+          className="tgg-input-field-story__theme"
+          data-tgg-theme={theme}
+        >
+          <h2 className="tgg-input-field-story__heading">
+            {theme === 'light' ? 'SDS Light' : 'SDS Dark'}
+          </h2>
+          <div style={{ display: 'grid', gap: 16, maxWidth: 320 }}>
+            <InputField
+              label="Email"
+              showTooltip
+              tooltipIcon={<InfoAlertIcon />}
+              tooltipText="Enter your email address."
+            />
+            <InputField
+              label="Work email address used for account notifications and travel updates"
+              showTooltip
+              tooltipIcon={<InfoAlertIcon />}
+              tooltipText="Use an address you can access."
+            />
+          </div>
+        </section>
+      ))}
+    </div>
+  )
+}
+
 export const Playground: Story = {
-  render: (args) => <InputField key={args.valueType} {...args} />,
+  args: {
+    requirement1Text: defaultRequirementTexts[0],
+    requirement1Status: 'default',
+    requirement2Text: defaultRequirementTexts[1],
+    requirement2Status: 'positive',
+    requirement3Text: defaultRequirementTexts[2],
+    requirement3Status: 'error',
+  },
 }
 
 export const FigmaVariantGallery: Story = {
@@ -211,6 +357,9 @@ export const ConsumerSuppliedIcons: Story = {
     prefixIcon: <PlusIcon />,
     showSuffixIcon: true,
     suffixIcon: <PlusIcon />,
+    showTooltip: true,
+    tooltipIcon: <InfoAlertIcon />,
+    tooltipText: 'Additional information',
     showPrefixText: true,
     showSuffixText: true,
   },
@@ -218,7 +367,7 @@ export const ConsumerSuppliedIcons: Story = {
     docs: {
       description: {
         story:
-          'PlusIcon is supplied by this story as a custom slot example; the component does not add default icons.',
+          'PlusIcon is supplied for prefix and suffix slots. InfoAlertIcon is supplied for the tooltip slot; the Input Field keeps these slots independent.',
       },
     },
   },
@@ -228,22 +377,139 @@ export const TooltipSlot: Story = {
   args: {
     showTooltip: true,
   },
-  render: (args) => (
-    <div className="tgg-input-field-story__stack">
-      <p className="tgg-input-field-story__caption">
-        No Info icon is available in the project, so no tooltip icon is drawn.
-        Supply a consumer-owned tooltipIcon to display one.
-      </p>
-      <InputField {...args} />
-    </div>
-  ),
+  render: (args) => {
+    const props = inputFieldProps(args)
+
+    return (
+      <div className="tgg-input-field-story__stack">
+        <p className="tgg-input-field-story__caption">
+          This example uses the reusable InfoAlertIcon. The tooltip slot can also
+          accept consumer-provided icon content.
+        </p>
+        <InputField
+          {...props}
+          tooltipIcon={<InfoAlertIcon />}
+          tooltipText="Additional information"
+        />
+      </div>
+    )
+  },
   parameters: { controls: { disable: true } },
+}
+
+export const TooltipLayout: Story = {
+  render: () => <TooltipLayoutExamples />,
+  parameters: {
+    controls: { disable: true },
+    docs: {
+      description: {
+        story:
+          'Shows short and wrapping long labels with a trailing tooltip icon in both Light and Dark themes.',
+      },
+    },
+  },
 }
 
 export const PasswordCaption: Story = {
   args: {
     type: 'password',
     showPasswordCaption: true,
+    requirement1Text: defaultRequirementTexts[0],
+    requirement1Status: 'default',
+    requirement2Text: defaultRequirementTexts[1],
+    requirement2Status: 'default',
+    requirement3Text: defaultRequirementTexts[2],
+    requirement3Status: 'default',
+  },
+}
+
+function PasswordRequirementsThemeComparison({
+  args,
+}: {
+  args: StoryArgs
+}) {
+  const {
+    showPasswordCaption,
+    requirement1Text,
+    requirement1Status,
+    requirement2Text,
+    requirement2Status,
+    requirement3Text,
+    requirement3Status,
+    ...props
+  } = args
+  const passwordRequirements: [
+    PasswordRequirement,
+    PasswordRequirement,
+    PasswordRequirement,
+  ] = [
+    {
+      text: requirement1Text ?? defaultRequirementTexts[0],
+      status: requirement1Status ?? 'default',
+    },
+    {
+      text: requirement2Text ?? defaultRequirementTexts[1],
+      status: requirement2Status ?? 'default',
+    },
+    {
+      text: requirement3Text ?? defaultRequirementTexts[2],
+      status: requirement3Status ?? 'default',
+    },
+  ]
+
+  return (
+    <div className="tgg-input-field-story__stack">
+      {(['light', 'dark'] as const).map((theme) => (
+        <section
+          key={theme}
+          className="tgg-input-field-story__theme"
+          data-tgg-theme={theme}
+        >
+          <h2 className="tgg-input-field-story__heading">
+            {theme === 'light' ? 'SDS Light' : 'SDS Dark'}
+          </h2>
+          <InputField
+            {...props}
+            type="password"
+            showPasswordCaption={showPasswordCaption}
+            passwordRequirements={passwordRequirements}
+          />
+        </section>
+      ))}
+    </div>
+  )
+}
+
+export const PasswordRequirements: Story = {
+  args: {
+    type: 'password',
+    showPasswordCaption: true,
+    requirement1Text: defaultRequirementTexts[0],
+    requirement1Status: 'default',
+    requirement2Text: defaultRequirementTexts[1],
+    requirement2Status: 'positive',
+    requirement3Text: defaultRequirementTexts[2],
+    requirement3Status: 'error',
+  },
+  render: (args) => <PasswordRequirementsThemeComparison args={args} />,
+  parameters: {
+    controls: {
+      include: [
+        'showPasswordCaption',
+        'requirement1Text',
+        'requirement1Status',
+        'requirement2Text',
+        'requirement2Status',
+        'requirement3Text',
+        'requirement3Status',
+      ],
+    },
+    docs: {
+      description: {
+        story:
+          'Edit each requirement text and status independently. Status selects its 16px icon and semantic colors. Both themes are shown.',
+      },
+    },
   },
 }
 
@@ -254,7 +520,7 @@ export const LightAndDarkThemeComparison: Story = {
 
 export const NativeInputInteraction: Story = {
   args: {
-    defaultValue: 'Type here',
+    valueText: 'Type here',
     onChange: fn(),
   },
   parameters: {

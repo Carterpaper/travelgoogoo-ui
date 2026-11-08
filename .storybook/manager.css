@@ -1,0 +1,4 @@
+/* Keep the Storybook tree's folder icons on brand in both manager themes. */
+.sidebar-item[data-nodetype='group'] > button > div > svg[type='group'] {
+  color: #e1ff01;
+}
